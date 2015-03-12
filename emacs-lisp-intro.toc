@@ -1,0 +1,240 @@
+@unnchapentry{Preface}{10001}{Preface}{1}
+@unnsecentry{On Reading this Text}{10001.1}{On Reading this Text}{1}
+@unnsecentry{For Whom This is Written}{10001.2}{Who You Are}{2}
+@unnsecentry{Lisp History}{10001.3}{Lisp History}{3}
+@unnsecentry{A Note for Novices}{10001.4}{Note for Novices}{3}
+@unnsecentry{Thank You}{10001.5}{Thank You}{4}
+@numchapentry{List Processing}{1}{List Processing}{1}
+@numsecentry{Lisp Lists}{1.1}{Lisp Lists}{1}
+@numsubsecentry{Lisp Atoms}{1.1.1}{Lisp Atoms}{1}
+@numsubsecentry{Whitespace in Lists}{1.1.2}{Whitespace in Lists}{3}
+@numsubsecentry{GNU Emacs Helps You Type Lists}{1.1.3}{Typing Lists}{3}
+@numsecentry{Run a Program}{1.2}{Run a Program}{3}
+@numsecentry{Generate an Error Message}{1.3}{Making Errors}{4}
+@numsecentry{Symbol Names and Function Definitions}{1.4}{Names & Definitions}{6}
+@numsecentry{The Lisp Interpreter}{1.5}{Lisp Interpreter}{6}
+@numsubsecentry{Byte Compiling}{1.5.1}{Byte Compiling}{7}
+@numsecentry{Evaluation}{1.6}{Evaluation}{7}
+@numsubsecentry{Evaluating Inner Lists}{1.6.1}{Evaluating Inner Lists}{8}
+@numsecentry{Variables}{1.7}{Variables}{9}
+@numsubsecentry{Error Message for a Symbol Without a Function}{1.7.1}{Void Function}{10}
+@numsubsecentry{Error Message for a Symbol Without a Value}{1.7.2}{Void Variable}{10}
+@numsecentry{Arguments}{1.8}{Arguments}{11}
+@numsubsecentry{Arguments' Data Types}{1.8.1}{Data types}{11}
+@numsubsecentry{An Argument as the Value of a Variable or List}{1.8.2}{Args as Variable or List}{12}
+@numsubsecentry{Variable Number of Arguments}{1.8.3}{Variable Number of Arguments}{12}
+@numsubsecentry{Using the Wrong Type Object as an Argument}{1.8.4}{Wrong Type of Argument}{13}
+@numsubsecentry{The @code {message} Function}{1.8.5}{message}{14}
+@numsecentry{Setting the Value of a Variable}{1.9}{set & setq}{15}
+@numsubsecentry{Using @code {set}}{1.9.1}{Using set}{15}
+@numsubsecentry{Using @code {setq}}{1.9.2}{Using setq}{16}
+@numsubsecentry{Counting}{1.9.3}{Counting}{17}
+@numsecentry{Summary}{1.10}{Summary}{18}
+@numsecentry{Exercises}{1.11}{Error Message Exercises}{18}
+@numchapentry{Practicing Evaluation}{2}{Practicing Evaluation}{19}
+@numsecentry{Buffer Names}{2.1}{Buffer Names}{19}
+@numsecentry{Getting Buffers}{2.2}{Getting Buffers}{21}
+@numsecentry{Switching Buffers}{2.3}{Switching Buffers}{22}
+@numsecentry{Buffer Size and the Location of Point}{2.4}{Buffer Size & Locations}{23}
+@numsecentry{Exercise}{2.5}{Evaluation Exercise}{24}
+@numchapentry{How To Write Function Definitions}{3}{Writing Defuns}{25}
+@numsecentry{The @code {defun} Special Form}{3.1}{defun}{25}
+@numsecentry{Install a Function Definition}{3.2}{Install}{27}
+@numsubsecentry{Change a Function Definition}{3.2.1}{Change a defun}{28}
+@numsecentry{Make a Function Interactive}{3.3}{Interactive}{28}
+@numsubsecentry{An Interactive @code {multiply-by-seven}}{3.3.1}{multiply-by-seven in detail}{29}
+@numsecentry{Different Options for @code {interactive}}{3.4}{Interactive Options}{30}
+@numsecentry{Install Code Permanently}{3.5}{Permanent Installation}{31}
+@numsecentry{@code {let}}{3.6}{let}{32}
+@numsubsecentry{The Parts of a @code {let} Expression}{3.6.1}{Parts of let Expression}{33}
+@numsubsecentry{Sample @code {let} Expression}{3.6.2}{Sample let Expression}{33}
+@numsubsecentry{Uninitialized Variables in a @code {let} Statement}{3.6.3}{Uninitialized let Variables}{34}
+@numsecentry{The @code {if} Special Form}{3.7}{if}{34}
+@numsubsecentry{The @code {type-of-animal} Function in Detail}{3.7.1}{type-of-animal in detail}{35}
+@numsecentry{If--then--else Expressions}{3.8}{else}{36}
+@numsecentry{Truth and Falsehood in Emacs Lisp}{3.9}{Truth & Falsehood}{37}
+@numsecentry{@code {save-excursion}}{3.10}{save-excursion}{38}
+@numsubsecentry{Template for a @code {save-excursion} Expression}{3.10.1}{Template for save-excursion}{39}
+@numsecentry{Review}{3.11}{Review}{40}
+@numsecentry{Exercises}{3.12}{defun Exercises}{43}
+@numchapentry{A Few Buffer--Related Functions}{4}{Buffer Walk Through}{44}
+@numsecentry{Finding More Information}{4.1}{Finding More}{44}
+@numsecentry{A Simplified @code {beginning-of-buffer} Definition}{4.2}{simplified-beginning-of-buffer}{45}
+@numsecentry{The Definition of @code {mark-whole-buffer}}{4.3}{mark-whole-buffer}{46}
+@numsubsecentry{Body of @code {mark-whole-buffer}}{4.3.1}{Body of mark-whole-buffer}{47}
+@numsecentry{The Definition of @code {append-to-buffer}}{4.4}{append-to-buffer}{48}
+@numsubsecentry{The @code {append-to-buffer} Interactive Expression}{4.4.1}{append interactive}{49}
+@numsubsecentry{The Body of @code {append-to-buffer}}{4.4.2}{append-to-buffer body}{50}
+@numsubsecentry{@code {save-excursion} in @code {append-to-buffer}}{4.4.3}{append save-excursion}{51}
+@numsecentry{Review}{4.5}{Buffer Related Review}{53}
+@numsecentry{Exercises}{4.6}{Buffer Exercises}{54}
+@numchapentry{A Few More Complex Functions}{5}{More Complex}{55}
+@numsecentry{The Definition of @code {copy-to-buffer}}{5.1}{copy-to-buffer}{55}
+@numsecentry{The Definition of @code {insert-buffer}}{5.2}{insert-buffer}{56}
+@numsubsecentry{The Interactive Expression in @code {insert-buffer}}{5.2.1}{insert-buffer interactive}{56}
+@unnsubsubsecentry{A Read-only Buffer}{10001.2.1.1}{Read-only buffer}{57}
+@unnsubsubsecentry{@samp {b} in an Interactive Expression}{10001.2.1.2}{b for interactive}{57}
+@numsubsecentry{The Body of the @code {insert-buffer} Function}{5.2.2}{insert-buffer body}{57}
+@numsubsecentry{@code {insert-buffer} With an @code {if} Instead of an @code {or}}{5.2.3}{if & or}{57}
+@numsubsecentry{The @code {or} in the Body}{5.2.4}{Insert or}{58}
+@numsubsecentry{The @code {let} Expression in @code {insert-buffer}}{5.2.5}{Insert let}{59}
+@numsubsecentry{New Body for @code {insert-buffer}}{5.2.6}{New insert-buffer}{60}
+@numsecentry{Complete Definition of @code {beginning-of-buffer}}{5.3}{beginning-of-buffer}{61}
+@numsubsecentry{Optional Arguments}{5.3.1}{Optional Arguments}{61}
+@numsubsecentry{@code {beginning-of-buffer} with an Argument}{5.3.2}{beginning-of-buffer opt arg}{62}
+@unnsubsubsecentry{What happens in a large buffer}{10001.3.2.1}{Large buffer case}{63}
+@unnsubsubsecentry{What happens in a small buffer}{10001.3.2.2}{Small buffer case}{64}
+@numsubsecentry{The Complete @code {beginning-of-buffer}}{5.3.3}{beginning-of-buffer complete}{65}
+@numsecentry{Review}{5.4}{Second Buffer Related Review}{66}
+@numsecentry{@code {optional} Argument Exercise}{5.5}{optional Exercise}{67}
+@numchapentry{Narrowing and Widening}{6}{Narrowing & Widening}{68}
+@numsecentry{The @code {save-restriction} Special Form}{6.1}{save-restriction}{68}
+@numsecentry{@code {what-line}}{6.2}{what-line}{69}
+@numsecentry{Exercise with Narrowing}{6.3}{narrow Exercise}{70}
+@numchapentry{@code {car}, @code {cdr}, @code {cons}: Fundamental Functions}{7}{car cdr & cons}{72}
+@numsecentry{@code {car} and @code {cdr}}{7.1}{car & cdr}{72}
+@numsecentry{@code {cons}}{7.2}{cons}{73}
+@numsubsecentry{Find the Length of a List: @code {length}}{7.2.1}{length}{74}
+@numsecentry{@code {nthcdr}}{7.3}{nthcdr}{75}
+@numsecentry{@code {nth}}{7.4}{nth}{76}
+@numsecentry{@code {setcar}}{7.5}{setcar}{77}
+@numsecentry{@code {setcdr}}{7.6}{setcdr}{78}
+@numsecentry{Exercise}{7.7}{cons Exercise}{78}
+@numchapentry{Cutting and Storing Text}{8}{Cutting & Storing Text}{79}
+@numsecentry{@code {zap-to-char}}{8.1}{zap-to-char}{79}
+@numsubsecentry{The @code {interactive} Expression}{8.1.1}{zap-to-char interactive}{80}
+@numsubsecentry{The Body of @code {zap-to-char}}{8.1.2}{zap-to-char body}{81}
+@numsubsecentry{The @code {search-forward} Function}{8.1.3}{search-forward}{81}
+@numsubsecentry{The @code {progn} Special Form}{8.1.4}{progn}{82}
+@numsubsecentry{Summing up @code {zap-to-char}}{8.1.5}{Summing up zap-to-char}{83}
+@numsecentry{@code {kill-region}}{8.2}{kill-region}{83}
+@numsubsecentry{@code {condition-case}}{8.2.1}{condition-case}{85}
+@numsubsecentry{Lisp macro}{8.2.2}{Lisp macro}{86}
+@numsecentry{@code {copy-region-as-kill}}{8.3}{copy-region-as-kill}{86}
+@numsubsecentry{The Body of @code {copy-region-as-kill}}{8.3.1}{copy-region-as-kill body}{88}
+@unnsubsubsecentry{The @code {kill-append} function}{10001.3.1.1}{kill-append function}{89}
+@unnsubsubsecentry{The @code {kill-new} function}{10001.3.1.2}{kill-new function}{90}
+@numsecentry{Digression into C}{8.4}{Digression into C}{94}
+@numsecentry{Initializing a Variable with @code {defvar}}{8.5}{defvar}{96}
+@numsubsecentry{@code {defvar} and an asterisk}{8.5.1}{defvar and asterisk}{97}
+@numsecentry{Review}{8.6}{cons & search-fwd Review}{97}
+@numsecentry{Searching Exercises}{8.7}{search Exercises}{99}
+@numchapentry{How Lists are Implemented}{9}{List Implementation}{100}
+@numsecentry{Symbols as a Chest of Drawers}{9.1}{Symbols as Chest}{102}
+@numsecentry{Exercise}{9.2}{List Exercise}{103}
+@numchapentry{Yanking Text Back}{10}{Yanking}{104}
+@numsecentry{Kill Ring Overview}{10.1}{Kill Ring Overview}{104}
+@numsecentry{The @code {kill-ring-yank-pointer} Variable}{10.2}{kill-ring-yank-pointer}{104}
+@numsecentry{Exercises with @code {yank} and @code {nthcdr}}{10.3}{yank nthcdr Exercises}{105}
+@numchapentry{Loops and Recursion}{11}{Loops & Recursion}{106}
+@numsecentry{@code {while}}{11.1}{while}{106}
+@numsubsecentry{A @code {while} Loop and a List}{11.1.1}{Loop Example}{107}
+@numsubsecentry{An Example: @code {print-elements-of-list}}{11.1.2}{print-elements-of-list}{108}
+@numsubsecentry{A Loop with an Incrementing Counter}{11.1.3}{Incrementing Loop}{109}
+@unnsubsubsecentry{Example with incrementing counter}{10001.1.3.1}{Incrementing Example}{109}
+@unnsubsubsecentry{The parts of the function definition}{10001.1.3.2}{Inc Example parts}{110}
+@unnsubsubsecentry{Putting the function definition together}{10001.1.3.3}{Inc Example altogether}{111}
+@numsubsecentry{Loop with a Decrementing Counter}{11.1.4}{Decrementing Loop}{113}
+@unnsubsubsecentry{Example with decrementing counter}{10001.1.4.1}{Decrementing Example}{113}
+@unnsubsubsecentry{The parts of the function definition}{10001.1.4.2}{Dec Example parts}{113}
+@unnsubsubsecentry{Putting the function definition together}{10001.1.4.3}{Dec Example altogether}{114}
+@numsecentry{Save your time: @code {dolist} and @code {dotimes}}{11.2}{dolist dotimes}{115}
+@unnsubsecentry{The @code {dolist} Macro}{10001.2.1}{dolist}{115}
+@unnsubsecentry{The @code {dotimes} Macro}{10001.2.2}{dotimes}{116}
+@numsecentry{Recursion}{11.3}{Recursion}{117}
+@numsubsecentry{Building Robots: Extending the Metaphor}{11.3.1}{Building Robots}{117}
+@numsubsecentry{The Parts of a Recursive Definition}{11.3.2}{Recursive Definition Parts}{118}
+@numsubsecentry{Recursion with a List}{11.3.3}{Recursion with list}{119}
+@numsubsecentry{Recursion in Place of a Counter}{11.3.4}{Recursive triangle function}{120}
+@unnsubsubsecentry{An argument of 3 or 4}{10001.3.4.1}{Recursive Example arg of 3 or 4}{121}
+@numsubsecentry{Recursion Example Using @code {cond}}{11.3.5}{Recursion with cond}{122}
+@numsubsecentry{Recursive Patterns}{11.3.6}{Recursive Patterns}{123}
+@unnsubsubsecentry{Recursive Pattern: @emph {every}}{10001.3.6.1}{Every}{123}
+@unnsubsubsecentry{Recursive Pattern: @emph {accumulate}}{10001.3.6.2}{Accumulate}{125}
+@unnsubsubsecentry{Recursive Pattern: @emph {keep}}{10001.3.6.3}{Keep}{125}
+@numsubsecentry{Recursion without Deferments}{11.3.7}{No Deferment}{126}
+@numsubsecentry{No Deferment Solution}{11.3.8}{No deferment solution}{127}
+@numsecentry{Looping Exercise}{11.4}{Looping exercise}{129}
+@numchapentry{Regular Expression Searches}{12}{Regexp Search}{130}
+@numsecentry{The Regular Expression for @code {sentence-end}}{12.1}{sentence-end}{130}
+@numsecentry{The @code {re-search-forward} Function}{12.2}{re-search-forward}{131}
+@numsecentry{@code {forward-sentence}}{12.3}{forward-sentence}{132}
+@unnsubsecentry{The @code {while} loops}{10001.3.1}{fwd-sentence while loops}{134}
+@unnsubsecentry{The regular expression search}{10001.3.2}{fwd-sentence re-search}{135}
+@numsecentry{@code {forward-paragraph}: a Goldmine of Functions}{12.4}{forward-paragraph}{136}
+@unnsubsecentry{The @code {let*} expression}{10001.4.1}{fwd-para let}{136}
+@unnsubsecentry{The forward motion @code {while} loop}{10001.4.2}{fwd-para while}{138}
+@numsecentry{Create Your Own @file {TAGS} File}{12.5}{etags}{141}
+@numsecentry{Review}{12.6}{Regexp Review}{143}
+@numsecentry{Exercises with @code {re-search-forward}}{12.7}{re-search Exercises}{144}
+@numchapentry{Counting: Repetition and Regexps}{13}{Counting Words}{145}
+@numsecentry{The @code {count-words-example} Function}{13.1}{count-words-example}{145}
+@numsubsecentry{The Whitespace Bug in @code {count-words-example}}{13.1.1}{Whitespace Bug}{148}
+@numsecentry{Count Words Recursively}{13.2}{recursive-count-words}{151}
+@numsecentry{Exercise: Counting Punctuation}{13.3}{Counting Exercise}{155}
+@numchapentry{Counting Words in a @code {defun}}{14}{Words in a defun}{156}
+@numsecentry{What to Count?}{14.1}{Words and Symbols}{156}
+@numsecentry{What Constitutes a Word or Symbol?}{14.2}{Syntax}{157}
+@numsecentry{The @code {count-words-in-defun} Function}{14.3}{count-words-in-defun}{158}
+@numsecentry{Count Several @code {defuns} Within a File}{14.4}{Several defuns}{161}
+@numsecentry{Find a File}{14.5}{Find a File}{161}
+@numsecentry{@code {lengths-list-file} in Detail}{14.6}{lengths-list-file}{162}
+@numsecentry{Count Words in @code {defuns} in Different Files}{14.7}{Several files}{164}
+@numsubsecentry{The @code {append} Function}{14.7.1}{append}{165}
+@numsecentry{Recursively Count Words in Different Files}{14.8}{Several files recursively}{166}
+@numsecentry{Prepare the Data for Display in a Graph}{14.9}{Prepare the data}{167}
+@numsubsecentry{Sorting Lists}{14.9.1}{Sorting}{167}
+@numsubsecentry{Making a List of Files}{14.9.2}{Files List}{168}
+@numsubsecentry{Counting function definitions}{14.9.3}{Counting function definitions}{171}
+@numchapentry{Readying a Graph}{15}{Readying a Graph}{175}
+@numsecentry{The @code {graph-body-print} Function}{15.1}{graph-body-print}{180}
+@numsecentry{The @code {recursive-graph-body-print} Function}{15.2}{recursive-graph-body-print}{182}
+@numsecentry{Need for Printed Axes}{15.3}{Printed Axes}{183}
+@numsecentry{Exercise}{15.4}{Line Graph Exercise}{183}
+@numchapentry{Your @file {.emacs} File}{16}{Emacs Initialization}{184}
+@numsecentry{Site-wide Initialization Files}{16.1}{Site-wide Init}{184}
+@numsecentry{Specifying Variables using @code {defcustom}}{16.2}{defcustom}{185}
+@numsecentry{Beginning a @file {.emacs} File}{16.3}{Beginning a .emacs File}{187}
+@numsecentry{Text and Auto Fill Mode}{16.4}{Text and Auto-fill}{188}
+@numsecentry{Mail Aliases}{16.5}{Mail Aliases}{189}
+@numsecentry{Indent Tabs Mode}{16.6}{Indent Tabs Mode}{190}
+@numsecentry{Some Keybindings}{16.7}{Keybindings}{190}
+@numsecentry{Keymaps}{16.8}{Keymaps}{191}
+@numsecentry{Loading Files}{16.9}{Loading Files}{192}
+@numsecentry{Autoloading}{16.10}{Autoload}{193}
+@numsecentry{A Simple Extension: @code {line-to-top-of-window}}{16.11}{Simple Extension}{194}
+@numsecentry{X11 Colors}{16.12}{X11 Colors}{195}
+@numsecentry{Miscellaneous Settings for a @file {.emacs} File}{16.13}{Miscellaneous}{196}
+@numsecentry{A Modified Mode Line}{16.14}{Mode Line}{198}
+@numchapentry{Debugging}{17}{Debugging}{201}
+@numsecentry{@code {debug}}{17.1}{debug}{201}
+@numsecentry{@code {debug-on-entry}}{17.2}{debug-on-entry}{202}
+@numsecentry{@code {debug-on-quit} and @code {(debug)}}{17.3}{debug-on-quit}{203}
+@numsecentry{The @code {edebug} Source Level Debugger}{17.4}{edebug}{204}
+@numsecentry{Debugging Exercises}{17.5}{Debugging Exercises}{205}
+@numchapentry{Conclusion}{18}{Conclusion}{207}
+@appentry{The @code {the-the} Function}{A}{the-the}{209}
+@appentry{Handling the Kill Ring}{B}{Kill Ring}{211}
+@appsecentry{The @code {current-kill} Function}{B.1}{current-kill}{211}
+@appsecentry{@code {yank}}{B.2}{yank}{215}
+@appsecentry{@code {yank-pop}}{B.3}{yank-pop}{216}
+@appsecentry{The @file {ring.el} File}{B.4}{ring file}{217}
+@appentry{A Graph with Labeled Axes}{C}{Full Graph}{218}
+@appsecentry{The @code {print-graph} Varlist}{C.1}{print-graph Varlist}{219}
+@appsecentry{The @code {print-Y-axis} Function}{C.2}{print-Y-axis}{219}
+@appsubsecentry{Side Trip: Compute a Remainder}{C.2.1}{Compute a Remainder}{220}
+@appsubsecentry{Construct a Y Axis Element}{C.2.2}{Y Axis Element}{222}
+@appsubsecentry{Create a Y Axis Column}{C.2.3}{Y-axis-column}{223}
+@appsubsecentry{The Not Quite Final Version of @code {print-Y-axis}}{C.2.4}{print-Y-axis Penultimate}{224}
+@appsecentry{The @code {print-X-axis} Function}{C.3}{print-X-axis}{225}
+@appsubsecentry{X Axis Tic Marks}{C.3.1}{X Axis Tic Marks}{226}
+@appsecentry{Printing the Whole Graph}{C.4}{Print Whole Graph}{229}
+@appsubsecentry{Testing @code {print-graph}}{C.4.1}{Test print-graph}{231}
+@appsubsecentry{Graphing Numbers of Words and Symbols}{C.4.2}{Graphing words in defuns}{232}
+@appsubsecentry{A @code {lambda} Expression: Useful Anonymity}{C.4.3}{lambda}{233}
+@appsubsecentry{The @code {mapcar} Function}{C.4.4}{mapcar}{234}
+@appsubsecentry{Another Bug @dots {} Most Insidious}{C.4.5}{Another Bug}{235}
+@appsubsecentry{The Printed Graph}{C.4.6}{Final printed graph}{237}
+@appentry{Free Software and Free Manuals}{D}{Free Software and Free Manuals}{238}
+@appentry{GNU Free Documentation License}{E}{GNU Free Documentation License}{240}
+@unnchapentry{Index}{10002}{Index}{249}
