@@ -1548,7 +1548,7 @@ comprende que @code{+} es una instrucci@'on para hacer alguna cosa con
 el resto de la lista: a@~nadir los n@'umeros que siguen.
 
 @need 1250
-Si est@'as leyendo esto dentro de GNU Emacs en Info,
+Si est@'a leyendo esto dentro de GNU Emacs en Info,
 aqu@'{@dotless{i}} est@'a como puedes evaluar una lista: posiciona tu
 cursor de manera inmediata despu@'es de la siguiente lista y escribe
 @kbd{C-x C-e}:
@@ -2046,7 +2046,7 @@ La variable @code{fill-column} ilustra un s@'{@dotless{i}}mbolo con un
 valor adjunto: en cada buffer de GNU Emacs, este s@'{@dotless{i}}mbolo
 establece alg@'un valor, normalmente 72 o 70, pero algunas veces
 alg@'un otro valor. Para encontrar el valor de este
-s@'{@dotless{i}}mbolo, eval@'ualo por s@'{@dotless{i}} mismo. Si est@'as
+s@'{@dotless{i}}mbolo, eval@'ualo por s@'{@dotless{i}} mismo. Si est@'a
 leyendo esto en Info dentro de GNU Emacs, tu puedes hacer esto
 poniendo el cursor despu@'es del s@'{@dotless{i}}mbolo y escribiendo
 @kbd{C-x C-e}:
@@ -2133,10 +2133,10 @@ another key.)
 @cindex S@'{@dotless{i}}mbolo sin valor de error
 @cindex Error para s@'{@dotless{i}}mbolo sin valor
 
-Si intentas evaluar un s@'{@dotless{i}}mbolo que no tiene un valor
-asociado, recibir@'as un mensaje de error. Puedes ver esto
+Si se intenta evaluar un s@'{@dotless{i}}mbolo que no tiene un valor
+asociado, recibir@'a un mensaje de error. Se puede ver esto
 experimentando con nuestra suma 2 m@'as 2. En la siguiente
-expresi@'on, pon tu cursor correcto despu@'es de @code{+}, antes del
+expresi@'on, pon el cursor correcto despu@'es de @code{+}, antes del
 primer n@'umero 2, escribe @kbd{C-x C-e}:
 
 @smallexample
@@ -2274,7 +2274,7 @@ puede ser visto evaluando lo siguiente:
 @noindent
 El valor producido para evaluar esta expresi@'on es @code{"abcdef"}.
 
-Una funci@'on tal como @code{substring} usa como argumentos tanto una
+Una funci@'on tal como @code{substring} usa como argumento tanto una
 cadena como n@'umeros. La funci@'on devuelve una parte de la cadena,
 una subcadena del primer argumento. Esta funci@'on toma tres
 argumentos. Su primer argumento es la cadena de caracteres, el segundo
@@ -2324,13 +2324,12 @@ El valor ser@'a un n@'umero dos m@'as que tu tienes evaluando
 @code{fill-column} solo. Para m@'{@dotless{i}}, este es 74, porque mi
 valor de @code{fill-column} es 72.
 
-Como nosotros hemos visto, un argumento puede ser un
-s@'{@dotless{i}}mbolo que devuelve un valor cuando se
-eval@'ua. Adem@'as, un argumento puede ser una lista que devuelve un
-valor cuando es evaluada. Por ejemplo, en la siguiente expresi@'on,
-los argumentos para la funci@'on @code{concat} son las cadenas
-@w{@code{"Los"}} y @w{@code{" zorros rojos."}} y la lista
-@code{(number-to-string (+ 2 fill-column))}.
+Como se ha visto, un argumento puede ser un s@'{@dotless{i}}mbolo que
+devuelve un valor cuando se eval@'ua. Adem@'as, un argumento puede
+ser una lista que devuelve un valor cuando es evaluada. Por ejemplo,
+en la siguiente expresi@'on, los argumentos para la funci@'on
+@code{concat} son las cadenas @w{@code{"Los"}} y @w{@code{" zorros
+rojos."}} y la lista @code{(number-to-string (+ 2 fill-column))}.
 
 @c For GNU Emacs 22, need number-to-string
 @smallexample
@@ -2338,14 +2337,14 @@ los argumentos para la funci@'on @code{concat} son las cadenas
 @end smallexample
 
 @noindent
-Si eval@'uas esta expresi@'on---y si, como con mi Emacs,
-@code{fill-column} eval@'ua a 72---@code{"Los 74 zorros rojos."}
+Si se eval@'ua esta expresi@'on---y si, como con mi Emacs,
+@code{fill-column} se eval@'ua a 72---@code{"Los 74 zorros rojos."}
 aparecer@'an en el @'area echo. (N@'otese que deben ponerse espacio
-despu@'es de la palabra @samp{The} y antes de la palabra @samp{red}
-as@'{@dotless{i}} aparecer@'an en la cadena final. La funci@'on
+despu@'es de la palabra @samp{Los} y antes de la palabra @samp{rojos}
+y as@'{@dotless{i}} aparecer@'an la cadena final. La funci@'on
 @code{number-to-string} convierte los enteros que la funci@'on de
-adici@'on devuelve una cadena. @code{number-to-string} es tambi@'en
-conocida como @code{int-to-string}.)
+adici@'on devuelve una cadena. @code{number-to-string} tambi@'en se
+conoce como @code{int-to-string}.)
 
 @node N@'umero de variables de argumentos
 @subsection N@'umero de variables de argumentos
@@ -2528,7 +2527,7 @@ al argumento que sigue la cadena. Eso eval@'ua el segundo argumento e
 imprime el valor en la posici@'on en la cadena donde el @samp{%s} est@'a.
 
 @need 1250
-Puedes ver esto posicionando el cursor despu@'es de la siguiente
+Puede ver esto posicionando el cursor despu@'es de la siguiente
 expresi@'on y escribiendo @kbd{C-x C-e}:
 
 @smallexample
@@ -2733,13 +2732,13 @@ Tambi@'en, @code{setq} puede ser usado para asignar diferentes valores
 a diferentes variables. El primer argumento est@'a asociado al valor
 del segundo argumento, el tercer argumento se asocia al valor del
 cuarto argumento, y as@'{@dotless{i}}. Por ejemplo, se
-podr@'{@dotless{i}}a usar el lo siguiente para asignar una lista de
-@'arboles al s@'{@dotless{i}}mbolo @code{trees} y una lista
-herb@'{@dotless{i}}voros al s@'{@dotless{i}}mbolo @code{herbivores}:
+podr@'{@dotless{i}}a usar lo siguiente para asignar una lista de
+@'arboles al s@'{@dotless{i}}mbolo @code{arboles} y una lista
+herb@'{@dotless{i}}voros al s@'{@dotless{i}}mbolo @code{herbivoros}:
 
 @smallexample
 @group
-(setq arboles '(pino abeto encina roble)
+(setq arboles '(pino abeto roble arce)
       herbivoros '(gacela antilope cebra))
 @end group
 @end smallexample
@@ -2939,17 +2938,17 @@ una funci@'on. @i{As@'{@dotless{i}} es c@'omo Emacs funciona}.
 Cuando se escriben teclas, se causa que el int@'erprete Lisp eval@'ue
 una expresi@'on que devuelve resultados. Incluso escribiendo texto
 plano se eval@'ua la funci@'on Emacs Lisp, en este caso,
-uno que usa @code{self-insert-command}, simplemente inserta el
+uno usa @code{self-insert-command}, simplemente inserta el
 caracter que se escribi@'o. Las funciones que se eval@'uan escribiendo
 atajos de teclado se llaman funciones @dfn{interactive}, o
-@dfn{commands}; como crear una fuci@'on interactive ser@'a ilustrada
+@dfn{comandos}; como crear una funci@'on interactive ser@'a ilustrada
 en el cap@'{@dotless{i}}tulo sobre c@'omo escribir definiciones de
 funciones. Ver @ref{Interactive, , Creando una Funci@'on
 Interactive}.
 
-Adem@'as de escribir comandos de teclado, hemos visto un segundo
+Adem@'as de escribir comandos de teclado, se ha visto un segundo
 camino para evaluar una expresi@'on: posicionar el cursor despu@'es de
-una lista y escribiendo @kbd{C-x C-e}. Esto es lo que nosotros haremos
+una lista y escribiendo @kbd{C-x C-e}. Esto es lo que se har@'a
 en el resto de esta secci@'on. Hay otros caminos de evaluar una
 expresi@'on tambi@'en; que ser@'an descritos como vienen.
 
@@ -2974,17 +2973,17 @@ devuelto por @code{(buffer-file-name)} es la ruta completa del fichero.
 
 Un fichero y un b@'uffer son dos entidades diferentes. Un fichero es
 informaci@'on grabada de manera permanente en el ordenador (a menos
-que tu lo borres). Un b@'uffer, por otro lado, es informaci@'on dentro
-de Emacs que evanecer@'a al final de la sesi@'on de la edici@'on (o
-cuando mates el b@'uffer). Normalmente, un b@'uffer contiene
-informaci@'on que has copiado desde un fichero; nosotros decimos que
+que se borre). Un b@'uffer, por otro lado, es informaci@'on dentro
+de Emacs que desaparecer@'a al final de la sesi@'on de la edici@'on (o
+cuando se mate el b@'uffer). Normalmente, un b@'uffer contiene
+informaci@'on que se ha copiado desde un fichero; nosotros decimos que
 el b@'uffer est@'a @dfn{visitando} este fichero. Esta copia es la que se
 trabaja y modifica. Los cambios al b@'uffer no cambian el fichero, hasta
 ser guardados. Cuando se guarda el b@'uffer, el b@'uffer est@'a copiado al
 fichero y est@'a de este modo salvado de manera permanente.
 
 @need 1250
-Si est@'as leyendo esto en Info dentro de GNU Emacs, se puede evaluar
+Si est@'a leyendo esto en Info dentro de GNU Emacs, se puede evaluar
 cada una de las siguientes expresiones posicionando el cursor
 despu@'es de eso y escribiendo @kbd{C-x C-e}.
 
@@ -3026,11 +3025,11 @@ funciones; sin los par@'entesis, el int@'erprete
 intentar@'{@dotless{i}}a evaluar los s@'{@dotless{i}}mbolos como
 variables. Ver @ref{Variables}.)
 
-A pesar de la distinci@'on entre ficheros y buffers, con frecuencia se
+A pesar de la distinci@'on entre ficheros y b@'uffers, con frecuencia se
 encuentra que hay personas que se refieren a un fichero cuando quieren
 un b@'uffer y al rev@'es. En realidad, la mayor@'{@dotless{i}}a de las
 personas dicen, ``Yo estoy editando un fichero,'' en vez de decir,
-``Estoy editando un b@'ufer que pronto se guardar@'a en un fichero.''
+``Estoy editando un b@'uffer que pronto se guardar@'a en un fichero.''
 Es casi siempre claro desde el contexto que las personas quieren
 decir. Al tratar con programas de ordenador, sin embargo, es
 importante tener la distinci@'on en mente, ya que el ordenador no es
@@ -3048,9 +3047,9 @@ ellos a trabajar juntos de manera efectiva. Finalmente, el b@'uffer
 creci@'o siendo uno intermedio, un lugar tomado temporalmente, para
 ser el lugar donde el trabajo est@'a hecho. Esta transformaci@'on es
 como un peque@~no puerto de mar que crece dentro de una gran ciudad:
-una vez fu@'e el lugar donde el lugar donde la carga era depositada
-temporalmente antes de ser cargada dentro de los barcos; entonces eso
-llega a ser un negocio y centro cultural en su propio derecho.  
+una vez fu@'e el lugar donde la carga era depositada temporalmente
+antes de ser cargada dentro de los barcos; entonces eso llega a ser
+un negocio y centro cultural en su propio derecho.  
 
 No todos los b@'uffers est@'an asociados con ficheros. Por ejemplo, un
 b@'uffer no visita cualquier fichero. De manera similar, un b@'uffer
@@ -3068,16 +3067,16 @@ Si se cambia al b@'uffer @file{*scratch*}, se escribe la posici@'on
 del @code{(buffer-name)} del cursor despu@'es, y entonces escribe
 @kbd{C-x C-e} para evaluar la expresi@'on. El nombre
 @code{*scratch*} ser@'a devuelto y aparecer@'a en el @'area
-echo. @code{*scratch*} es el nombre del b@'uffer. Cuando escribes
+echo. @code{*scratch*} es el nombre del b@'uffer. Cuando se escribe
 @code{(buffer-file-name)} en el b@'uffer @file{*scratch*} y eval@'ua
 que, @code{nil} aparecer@'a en el @'area echo, solo se hace cuando
-eval@'uas @code{(buffer-file-name)} en Info.
+se eval@'ua @code{(buffer-file-name)} en Info.
 
-Incidentalmente, si est@'as en el b@'uffer @file{*scratch*} y quiere
-el valor devuelto por una expresi@'on para aparecer en el b@'uffer por
-s@'{@dotless{i}} mismo que en el @'area echo, escribe @kbd{C-u C-x
-C-e} en vez de @kbd{C-x C-e}. Esto causa el valor devuelto para
-aparecer despu@'es de la expresi@'on. El b@'uffer se ver@'a
+Incidentalmente, si se est@'a en el b@'uffer @file{*scratch*} y se
+quiere el valor devuelto por una expresi@'on para aparecer en el
+b@'uffer en s@'{@dotless{i}} del @'area echo, se escribe @kbd{C-u C-x
+C-e} en vez de @kbd{C-x C-e}. Esto causa que el valor devuelto
+aparezca despu@'es de la expresi@'on. El b@'uffer se ver@'a
 as@'{@dotless{i}}:
 
 @smallexample
@@ -3149,7 +3148,7 @@ nombre. Si tu recientemente has cambiado fuera de @file{*scratch*}
 b@'uffer, @code{other-buffer} devolver@'a este b@'uffer.
 
 @need 800
-Puedes ver esto evaluando la expresi@'on:
+Se puede ver esto evaluando la expresi@'on:
 
 @smallexample
 (other-buffer)
@@ -3185,9 +3184,9 @@ presiona la tecla @kbd{TAB} para causar expandir al nombre completo, y
 entonces escribe la tecla @kbd{RET}} cuando se ve en el minibuffer
 el nombre del b@'uffer al que se quiere cambiar. El atajo, @kbd{C-x
 b}, causa que el int@'erprete Lisp eval@'ue la funci@'on interactiva
-@code{switch-to-buffer}. Como nosotros dijimos antes, esto es como
-Emacs funciona: diferentes atajos de teclado llaman o ejecutan
-diferentes funciones. Por ejemplo, @kbd{C-f} llama
+@code{switch-to-buffer}. Como nosotros dijimos antes,
+as@'{@dotless{i}} es como Emacs funciona: diferentes atajos de teclado
+llaman o ejecutan diferentes funciones. Por ejemplo, @kbd{C-f} llama
 @code{forward-char}, @kbd{M-e} llama a @code{forward-sentence} y
 as@'{@dotless{i}}
 
@@ -3211,7 +3210,7 @@ primero. @code{other-buffer} es el primero (y en este caso, el
 Lisp llama o ejecuta la funci@'on. Eso devuelve otro
 b@'uffer. Despu@'es, el int@'erprete ejecuta @code{switch-to-buffer},
 pasando, como un argumento, el otro b@'uffer, que es al que Emacs
-cambia. Si est@'as leyendo esto en Info, prueba esto ahora. Eval@'ua
+cambia. Si est@'a leyendo esto en Info, prueba esto ahora. Eval@'ua
 la expresi@'on. (Para volver, escribe @kbd{C-x b
 @key{RET}}.)@footnote{Recuerda, esta expresi@'on te permite cambiar a
 tus b@'uffers m@'as recientes y otros buffers que no puedes ver. Si
@@ -3229,14 +3228,14 @@ usar@'{@dotless{i}}as @kbd{C-x o} (@code{other-window}) para ir a otro
 b@'uffer visible}.
 
 En los ejemplos de programaci@'on en secciones posteriores de este
-documento, tu ver@'as la funci@'on @code{set-buffer} con m@'as con
+documento, se ve la funci@'on @code{set-buffer} con m@'as con
 frecuencia que @code{switch-to-buffer}. Esto es porque a diferencia
-entre los programas de ordenador y humanos: los humanos tienen ojos y
+de los programas de ordenador: los humanos tienen ojos y
 esperan ver el b@'uffer en el que ellos est@'an trabajando en sus
-terminales de ordenador. Esto es as@'{@dotless{i}} de obvio, casi va
-sin decirlo. Sin embargo, los programas no tienen ojos. Cuando un
-programa de ordenador trabaja en un b@'uffer, que b@'uffer no
-necesitan ser visibles en la pantalla.
+terminales de ordenador. Esto es tan obvio, que casi no hace falta
+decirlo. Sin embargo, los programas no tienen ojos. Cuando un
+programa de ordenador trabaja en un b@'uffer, el b@'uffer no
+necesita ser visible en la pantalla.
 
 @code{switch-to-buffer} est@'a dise@~nado para humanos y hace dos
 cosas diferentes: cambia el b@'uffer para el que la atenci@'on de
@@ -3276,7 +3275,7 @@ el buffer.
 @end smallexample
 
 @noindent
-Puedes evaluar esto en el camino usual, posicionando el cursor
+Se puede evaluar esto en el camino usual, posicionando el cursor
 despu@'es de la expresi@'on y escribiendo @kbd{C-x C-e}.
 
 @cindex definici@'on de @samp{punto}
@@ -3300,7 +3299,7 @@ posteriores en este libro.
 
 @need 1250
 El valor del punto depende, de acuerdo, a la posici@'on que tiene en
-el b@'uffer. Si eval@'uas punto en este lugar, el n@'umero ser@'a
+el b@'uffer. Si se eval@'ua punto en este lugar, el n@'umero ser@'a
 largo:
 
 @smallexample
@@ -3336,8 +3335,8 @@ tama@~no, y su posici@'on en el fichero.
 @cindex Escribiendo la Definici@'on de Funci@'on
 @cindex Escribiendo una definici@'on funci@'on
 
-Cuando el int@'erprete eval@'ua una lista, parece ver si el primer
-s@'{@dotless{i}}mbolo en la lista tiene definici@'on adjunta; o, poner
+Cuando el int@'erprete eval@'ua una lista, se ve si el primer
+s@'{@dotless{i}}mbolo en la lista tiene definici@'on adjunta; o, pone
 otro camino, si el s@'{@dotless{i}}mbolo apunta a una definici@'on de
 funci@'on. Si lo hace, el ordenador trae las instrucciones en la
 definici@'on. Un s@'{@dotless{i}}mbolo que tiene una definici@'on de
@@ -3581,7 +3580,7 @@ describe en la siguiente secci@'on.
 @cindex Definici@'on de la instalaci@'on
 @cindex Definici@'on de la Instalaci@'on de Funci@'on
 
-Si est@'as leyendo esto dentro de Info en Emacs, se puede probar la
+Si est@'a leyendo esto dentro de Info en Emacs, se puede probar la
 funci@'on @code{multiply-by-seven} evaluando primero la definici@'on
 de funci@'on y entonces evaluando @code{(multiply-by-seven 3)}. Una
 copia de la definici@'on sigue. Emplaza el cursor despu@'es del
@@ -3628,7 +3627,7 @@ expresi@'on y escribe @kbd{C-x C-e}. El n@'umero 21 aparacer@'a en el
 (multiply-by-seven 3)
 @end smallexample
 
-Si lo deseas, se puede leer la documentaci@'on para la funci@'on
+Si lo desea, se puede leer la documentaci@'on para la funci@'on
 escribiendo @kbd{C-h f} (@code{describe-function}) y entonces el
 nombre de la funci@'on, @code{multiply-by-seven}. Cuando haces esto,
 una ventana @file{*Help*} aparecer@'a en tu pantalla que dice:
@@ -3651,11 +3650,11 @@ Multiplicar NUMERO por siete.
 @cindex Definici@'on de Funci@'on, como cambiar
 @cindex Definici@'on, c@'omo cambiar
 
-Si quieres cambiar a cambiar el c@'odigo en @code{multiply-by-seven},
-solo reescr@'{@dotless{i}}belo. Para instalar la nueva versi@'on en
-lugar de la vieja, eval@'ua la definici@'on de la funci@'on de
-nuevo. As@'{@dotless{i}} se c@'omo modifica el c@'odigo en Emacs. Es
-muy simple,
+Si se quiere cambiar al c@'odigo en @code{multiply-by-seven}, solo
+reescr@'{@dotless{i}}belo. Para instalar la nueva versi@'on en lugar
+de la vieja, eval@'ua la definici@'on de la funci@'on de
+nuevo. As@'{@dotless{i}}, s@'e c@'omo modificar el c@'odigo en
+Emacs. Es muy simple,
 
 Por ejemplo, se puede cambiar la funci@'on @code{multiply-by-seven}
 a@~nade el n@'umero por s@'{@dotless{i}} mismo siete veces en vez de
@@ -3751,24 +3750,24 @@ multiply-by-seven} y presionando @key{RET}. La frase @samp{El
 resultado es @dots{}} seguido por el producto aparecer@'a en el @'area
 echo
 
-Hablando m@'as generalmente, invoca una funci@'on como esta dentro si
-de dos caminos:
+Hablando m@'as generalmente, se puede invocar a una funci@'on como
+@'esta de dos maneras:
 
 @enumerate
 @item
-Escribiendo un argumento prefijo que contienes el n@'umero para ser
-pasado, y entonces escribiendo @kbd{M-x} y el nombre de la funci@'on,
-como con @kbd{C-u 3 M-x forward-sentence}; o,
+Escribir un argumento prefijo que contiene el n@'umero a ser pasado, y
+entonces escribir @kbd{M-x} y el nombre de la funci@'on, como con
+@kbd{C-u 3 M-x forward-sentence}; o,
 
 @item
-Escribe siempre la tecla/s de la funci@'on est@'en emparejadas, como
-con @kbd{C-u 3 M-e}.
+Escribe siempre de modo que la tecla/s de la funci@'on est@'en
+emparejadas, como con @kbd{C-u 3 M-e}.
 @end enumerate
 
 @noindent
 Ambos ejemplos solo trabajan mencionados id@'enticamente para mover
 puntos hacia adelantes tres frases. (Desde @code{multiply-by-seven} no
-est@'a emparejado a una techa, eso no podr@'{@dotless{i}}a ser usado
+est@'a emparejado a una tecla, eso no podr@'{@dotless{i}}a ser usado
 como un ejemplo de emparejar la tecla.
 
 (@xref{Atajos de teclado, , Algunos Atajos de Teclas}, para aprender
@@ -3785,8 +3784,8 @@ defecto a 4).
 
 Permite mirar el uso de la forma especial @code{interactive} y
 entonces en la funci@'on @code{message} en la versi@'on interactiva de
-@code{multiply-by-seven}. Se rellamar@'a que la definici@'on funci@'on
-se ve como esto:
+@code{multiply-by-seven}. Se volver@'a a llamar que la definici@'on
+funci@'on se ve as@'{@dotless{i}}:
 
 @smallexample
 @group
@@ -3821,7 +3820,7 @@ evaluar@'a la l@'{@dotless{i}}nea como si fuera:
 @end smallexample
 
 @noindent
-(Si est@'as leyendo esto en GNU Emacs, se puede evaluar esta
+(Si est@'a leyendo esto en GNU Emacs, se puede evaluar esta
 expresi@'on por s@'{@dotless{i}} misma.) Primera, el int@'erprete
 evaluar@'a la lista interna, que es @code{(* 7 5)}. Esto devuelve un
 valor de 35. Lo siguiente, evaluar@'a la lista externa, pasando los
@@ -3858,9 +3857,9 @@ cuando se eval@'ua una expresi@'on cuyo primer elemente es
 @cindex Opciones para @code{interactive}
 @cindex Opciones Interactive
 
-En el ejemplo, @code{multipy-by-seven} usado @code{"p"} como el
-argumento a @code{interactive}. Este argumento cont@'o a Emacs para
-interpretar tu escritura si @kbd{C-u} seguido por un n@'umero o
+En el ejemplo, @code{multiply-by-seven} usa @code{"p"} como el
+argumento a @code{interactive}. Este argumento cuenta a Emacs que
+interprete la escritura si @kbd{C-u} seguido por un n@'umero o
 @key{META} seguido por un n@'umero como un comando para pasar este
 n@'umero a la funci@'on como su argumento. Emacs tiene m@'as de veinte
 caracteres predefinidos para usar con @code{interactive}. En casi cada
@@ -3877,22 +3876,23 @@ Considera la funci@'on @code{zap-to-char}. Su expresi@'on interactiva es
 @end smallexample
 
 La primera parte del argumento para @code{interactive} es @samp{p},
-con el que tu est@'as ya familiarizado. Este argumento cuenta a Emacs
-intepretar un `prefijo', como un n@'umero para ser pasado a la
-funci@'on. Tu puedes especificar un prefijo si escribiendo @kbd{C-u}
-seguidos por un n@'umero o escribiendo @key{META} seguido por un
+con el que ya se est@'a familiarizado. Este argumento cuenta a Emacs
+intepretar un `prefijo', como un n@'umero que se pase a la
+funci@'on. Se puede especificar un prefijo si escribiendo @kbd{C-u}
+seguido por un n@'umero o escribiendo @key{META} seguido por un
 n@'umero. El prefijo es el n@'umero de caracteres especificado. De
-este modo, si tu prefijo es tres y el caracter especificado es
-@samp{x}, entonces se borrar@'a todo el texto e incluyendo el tercer
-@samp{x} siguiente. Si no se fija un prefijo, entonces borra todo el
-texto e incluye el car@'acter espec@'{@dotless{i}}fico, pero no m@'as.
+este modo, si el prefijo es tres y el caracter
+espec@'{@dotless{i}}fico es @samp{x}, entonces se borrar@'a todo el
+texto e incluyendo el tercer @samp{x} siguiente. Si no se fija un
+prefijo, entonces borra todo el texto e incluye el car@'acter
+espec@'{@dotless{i}}fico, pero no m@'as.
 
 El @samp{c} cuenta la funci@'on el nombre del car@'acter para que borre.
 
 M@'as formalmente, una funci@'on con dos o m@'as argumentos puede
 tener informaci@'on pasado a cada argumento a@~nadiendo partes para la
-cadena que sigue @code{interactive}. Cuando haces esto, la
-informaci@'on est@'a pasada para cada argumento en el mismo orden esto
+cadena que sigue @code{interactive}. Cuando se hace esto, la
+informaci@'on est@'a pasada para cada argumento en el mismo orden, esto
 est@'a especificado en la lista @code{interactive}. En la cadena, cada
 parte est@'a separada desde la siguiente parte por un @samp{\n}, que
 es una nueva l@'{@dotless{i}}nea. Por ejemplo, tu puedes seguir
@@ -3919,7 +3919,7 @@ mejor. @xref{copy-to-buffer, , La Definici@'on de
 @code{copy-to-buffer}}, por ejemplo.)
 
 Cuando una funci@'on no tiene argumentos, @code{interactive} no
-requiere ninguno. Tal funci@'on cotiene la expresi@'on simple
+requiere ninguno. Tal funci@'on contiene la expresi@'on simple
 @code{(interactive)}. La funci@'on @code{mark-whole-buffer} es como esto.
 
 Alternativamente, si los c@'odigos de letras no son correctos para tu
@@ -3937,30 +3937,30 @@ explicaci@'on m@'as completa acerca de esta t@'ecnica.
 @cindex C@'odigo Permanente de Instalaci@'on
 @cindex C@'odigo de instalaci@'on
 
-Cuando tu instales una definici@'on de funci@'on evalu@'andolo,
-estar@'a instalado hasta que salgas de Emacs. La siguiente vez que tu
-empieces una nueva sesi@'on de Emacs, la funci@'on no ser@'a instalado
-a menos que tu eval@'ues la definici@'on de nuevo.
+Para instalar una definici@'on de funci@'on, se evalu@'a y
+as@'{@dotless{i}} estar@'a instalada hasta que se salga de Emacs. La
+siguiente vez que se empiece una nueva sesi@'on de Emacs, la
+funci@'on no ser@'a instalado a menos que eval@'ue la definici@'on
+de nuevo.
 
-En alg@'un punto, tu puedes querer tener c@'odigo instalado
-autom@'aticamente siempre y cuando tu empieces una nueva sesi@'on de
-Emacs. Hay varios caminos de hacer esto:
+En alg@'un punto, se puede querer tener c@'odigo instalado
+autom@'aticamente siempre y cuando se empiece una nueva sesi@'on de
+Emacs. Hay varios caminos para hacer esto:
 
 @itemize @bullet
 @item
-Si tienes c@'odigo que es solo para t@'{@dotless{i}} mismo, se puede
-poner el c@'odigo para la definici@'on de funci@'on en tu fichero de
-inicializaci@'on de @file{.emacs}. Cuando tu empieces Emacs, tu
-fichero @file{.emacs} es autom@'aticamente evaluado y todas las
-definiciones de funci@'on con ello est@'a
-instalado. @xref{Inicializaci@'on de Emacs, , Tu Fichero
-@file{.emacs}}.
+Si se tiene c@'odigo que es solo para uno mismo, se puede poner el
+c@'odigo para la definici@'on de funci@'on en el fichero de
+inicializaci@'on de @file{.emacs}. Cuando se inicia Emacs, el fichero
+@file{.emacs} se eval@'ua autom@'atica y todas las definiciones de
+funci@'on que tenga quedan instaladas. @xref{Inicializaci@'on de Emacs,
+, Tu Fichero @file{.emacs}}.
 
 @item
-Alternativamente, se pueden poner las definiciones de funci@'on que tu
-quieres instalado en uno o m@'as ficheros de su propio y usar la
-funci@'on @code{load} para causar a Emacs evaluar y cada una de las
-funciones en los ficheros. @xref{Cargando ficheros, , Cargando ficheros}.
+Alternativamente, se pueden poner las definiciones de funci@'on que se
+quieren instalar en uno o m@'as ficheros y usar la funci@'on
+@code{load} para causar a Emacs evaluar y cada una de las funciones en
+los ficheros. @xref{Cargando ficheros, , Cargando ficheros}.
 
 @item
 Tercero, si tu tienes un c@'odigo que tu sitio completo usar@'a, es normal
@@ -3987,7 +3987,7 @@ a@~nos pasados, por donaciones.
 @findex let
 
 La expresi@'on @code{let} es una forma especial en Lisp que
-necesitar@'as para usar en la mayor@'{@dotless{i}}a de las
+se necesitar@'a para usar la mayor@'{@dotless{i}}a de las
 definiciones de funci@'on.
 
 @code{let} se usa para adjuntar o emparejar un s@'{@dotless{i}}mbolo
@@ -3996,13 +3996,13 @@ variable con otra variable del mismo nombre que no es parte de la
 funci@'on.
 
 Para comprender por qu@'e la forma especial @code{let} es necesaria,
-considera la situaci@'on en el que tu propio hogar que generalmente se
+considere la situaci@'on en el que tu propio hogar que generalmente se
 refiere como `la casa', como en la frase, ``La casa necesita
-pintura.'' Si tu est@'as visitando a un amigo y tu alojamiento se
+pintura.'' Si est@'a visitando a un amigo y tu alojamiento se
 refiere a `la casa', @'el es amistoso para estar refiri@'endose a
 @emph{su} casa, no la suya, que es, una casa diferente.
 
-Si tu amigo est@'a refiri@'endose a su casa y tu piensas que @'el
+Si el amigo est@'a refiri@'endose a su casa y tu piensas que @'el
 est@'a refiri@'endose a su casa, tu puedes estar dentro por alguna
 confusi@'on. La misma cosa podr@'{@dotless{i}}a ocurrir en Lisp si una
 variable que es usada dentro de una funci@'on tiene el mismo que una
@@ -4069,7 +4069,7 @@ evolucionado como un sin@'onimo para `evaluar'.)
 @cindex @samp{varlist} definida
 Una expresi@'on @code{let} es una lista de tres partes. La primera
 parte es el s@'{@dotless{i}}mbolo @code{let}. La segunda parte es una
-lista, llamada una @dfn{varlist}, cada elemento de que es un
+lista, llamada una @dfn{varlist}, cada elemento es un
 s@'{@dotless{i}}mbolo por s@'{@dotless{i}} mismo o una lista de dos
 elementos, el primer elemento de que es un s@'{@dotless{i}}mbolo. La
 tercera parte de la expresi@'on @code{let} es el cuerpo del
@@ -4134,15 +4134,15 @@ dos variables @code{zebra} y @code{tiger}. El cuerpo de la expresi@'on
 Aqu@'{@dotless{i}}, la varlist es @code{((zebra 'rayas) (tiger
 'fiero))}.
 
-Las dos variables son @code{zebra} y @code{tiger}. Cada variable es el
+Las dos variables son @code{cebra} y @code{tigre}. Cada variable es el
 primer elemento de una lista de dos elementos y cada valor es el
 segundo elemento de su lista de dos elementos. En la varlist, Emacs
-asocia la variable @code{zebra} al valor @code{rayas}@footnote{De
+asocia la variable @code{cebra} al valor @code{rayas}@footnote{De
 acuerdo a Jared Diamond en @cite{Guns, Germs, y Steel}, ``@dots{} las
 cebras llegan a ser muy peligrosas a medida que crecen'' pero el
 clamor aqu@'{@dotless{i}} son que ellos no llegan a ser fieros como un
 tigre. (1997, W. W. Norton and Co., ISBN 0-393-03894-2, page 171)}, y
-asocia la variable @code{tiger} al valor @code{fiero}. En este
+asocia la variable @code{tigre} al valor @code{fiero}. En este
 ejemplo, ambos valores son s@'{@dotless{i}}mbolos precedidos por una
 comilla. Los valores podr@'{@dotless{i}}an ser precedidos por una
 comilla. Los valores podr@'{@dotless{i}}an tambi@'en haber sido otra
@@ -4180,10 +4180,10 @@ a un valor inicial de @code{nil}, como en la siguiente expresi@'on:
 (let ((abedul 3)
       pino
       abeto
-      (encina 'algo))
+      (roble 'algo))
   (message
    "Aqu@'{@dotless{i}} est@'an %d variables con %s, %s, y el valor %s."
-   abedul pino abeto encina))@end group
+   abedul pino abeto roble))@end group
 @end smallexample
 
 @noindent
@@ -4200,10 +4200,10 @@ valor".
 @end smallexample
 
 @noindent
-En este ejemplo, Emacs empareja el s@'{@dotless{i}}mbolo @code{birch}
+En este ejemplo, Emacs empareja el s@'{@dotless{i}}mbolo @code{abedul}
 al n@'umero 3, empareja los s@'{@dotless{i}}mbolos
-@code{pine} y @code{fir} a @code{nil}, y empareja el
-s@'{@dotless{i}}mbolo @code{oak} al valor @code{otro}.
+@code{pino} y @code{abeto} a @code{nil}, y empareja el
+s@'{@dotless{i}}mbolo @code{encina} al valor @code{otro}.
 
 Note que en la primera parte del @code{let}, las variables @code{pine}
 y @code{fir} se aloja solo como @'atomos que no est@'an rodeados por
@@ -4293,8 +4293,8 @@ impreso.
 segundo argumento y devuelve cierto si lo es.)
 @findex > (mayor que)
 
-De acuerdo, en uso actual, el test en una expresi@'on @code{if} no
-ser@'a corregido para todo el tiempo como eso es por la expresi@'on
+De acuerdo, al uso actual, el test en una expresi@'on @code{if} no
+ser@'a corregido todo el tiempo, ya que eso es por la expresi@'on
 @code{(> 5 4)}. En vez, al menos una de las variables usadas en el
 test ser@'a asociada a un valor que no es conocido en frente del
 tiempo. (Si el valor fuera conocido en el tiempo, @exclamdown{}no
@@ -4320,7 +4320,7 @@ entonces avisa de un tigre."
 
 @need 1500
 @noindent
-Si est@'as leyendo esto dentro de GNU Emacs, se puede evaluar la
+Si est@'a leyendo esto dentro de GNU Emacs, se puede evaluar la
 definici@'on funci@'on en el modo usual para instalarlo en Emacs, y
 entonces se puede evaluar las siguientes dos expresiones para ver los
 resultados:
@@ -4438,8 +4438,8 @@ Una expresi@'on @code{if} @emph{si} puede tener un tercer argumento
 opcional, llamado la @dfn{parte-resto}, para el caso en el que
 test-verdadero-o-falso devuelve falso. Cuando esto ocurre, el segundo
 argumento o la parte-entonces sobre todo la expresi@'on @code{if}
-(@emph{si}), @emph{no} es evaluado, pero el tercero o la parte-resto
-@emph{es} evaluado. Se podr@'{@dotless{i}}a pensar en esto como la
+(@emph{si}), @emph{no} se eval@'ua, pero el tercero o la parte-resto
+@emph{se} eval@'ua. Se podr@'{@dotless{i}}a pensar en esto como la
 alternativa del d@'{@dotless{i}}a nublado para la decisi@'on ``si eso
 es c@'alido y soleado, ve a la playa, sino @exclamdown{}lee un
 libro!''
@@ -4628,14 +4628,14 @@ Por otro lado, esta funci@'on devuelve @code{nil} si el test es falso.
 @findex marca
 
 La funci@'on @code{save-excursion} es la cuarta y @'ultima forma especial
-que se discutir@'a en este en este cap@'{@dotless{i}}tulo.
+que se discutir@'a en este cap@'{@dotless{i}}tulo.
 
 En Emacs Lisp hay programas usados para edici@'on, la funci@'on
 @code{save-excursion} es muy com@'un. Eso guarda la posici@'on de
 punto y marca, ejecuta el cuerpo de la funci@'on, y entonces restaura
 el punto y marca a sus posiciones previas si sus posiciones fueran
 cambiadas. Su prop@'osito primario es guardar que el usuario sea
-sorprendido y molesto por movimientos inesperado de punto y marca.
+sorprendido y molesto por movimientos inesperados de punto y marca.
 
 @menu
 * Punto y marca::            Una revisi@'on de varias localizaciones.
@@ -4679,12 +4679,12 @@ cuerpo de la forma especial es evaluada por el int@'erprete Lisp. De
 este modo, si el punto fuera en el principio de una pieza de texto y
 alg@'un c@'odigo movido apunta al fin del b@'uffer, el
 @code{save-excursion} no apuntar@'{@dotless{i}}a a donde fu@'e antes,
-despu@'es las expresiones en el cuerpo de la fueron evaluadas.
+despu@'es las expresiones en el cuerpo de las que fueron evaluadas.
 
 En Emacs, una funci@'on frecuentemente mueve el punto como parte de
 sus trabajos internos incluso aunque un usuario no espere esto. Por
 ejemplo, @code{count-lines-region} se mueve al punto. Para prevenir al
-usuario que se preocupe por salto que es inesperado y (desde el punto
+usuario que se preocupe por el salto que es inesperado y (desde el punto
 de vista del usuario) innecesario, @code{save-excursion} es con
 frecuencia usado para punto y marca en la posici@'on esperada por el
 usuario. El uso de @code{save-excursion} es un buen guarda casas.
@@ -4945,7 +4945,7 @@ s@'{@dotless{i}}mbolos son usado en vez de s@'{@dotless{i}}mbolos por
 s@'{@dotless{i}} mismos.
 
 @cindex @samp{cadena vac@'{@dotless{i}}a} definida
-Una cadena vac@'{@dotless{i}}a, @samp{"\"}, una cadena sin caracteres
+Una cadena vac@'{@dotless{i}}a, @samp{"\"}, es una cadena sin caracteres
 dentro, es m@'as peque@~na que cualquier cadena de caracteres.
 
 @code{string-equal} provee el test correpondiente para igualdad. Su
@@ -4987,8 +4987,8 @@ b@'uffer pasado a @code{other-buffer} como un argumento y otro en vez
 de el b@'uffer actual).
 
 @item switch-to-buffer
-Selecciona un b@'uffer para Emacs est@'e activo y lo muestre en la
-ventana actual y as@'{@dotless{i}} los usuarios puedan
+Selecciona un b@'uffer para que Emacs est@'e activo y lo muestre
+en la ventana actual y as@'{@dotless{i}} los usuarios puedan
 mirarlo. Normalmente se empareja a @kbd{C-x b}.
 
 @item set-buffer
@@ -5019,7 +5019,7 @@ contracci@'on est@'e en efecto
 @itemize @bullet
 @item
 Escribe una funci@'on no interactiva que doble el valor de su
-argumento, un n@'umero. Luego hazla funci@'on interactiva.
+argumento, un n@'umero. Luego haz la funci@'on interactiva.
 
 @item
 Escribe una funci@'on que chequee si el valor actual de
@@ -5280,8 +5280,8 @@ La funci@'on es un argumento es la posici@'on deseada.
 @noindent
 (La consola para @code{describe-function} te ofrecer@'a el
 s@'{@dotless{i}}mbolo abajo o precediendo al cursor, as@'{@dotless{i}}
-se puede guardar escribiendo al posiciona el cursor a la derecha o
-despu@'es de la funci@'on y entonces escribiendo @kbd{C-h f @key{RET}}.)
+se puede guardar escribiendo al posicionar el cursor a la derecha o
+despu@'es de la funci@'on y entonces escribir @kbd{C-h f @key{RET}}.)
 
 La definici@'on de funci@'on @code{end-of-buffer} est@'a escrito en el
 mismo modo que la definici@'on @code{beginnig-of-buffer} excepto que
@@ -5397,10 +5397,10 @@ l@'{@dotless{i}}nea de @code{mark-whole-buffer} fu@'e @code{(push-mark
 b@'uffer que tiene el n@'umero m@'as alto. Esto ser@'a el fin del
 b@'uffer (o, si el b@'uffer es encogida, el fin de la porci@'on
 accesible del b@'uffer. @xref{Encogiendo y extendiendo, , Encogiendo y
-extendiendo}, para m@'as acerca encoger.) Despu@'es esta marca ha sido
-asignada, la marca previa, uno asigna un punto, no es se asigna largo,
+extendiendo}, para m@'as acerca de encoger). Despu@'es esta marca ha sido
+asignada, la marca previa, uno asigna un punto, pero no se asigna largo,
 pero Emacs recuerda su posici@'on, solo como todas las otras marcas
-recientes son siempre recordadas. Esto significa que tu puedes, si lo
+recientes son siempre recordadas. Esto significa que se puede, si lo
 deseas, vuelve a esta posici@'on escribiendo @kbd{C-u C-@key{SPC}} dos
 veces.
 
@@ -5430,7 +5430,7 @@ camino camino como est@'a escrito @code{beginning-of-buffer}. La
 expresi@'on mueve el cursor al m@'{@dotless{i}}nimo punto en el
 b@'uffer, que es, al principio del b@'ufferr (o para el principio de
 la porci@'on accesible del b@'uffer). Como un resultado de esto, punto
-est@'a emplazado al principio del b@'uffer y marca est@'a asignada al
+est@'a emplazado al principio del b@'uffer y la marca est@'a asignada al
 fin del b@'uffer. El b@'uffer completo es, m@'as all@'a, la regi@'on.
 
 @node append-to-buffer
@@ -5711,9 +5711,9 @@ La funci@'on @code{save-excursion} guarda las localizaciones de punto y
 la marca, y las restaura a estas posiciones despu@'es de las expresiones
 en el cuerpo de la ejecuci@'on completa
 @code{save-excursion}. Adem@'as, @code{save-excursion} completa
-la ejecuci@'on. Adem@'as, @code{save-excurion} guarda la traza del
+la ejecuci@'on. Adem@'as, @code{save-excursion} guarda la traza del
 b@'uffer original, y lo restaura. Esto es c@'omo @code{save-excursion}
-es usado en @code{append-to-buffer}.
+que se usa en @code{append-to-buffer}.
 
 @need 1500
 @cindex Indentaci@'n para formatear
@@ -5774,8 +5774,8 @@ proceso de rellenar slots de una plantilla:
 En esta funci@'on, el cuerpo de @code{save-excursion} contiene solo
 una expresi@'on, la expresi@'on @code{let*}. Se conoce una funci@'on
 @code{let}. La funci@'on @code{let*} es diferente. Eso tiene un
-@samp{*} en su nombre. Eso permite a Emacs asignar cada variable en su
-varlist en secuencia, uno despu@'es de otro.
+@samp{*} en su nombre. Eso permite a Emacs asignar cada variable de su
+varlist en secuencia, una despu@'es de otra.
 
 Su funcionalidad cr@'{@dotless{i}}tica es que las variable despu@'es
 en la varlist puedan hacer uso de los valores para los que Emacs asigna
@@ -5930,9 +5930,9 @@ trabaja en un b@'uffer diferente.
 
 @item get-buffer-create
 @itemx get-buffer
-Encuentra un buffer nombrado o crea uno si un buffer de este nombre no
-existe. La funci@'on @code{get-buffer} devuelve @code{nil} si el
-nombre del b@'uffer no existe.
+Encuentra un b@'uffer nombrado o crea uno si un b@'uffer de este
+nombre no existe. La funci@'on @code{get-buffer} devuelve @code{nil}
+si el nombre del b@'uffer no existe.
 @end table
 
 @need 1500
@@ -6035,12 +6035,12 @@ el b@'uffer.
 Finalmente, las @'ultimas dos l@'{@dotless{i}}neas contienen la
 expresi@'on @code{save-excursion} con @code{insert-buffer-substring}
 como su cuerpo. La expresi@'on @code{insert-buffer-substring} copia el
-texto desde el b@'uffer en el que est@'as (y no se ha visto el
+texto desde el b@'uffer en el que se est@'a (y no se ha visto el
 ordenador puesta su atenci@'on, as@'{@dotless{i}} no se sabe que este
 b@'uffer es ahora llamado @code{oldbuf}).
 
 De manera incidental, esto es lo que significa por `reemplazo'. Para
-reemplazar texto Emacs borra el texto previo y entonces inserta el
+reemplazar texto Emacs se borra el texto previo y entonces se inserta el
 nuevo texto.
 
 @need 1250
@@ -6153,12 +6153,12 @@ En @code{insert-buffer}, el argumetno para la declaraci@'on
 @cindex Asterisco para b@'uffer de solo lectura
 @findex * @r{para buffer solo lectura}
 
-El asterisco es para la situaci@'on cuando el buffer actual es un
-buffer de solo lectura --- un buffer que no puede ser modificado. Si
-@code{insert-buffer} es llamado cuando el buffer actual es de solo
+El asterisco se utliza en la situaci@'on cuando el b@'uffer actual es un
+b@'uffer de solo lectura --- un b@'uffer que no puede ser modificado. Si
+@code{insert-buffer} es llamado cuando el b@'uffer actual es de solo
 lectura, un mensaje a este efecto est@'a impreso en el @'area echo y
 el terminal puede avisar; no se permite insertar cualquier cosa dentro
-del buffer. El asterisco no necesita ser seguido por una nueva
+del b@'uffer. El asterisco no necesita ser seguido por una nueva
 l@'{@dotless{i}}nea para separarse desde el siguiente argumento.
 
 @node b para interactivo
@@ -6187,10 +6187,10 @@ no. (Eso ser@'a descrito despu@'es).
 
 El cuerpo de la funci@'on @code{insert-buffer} tiene dos partes
 principales: una expresi@'on @code{or} y una expresi@'on
-@code{let}. El prop@'osito de la expresi@'on @code{or} es asegura que
-el argumento @code{buffer} es emparejado a un buffer y no solo el
-nombre de un buffer. El cuerpo de la expresi@'on @code{let} contiene
-el c@'odigo que copia los otros buffer dentro del buffer.
+@code{let}. El prop@'osito de la expresi@'on @code{or} es asegurar que
+el argumento @code{buffer} es emparejado a un b@'uffer y no solo el
+nombre de un b@'uffer. El cuerpo de la expresi@'on @code{let} contiene
+el c@'odigo que copia los otros b@'uffers dentro del b@'uffer.
 
 @need 1250
 En el "outline" (esquema), las dos expresiones se ajustan dentro de la
@@ -6221,9 +6221,9 @@ hecho en una manera que ser@'a familiar.
 @node si y o
 @subsection @code{insert-buffer} con un @code{if} en vez de un @code{or}
 
-El trabajo que debe ser hecho y asegura el valor de @code{b@'uffer} es
-un buffer en s@'{@dotless{i}} mismo y no el nombre de un b@'uffer. Si
-el valor es el nombre, entonces el buffer en s@'{@dotless{i}} debe ser
+El trabajo que debe ser hecho y asegura el valor de @code{buffer} es
+un b@'uffer en s@'{@dotless{i}} mismo y no el nombre de un b@'uffer. Si
+el valor es el nombre, entonces el b@'uffer en s@'{@dotless{i}} debe ser
 obtenido.
 
 Te puedes imaginar a t@'{@dotless{i}} mismo en una conferencia donde
@@ -6265,7 +6265,7 @@ es @w{@code{(not (bufferp buffer))}}; y la then-part es la expresi@'on
 
 En el test, la funci@'on @code{bufferp} devuelve cierto si su
 argumento es un b@'uffer --- pero falso si su argumento es el nombre del
-buffer. (El @'ultimo car@'acter del nombre de la funci@'on
+b@'uffer. (El @'ultimo car@'acter del nombre de la funci@'on
 @code{bufferp} es el car@'acter @samp{p}; como se vi@'o antes, tal uso de
 @samp{p} es una convenci@'on que indica que la funci@'on es un
 predicado, que es un t@'ermino que significa que la funci@'on
@@ -6282,7 +6282,7 @@ buffer)}, as@'{@dotless{i}} el true-or-false-test se ve como esto:
 @end smallexample
 
 @noindent
-@code{no} es una fuci@'on que devuelve cierto si su argumento es falso
+@code{no} es una funci@'on que devuelve cierto si su argumento es falso
 y falso si su argumento es verdadero. As@'{@dotless{i}} si
 @code{(bufferp buffer)} devuelve cierto, la expresi@'on @code{no}
 devuelve falso y vice-versa: que es ``no cierto'' es falso que es ``no
@@ -6313,7 +6313,7 @@ El prop@'osito de la expresi@'on @code{or} en la funci@'on
 asociado a un b@'uffer y no solo al nombre de un b@'uffer. La secci@'on
 previa muestra como el trabajo podr@'{@dotless{i}}a haber sido hecho
 usando una expresi@'on @code{if}. Sin embargo, la funci@'on
-@code{insert-buffer} actualmente usa @code{or}. Para comprender este,
+@code{insert-buffer} actualmente usa @code{or}. Para comprender esto,
 es necesario comprender como @code{or} trabaja.
 
 @findex or
@@ -6337,12 +6337,12 @@ La expresi@'on @code{or} se ve como esto:
 @noindent
 El primer argumento a @code{or} es la expresi@'on @code{(bufferp
 buffer)}. Esta expresi@'on devuelve cierto (un valor no-@code{nil}) si
-el buffer es actualmente un buffer, y no solo el nombre de un
-buffer. En la expresi@'on @code{or}, si este es el caso, la
+el b@'uffer es actualmente un b@'uffer, y no solo el nombre de un
+b@'uffer. En la expresi@'on @code{or}, si este es el caso, la
 expresi@'on @code{or} devuelve esto el valor cierto y no eval@'ua la
 siguiente expresi@'on --- y esto es bueno para nosotros, desde que
 nosotros no queremos hacer cualquier cosa al valor de @code{buffer} si
-eso es realmente un buffer.
+eso es realmente un b@'uffer.
 
 Por otro lado, si el valor de @code{(bufferp buffer)} es @code{nil},
 que ser@'a si el valor de @code{buffer} es el nombre de un buffer, el
@@ -6405,7 +6405,7 @@ est@'a asignado al valor del cuarto.
 Despu@'es el cuerpo del @code{save-excursion} propio es evaluado, el
 @code{save-excursion} restaura el b@'uffer original, pero @code{start}
 y @code{end} permanece asignado a los valores del principio y fin del
-b@'uffer de el que el texto ser@'a copiado.
+b@'uffer en el que el texto ser@'a copiado.
 
 @need 1250
 La expresi@'on por fuera @code{save-excursion} se ve como:
@@ -6463,8 +6463,8 @@ La expresi@'on @code{let} se parece a esto:
 Como la funci@'on @code{append-to-buffer}, la funci@'on
 @code{insert-buffer} usa @code{let}, @code{save-excursion} y
 @code{set-buffer}. Adem@'as, la funci@'on ilustra un camino para usar
-@code{o}. Toda estas funciones est@'an construyendo bloque que
-encontrar@'an y usar@'an una y otra vez.
+@code{o}. Toda estas funciones est@'an construyendo el bloque que
+se encontrar@'an y usar@'an una y otra vez.
 
 @node Nuevo insert-buffer
 @subsection Nuevo cuerpo para @code{insert-buffer}
@@ -6490,11 +6490,11 @@ Consiste de dos expresiones
 
 @noindent
 excepto, y esto es lo que los novicios confunden, un trabajo muy
-importantes es hecho dentro de la expresi@'on @code{push-mark}.
+importante es hecho dentro de la expresi@'on @code{push-mark}.
 
-La funci@'on @code{get-buffer} devuelve un buffer con el nombre
-proporcionado. Tu tomar@'as nota de que la funci@'on @emph{no} es
-llamado @code{get-buffer-create}; eso no crea un b@'uffer si uno no
+La funci@'on @code{get-buffer} devuelve un b@'uffer con el nombre
+proporcionado. Se tomar@'a nota de que la funci@'on @emph{no} se
+llama @code{get-buffer-create}; eso no crea un b@'uffer si uno no
 existe ya. El b@'uffer devuelto por @code{get-buffer}, un b@'uffer
 existente, es pasado a @code{insert-buffer-substring}, que inserta el
 total del b@'uffer (desde que no se especific@'on ninguna cosa
@@ -6523,13 +6523,13 @@ comando es invocado con un n@'umero entre uno y diez, la funci@'on
 considera que n@'umero ser@'a una fracci@'on del tama@~no del
 b@'uffer, medido en decenas, y Emacs mueve el cursor en esta
 fracci@'on del camino desde el principio del b@'uffer. De este modo,
-se puede bien llamar a esta funci@'on con la tecla comando @kbd{M-<},
+se puede o bien llamar a esta funci@'on con la tecla comando @kbd{M-<},
 que mover@'a el cursor al principio del b@'uffer, o con una tecla tal
 como @kbd{C-u 7 M-<} que mover@'a el cursor a un punto 70% del camino
-a trav@'es del b@'uffer. Si un n@'umero m@'as grande que diez es usado
-para el argumento se mueve al fin del b@'uffer.
+a trav@'es del b@'uffer. Si un n@'umero m@'as grande de diez es usado
+para el argumento que se mueve al final del b@'uffer.
 
-La funci@'on @code{beginning-of-buffer} puede ser llamado con o sin
+La funci@'on @code{beginning-of-buffer} puede ser llamada con o sin
 argumentos. El uso del argumento es opcional.
 
 @menu
@@ -6684,7 +6684,7 @@ lejos como antes.
 Hay dos casos: si el b@'uffer es largo, o si no.
 
 @node El caso del buffer largo
-@unnumberedsubsubsec Qu@'e ocurre en b@'uffer largo
+@unnumberedsubsubsec Qu@'e ocurre en un b@'uffer largo
 
 En @code{beginning-of-buffer}, la expresi@'on propia @code{if} chequea
 si el tama@~no del b@'uffer es mayor que 10000 caracteres. Para hacer
@@ -7053,24 +7053,24 @@ bastante desesperadas si no conocen que ellas pueden volver al resto
 de un b@'uffer para visibilizarlo con el comando @code{widen}. (El
 emparejamiento de la tecla para @code{widen} es @kbd{C-x n w}.)
 
-Encoger es solo tan @'util al int@'erprete Lisp como para un
-humano. Con frecuencia, una funci@'on Emacs Lisp est@'a dise@~nada
-para trabajar en solo parte de un b@'uffer; o de manera conversa, una
-funci@'on Emacs Lisp necesita trabajar en todo un b@'uffer que ha sido
+Encoger es tan @'util al int@'erprete Lisp como para las personas. Con
+frecuencia, una funci@'on Emacs Lisp est@'a dise@~nada para trabajar
+en solo parte de un b@'uffer; o de manera conversa, una funci@'on
+Emacs Lisp necesita trabajar en todo un b@'uffer que ha sido
 encogido. La funci@'on @code{what-line}, por ejemplo, borra el
 encogimiento desde un b@'uffer, si eso tiene cualquier encogimiento y
-cuando eso ha finalizado su trabajo, restaura el encogimiento para el
-que fuera. Por otro lado, la funci@'on @code{count-lines}, que es
+cuando eso ha finalizado su trabajo, restaura el encogimiento
+que haya. Por otro lado, la funci@'on @code{count-lines}, que es
 llamada por @code{what-line}, usa el encogimiento para restringirse a
 s@'{@dotless{i}} misma solo a la porci@'on del b@'uffer en el que
-est@'a interesada y entonces restaura la situaci@'on previa.
+se est@'a interesado y entonces restaura la situaci@'on previa.
 
 @node save-restriction
 @section La forma especial @code{save-restriction}
 @findex save-restriction
 
 En Emacs Lisp, se puede usar la forma especial @code{save-restriction}
-para guardar la traza de siempre que el encogimiento est@'e en
+para guardar la traza siempre que el encogimiento est@'e en
 efecto. Cuando el int@'erprete Lisp se encuentra con
 @code{save-restriction}, eso ejecuta el c@'odigo en el cuerpo de la
 expresi@'on @code{save-restriction}, y entonces deshace cualquier
@@ -7211,12 +7211,12 @@ la funci@'on:
 @end smallexample
 
 (En versiones recientes de GNU Emacs, la funci@'on @code{what-line} se
-ha expandido para contarte el n@'umero de l@'{@dotless{i}}neas en un
-b@'uffer encogido tan bien como tu n@'umero de l@'{@dotless{i}}nea en
+ha expandido para contar el n@'umero de l@'{@dotless{i}}neas en un
+b@'uffer encogido tan bien como el n@'umero de l@'{@dotless{i}}neas en
 un b@'uffer ampliado. La versi@'on reciente es m@'as compleja que la
-versi@'on que se muestra. Si se siente venturoso, podr@'{@dotless{i}}a
-querer mirarla despu@'es de figurarse como esta versi@'on
-funciona. Probablemente se necesitar@'a usar @kbd{C-h f}
+versi@'on que se muestra. Alguien sinti@'endose venturoso,
+podr@'{@dotless{i}}a querer mirarla despu@'es de entender como esta
+versi@'on funciona. Probablemente se necesitar@'a usar @kbd{C-h f}
 (@code{describe-function}). La versi@'on nueva usa un condicional para
 determinar si el b@'uffer se ha encogido.
 
@@ -7237,13 +7237,13 @@ sido evaluada.
 
 La forma especial @code{save-restriction} es seguida por
 @code{widen}. Esta funci@'on deshace cualquier distancia del actual
-buffer que puede haber tenido cuando @code{what-line} se llame. (La
+b@'uffer que puede haber tenido cuando @code{what-line} se llame. (La
 distancia que hab@'{@dotless{i}}a es la distancia que
 @code{save-restriction} recuerda.) Esta ampliaci@'on se hace posible
 para la l@'{@dotless{i}}nea contando comandos a contar desde el
-principio del b@'uffer. De otro modo, habr@'{@dotless{i}}a sido
+principio del b@'uffer. De otro modo, se habr@'{@dotless{i}}a
 limitado para contar con la regi@'on accesible. Cualquier distancia
-original es restaurada solo antes de la compleci@'on de la funci@'on
+original se restaura solo antes de la compleci@'on de la funci@'on
 por la forma especial @code{save-restriction}.
 
 La llamada a @code{widen} es seguida por @code{save-excursion}, que
@@ -7314,10 +7314,10 @@ and the greater of them is not at the start of a line."
 @end ignore
 
 @noindent
-Lo que esto hace es contar las l@'{@dotless{i}}neas desde la primera
-posici@'on del b@'uffer indicada por el @code{1}, subir al
-@code{(point)}, y entonces a@~nadir uno a este n@'umero. (La funci@'on
-@code{1+} a@~nade uno a su argumento.) Nosotros a@~andir a eso porque
+Lo que esto hace es contar las l@'{@dotless{i}}neas entre la primera
+posici@'on del b@'uffer indicada por el @code{1}, y el
+@code{(point)}, y entonces se a@~nade uno a este n@'umero. (La funci@'on
+@code{1+} a@~nade uno a su argumento.) Se a@~nade a eso porque
 la l@'{@dotless{i}}nea 2 tiene solo una l@'{@dotless{i}}nea antes, y
 @code{count-lines} cuenta solo las l@'{@dotless{i}}neas @emph{antes}
 de la l@'{@dotless{i}}nea actual.
@@ -7331,7 +7331,7 @@ restaura punto y marca a sus posiciones originales; y
 @section Ejercicio de encoger
 
 Escribe una funci@'on que mostrar@'a los primeros 60 caracteres del
-buffer actual, incluso si se ha encogido el buffer a su mitad
+b@'uffer actual, incluso si se ha encogido el b@'uffer a su mitad
 as@'{@dotless{i}} que la primera l@'{@dotless{i}}nea es
 inaccesible. Restaura punto, marca y encogimiento. Para este
 ejercicio, se necesita usa un popurri entero de funciones, incluyendo
@@ -7340,12 +7340,12 @@ ejercicio, se necesita usa un popurri entero de funciones, incluyendo
 
 @cindex Propiedades, menci@'on de @code{buffer-substring-no-properties}
 (@code{buffer-substring} es una funci@'on previamente no mencionada
-que tendr@'as que investigar por t@'{@dotless{i}} mismo; o quiz@'as
-tendr@'as que usar @code{buffer-substring-no-properties} o
-@code{filter-buffer-substring} @dots{}, todav@'{@dotless{i}}a otras
+que tendr@'a que investigarla cada cual por uno mismo; o quiz@'as
+tendr@'a que usarse @code{buffer-substring-no-properties} o
+@code{filter-buffer-substring} @dots{}, o todav@'{@dotless{i}}a otras
 funciones. Las propiedades de texto son una funcionalidad que de otro
-modo no ser@'{@dotless{i}}an discutidas
-aqu@'{@dotless{i}}. @xref{Propiedades de Texto, , Propiedades de
+modo no ser@'{@dotless{i}}an discutidas aqu@'{@dotless{i}}.
+@xref{Propiedades de Texto, , Propiedades de
 Texto, elisp, El Manual de Referencia de Emacs Lisp}.)
 
 Adem@'as, @questiondown{}realmente se necesita @code{goto-char} o
@@ -7359,11 +7359,13 @@ Adem@'as, @questiondown{}realmente se necesita @code{goto-char} o
 
 En Lisp, @code{car}, @code{cdr}, y @code{cons} son funciones
 fundamentales. La funci@'on @code{cons} es usada para construir
-listas, y las funciones @code{car} y @code{cdr} son usadas tomarlas aparte.
+listas, y las funciones @code{car} y @code{cdr} son usadas para
+tomarlas aparte.
 
-En el paseo a trav@'es de la funci@'on @code{copy-region-as-kill}, se
-ver@'a @code{cons} tan bien como dos variantes de @code{cdr}, llamadas
-@code{setcdr} y @code{nthcdr}. (@xref{copy-region-as-kill}.)
+En el paseo guiado a trav@'es de la funci@'on
+@code{copy-region-as-kill}, se ver@'a @code{cons} tan bien como dos
+variantes de @code{cdr}, llamadas @code{setcdr} y
+@code{nthcdr}. (@xref{copy-region-as-kill}.)
 
 @menu
 * Nombres extra@~nos::       Un lado hist@'orico: @questiondown{}por qu@'e 
@@ -7385,9 +7387,9 @@ ver@'a @code{cons} tan bien como dos variantes de @code{cdr}, llamadas
 El nombre de la funci@'on @code{cons} es razonable: es una
 abreviaci@'on de la palabra `constructo'. Los or@'{@dotless{i}}genes
 de los nombres @code{car} y @code{cdr}, por otro lado, son
-esot@'ericos: @code{car} es un acr@'onimo desde la frase `Contenidos
-de la parte de la Direcci@'on del Registro'; y @code{cdr} (pronunciado
-`could-er') es un acr@'onimo desde la frase `Contenidos del Decremento
+esot@'ericos: @code{car} es un acr@'onimo de la frase `Contenidos de
+la parte de la Direcci@'on del Registro'; y @code{cdr} (pronunciado
+`could-er') es un acr@'onimo de la frase `Contenidos del Decremento
 del Registro'. Estas frases se refieren a piezas
 espec@'{@dotless{i}}ficas de hardware en el ordenador en el que el
 Lisp original fu@'e desarrollado. El resto de frases han sido
@@ -7401,48 +7403,48 @@ Lisp, que usaremos en esta introducci@'on.
 @node car y cdr
 @section @code{car} y @code{cdr}
 
-El @sc{car} de una lista es, bastatante simple, el primer
+El @sc{car} de una lista es, bastante simple, el primer
 @'{@dotless{i}}tem en la lista. De este modo, el @sc{car} de la lista
-@code{(roer violet daisy buttercup)} es @code{rose}.
+@code{(rosa violeta margarita mantequilla)} es @code{rosa}.
 
 @need 1200
-Si est@'as leyendo en Info y en GNU Emacs, se puede ver esto evaluando
+Si est@'a leyendo en Info y en GNU Emacs, se puede ver esto evaluando
 lo siguiente:
 
 @smallexample
-(car '(rose violet daisy buttercup))
+(car '(rosa violeta margarita mantequilla))
 @end smallexample
 
 @noindent
-Despu@'es de evaluar la expresi@'on, @code{rose} aparecer@'a en el
+Despu@'es de evaluar la expresi@'on, @code{rosa} aparecer@'a en el
 @'area echo.
 
 Claramente, un nombre m@'as razonable para la funci@'on @code{car}
 ser@'{@dotless{i}}a @code{first} y esto es con frecuencia lo que se
 sugiere.
 
-@code{car} no elimina el primer @'{@dotless{i}}tem desde la lista; eso
-solo informa que eso es. Despu@'es @code{car} ha sido aplicado a una
-lista, la lista es todav@'{@dotless{i}}a la misma que era. En la
+@code{car} no elimina el primer @'{@dotless{i}}tem de la lista; solo
+se informa de lo que hay. Despu@'es de que @code{car} se haya aplicado a
+una lista, la lista es todav@'{@dotless{i}}a la misma que era. En la
 jerga, @code{car} es `no-destructiva'. Esta funcionalidad deja de ser
 importante.
 
 El @sc{cdr} de una lista es el resto de la lista, que es, la funci@'on
 @code{cdr} que devuelve la parte de la lista que sigue el primer
-@'{@dotless{i}}tem. De este modo, mientra el @sc{car} de la lista
-@code{'(rose violet daisy buttercup)} es @code{rose}, el resto
+@'{@dotless{i}}tem. De este modo, mientras el @sc{car} de la lista
+@code{'(rosa violeta margarita mantequilla)} es @code{rosa}, el resto
 de la lista, el valor devuelto por la funci@'on @code{cdr}, es
-@code{(violet daisy buttercup)}.
+@code{(violeta margarita mantequilla)}.
 
 @need 800
 Se puede ver esto evaluando lo siguiente del modo usual:
 
 @smallexample
-(cdr '(rose violet daisy buttercup))
+(cdr '(rosa violeta margarita mantequilla))
 @end smallexample
 
 @noindent
-Cuando se eval@'ua esto, @code{(violet daisy buttercup)}
+Cuando se eval@'ua esto, @code{(violeta margarita mantequilla)}
 aparecer@'a en el @'area echo.
 
 Al igual que @code{car}, @code{cdr} no elimina los elementos desde la
@@ -7450,7 +7452,7 @@ lista --- solo devuelve un informe de lo que el segundo y subsiguientes
 elementos son.
 
 En el ejemplo, la lista de flores se cita. Si no, el int@'erprete Lisp
-intentar@'{@dotless{i}}a evaluar la lista llamando a @code{rose} como
+intentar@'{@dotless{i}}a evaluar la lista llamando a @code{rosa} como
 una funci@'on. En este ejemplo, no queremos hacer esto.
 
 Claramente, un nombre m@'as razonable para @code{cdr}
@@ -7459,26 +7461,26 @@ ser@'{@dotless{i}}a @code{rest}.
 (Hay una lecci@'on aqu@'{@dotless{i}}: cuando se nombran nuevas
 funciones, considere muy cuidadosamente lo que se est@'a haciendo, ya
 que puede estar pegadas con los nombres largos que se esperan. La
-raz@'on es que este doucumento perpet@'ua estos nombres que el
+raz@'on es que este documento perpet@'ua estos nombres que el
 c@'odigo fuente de Emacs Lisp usa, y si no los usaba, se
 estar@'{@dotless{i}}a un duro rato leyendo el c@'odigo; pero, por
-favor, intente evitar usar estos t@'erminos por s@'{@dotless{i}}
-mismo. Las personas quienes vienen despu@'es se lo agradecer@'an.
+favor, se debe intentar evitar usar estos t@'erminos por uno
+mismo. Las personas que vengan despu@'es se lo agradecer@'an.
 
 Cuando @code{car} y @code{cdr} se aplica a una lista hecha de
-s@'{@dotless{i}}mbolos, tal como la lista @code{(pine fir oak maple)},
-el elemento de la lista devuelta por la funci@'on @code{car} es el
-s@'{@dotless{i}}mbolo @code{pine} sin cualquier par@'entesis
-alrededor. @code{pine} es el primer elemento en la lista. Sin embargo,
+s@'{@dotless{i}}mbolos, tal como la lista @code{(pino roble abeto
+arce)}, el elemento de la lista devuelta por la funci@'on @code{car}
+es el s@'{@dotless{i}}mbolo @code{pino} sin cualquier par@'entesis
+alrededor. @code{pino} es el primer elemento en la lista. Sin embargo,
 el @sc{cdr} de la lista es una lista por s@'{@dotless{i}} misma,
-@code{(fir oak maple)}, como se puede ver evaluando las siguientes
+@code{(roble abeto arce)}, como se puede ver evaluando las siguientes
 expresiones en el modo usual:
 
 @smallexample
 @group
-(car '(pine fir oak maple))
+(car '(pino roble abeto arce))
 
-(cdr '(pine fir oak maple))
+(cdr '(pino roble abeto arce))
 @end group
 @end smallexample
 
@@ -7498,9 +7500,9 @@ herb@'{@dotless{i}}voros y una lista de mam@'{@dotless{i}}feros:
 
 @noindent
 En este ejemplo, el primer elemento de @sc{car} de la lista es la
-lista de carn@'{@dotless{i}}voros, @code{(lion tiger cheetah)}, y el
-resto de la lista es @code{((gazelle antelope zebra)
-(whale dolphin seal))}.
+lista de carn@'{@dotless{i}}voros, @code{(leon tigre leopardo)}, y el
+resto de la lista es @code{((gacela antilope cebra)
+(ballena delfin foca))}.
 
 @smallexample
 @group
@@ -7535,7 +7537,7 @@ Manual de Referencia de GNU Emacs Lisp}.)
 La funci@'on @code{cons} construye listas; eso es lo inverso de
 @code{car} y @code{cdr}. Por ejemplo, @code{cons} puede usarse para
 crear una lista de cuatro elementos desde los tres elementos de la
-lista, @code{(fir oak maple)}:
+lista, @code{(abeto roble arce)}:
 
 @smallexample
 (cons 'pino '(abeto roble arce))
@@ -7579,25 +7581,25 @@ elisp, El Manual de Referencia de GNU Emacs Lisp}.} No se puede
 empezar desde absolutamente nada. Si se est@'a construyendo una lista,
 se necesita proveer al menos una lista vac@'{@dotless{i}}a al
 principio. Aqu@'{@dotless{i}} hay una serie de expresiones @code{cons}
-que construyen una lista de flores. Si est@'as leyendo esto en Info en
+que construyen una lista de flores. Si est@'a leyendo esto en Info en
 GNU Emacs, se puede evaluar cada una de las expresiones en el camino
 usual; el valor es impreso en este texto despu@'es de @samp{@result{}},
-que puede leer como `evaluas para'.
+que puede leer como `eval@'uas para'.
 
 @smallexample
 @group
-(cons 'buttercup ())
-     @result{} (buttercup)
+(cons 'mantequilla ())
+     @result{} (mantequilla)
 @end group
 
 @group
-(cons 'daisy '(buttercup))
-     @result{} (daisy buttercup)
+(cons 'margarita '(mantequilla))
+     @result{} (margarita mantequilla)
 @end group
 
 @group
-(cons 'violet '(daisy buttercup))
-     @result{} (violet daisy buttercup)
+(cons 'violeta '(margarita mantequilla))
+     @result{} (violeta margarita mantequilla)
 @end group
 
 @group
@@ -7616,11 +7618,11 @@ vac@'{@dotless{i}}a no cuenta como un elemento de una lista porque
 no hay nada en una lista vac@'{@dotless{i}}a. Generalmente hablando,
 una lista vac@'{@dotless{i}}a es invisible.
 
-El segundo ejemplo, @code{(cons 'daisy '(buttercup))} construye
-una nueva lista de dos elemento poniendo @code{daisy} en frente de
-@code{buttercup}; y el tercer ejemplo construye una lista de tres
-elementos poniendo @code{violet} en frente de @code{daisy} y
-@code{buttercup}.
+El segundo ejemplo, @code{(cons 'margarita '(mantequilla))} construye
+una nueva lista de dos elemento poniendo @code{margarita} en frente de
+@code{mantequilla}; y el tercer ejemplo construye una lista de tres
+elementos poniendo @code{violeta} en frente de @code{margarita} y
+@code{mantequilla}.
 
 @node length
 @subsection Encuentra el tama@~no de una lista: @code{length}
@@ -7631,17 +7633,17 @@ funci@'on Lisp @code{length}, como en los siguientes ejemplos:
 
 @smallexample
 @group
-(length '(buttercup))
+(length '(mantequilla))
      @result{} 1
 @end group
 
 @group
-(length '(daisy buttercup))
+(length '(margarita mantequilla))
      @result{} 2
 @end group
 
 @group
-(length (cons 'violet '(daisy buttercup)))
+(length (cons 'violeta '(margarita mantequilla)))
      @result{} 3
 @end group
 @end smallexample
@@ -7713,10 +7715,10 @@ In an earlier version:
 La funci@'on @code{nthcdr} est@'a asociada con la funci@'on
 @code{cdr}. Que lo que hace es tomar la @sc{cdr} de una lista repetidamente.
 
-Si se toma el @sc{cdr} de la lista @code{(pine fir oak maple)},
-ser@'a devuelta la lista @code{(fir oak maple)}. Si se repite esto en
-lo que se devolvi@'o, se devolver@'a lista lista @code{(oak
-maple)}. (De acuerdo, se repite @sc{cdr} en la lista original solo se
+Si se toma el @sc{cdr} de la lista @code{(pino roble abeto arce)},
+ser@'a devuelta la lista @code{(roble abeto arce)}. Si se repite esto en
+lo que se devolvi@'o, se devolver@'a lista lista @code{(abeto
+arce)}. (De acuerdo, se repite @sc{cdr} en la lista original solo se
 dar@'a @sc{cdr} desde la funci@'on que no cambia la lista. Se necesita
 evaluar el @sc{cdr} del @sc{cdr} y as@'{@dotless{i}}.) Si se conti@'ua
 esto, finalmente ser@'a devuelta una lista vac@'{@dotless{i}}a, que en
@@ -7725,26 +7727,26 @@ este caso, en vez de ser mostrada como @code{()} es mostrado como
 
 @need 1200
 Para revisar, aqu@'{@dotless{i}} hay una serie de @sc{cdr}s repetidos,
-el siguiente @samp{@result{}} muestra que se devuelve.
+el siguiente @samp{@result{}} muestra lo que se devuelve.
 
 @smallexample
 @group
-(cdr '(pine fir oak maple))
-     @result{}(fir oak maple)
+(cdr '(pino roble abeto arce))
+     @result{}(roble abeto arce)
 @end group
 
 @group
-(cdr '(fir oak maple))
-     @result{} (oak maple)
+(cdr '(roble abeto arce))
+     @result{} (abeto arce)
 @end group
 
 @group
-(cdr '(oak maple))
-     @result{}(maple)
+(cdr '(abeto arce))
+     @result{}(arce)
 @end group
 
 @group
-(cdr '(maple))
+(cdr '(arce))
      @result{} nil
 @end group
 
@@ -7760,13 +7762,13 @@ el siguiente @samp{@result{}} muestra que se devuelve.
 @end smallexample
 
 @need 1200
-Tambi@'es se pueden hacer varios @sc{cdr}s sin imprimir los valores
+Tambi@'en se pueden hacer varios @sc{cdr}s sin imprimir los valores
 as@'{@dotless{i}}:
 
 @smallexample
 @group
-(cdr (cdr '(pine fir oak maple)))
-     @result{} (oak maple)
+(cdr (cdr '(pino roble abeto arce)))
+     @result{} (abeto arce)
 @end group
 @end smallexample
 
@@ -7788,8 +7790,8 @@ exactamente los mismos dos @code{cdr} en la lista:
 
 @smallexample
 @group
-(nthcdr 2 '(pine fir oak maple))
-     @result{} (oak maple)
+(nthcdr 2 '(pino roble abeto arce))
+     @result{} (abeto arce)
 @end group
 @end smallexample
 
@@ -7861,7 +7863,7 @@ puede ser muy conveniente.
 N@'otese que los elementos son numerados desde cero, no desde uno. Es
 decir, el primer elemento de una lista, su @sc{car} es el elemento
 cero. Esto se llama contar en `base cero' y con frecuencia las
-personas tienes la costumbre del que el primer elemento en una lista
+personas tienen la costumbre del que el primer elemento en una lista
 sea el n@'umero uno, eso es `basado en uno'.
 
 @need 1250
@@ -7903,16 +7905,15 @@ variable a la lista usando la funci@'on
 @end smallexample
 
 @noindent
-Si est@'as leyendo esto en Info dentro de GNU Emacs, se puede evaluar
+Si est@'a leyendo esto en Info dentro de GNU Emacs, se puede evaluar
 esta expresi@'on del modo usual, posicionando el cursor despu@'es de
-la expresi@'on y escribiendo @kbd{C-x C-e}. (Esto haciendo esto tan bien
-aqu@'{@dotless{i}} como yo escribo esto. Esto es una de las ventajas
-de tener el int@'erprete construido dentro del entorno de
+la expresi@'on y escribiendo @kbd{C-x C-e}. Esto es una de las
+ventajas de tener el int@'erprete construido dentro del entorno de
 computaci@'on. Incidentalmente, cuando no hay nada en la
 l@'{@dotless{i}}nea despu@'es del par@'entesis final, tal como un
 comentario, el punto puede estar en la siguiente
 l@'{@dotless{i}}nea. De este modo, si tu cursor est@'a en la primera
-columna de la siguiente l@'{@dotless{i}}nea, no necesitas moverlo. En
+columna de la siguiente l@'{@dotless{i}}nea, no se necesita mover. En
 realidad, Emacs permite cualquier cantidad de espacio en blanco
 despu@'es del par@'entesis final.)
 
@@ -7922,18 +7923,18 @@ asociada a la lista @code{(antelope giraffer lion tiger)}:
 
 @smallexample
 @group
-animals
-     @result{} (antelope giraffe lion tiger)
+animales
+     @result{} (antilope jirafa leon tigre)
 @end group
 @end smallexample
 
 @noindent
-Pon otro camino, la variable @code{animales} apunta a la lista
+Por otro lado, la variable @code{animales} apunta a la lista
 @code{(antilope jirafa leon tigre)}.
 
 Lo siguiente, es evaluar la funci@'on @code{setcar} mientras le pasa
 dos argumentos, la variable @code{animales} y el s@'{@dotless{i}}mbolo
-citado @code{hipopotamo}; esto es hecho escribiendo la lista de tres
+citado @code{hipopotamo}; esto se hace escribiendo la lista de tres
 elementos @code{(setcar animales 'hipopotamo)} y entonces evaluando
 en el modo usual:
 
@@ -7980,18 +7981,18 @@ Para ver c@'omo esto funciona, asigna el valor de la variable a una
 lista de animales domesticados evaluando la siguiente expresi@'on:
 
 @smallexample
-(setq domesticated-animals '(horse cow sheep goat))
+(setq animales-domesticos '(caballo vaca oveja cabra))
 @end smallexample
 
 @need 1200
 @noindent
-Si ahora se eval@'ua la lista, ser@'a devuelta la lista @code{(horse
-cow sheep goat)}:
+Si ahora se eval@'ua la lista, lo que se devuelve es @code{(caballo
+vaca oveja cabra)}:
 
 @smallexample
 @group
-domesticated-animals
-     @result{} (horse cow sheep goat)
+animales-domesticos
+     @result{} (caballo vaca oveja cabra)
 @end group
 @end smallexample
 
@@ -8001,7 +8002,7 @@ variable que tiene una lista como su valor, y la lista para la que el
 @sc{cdr} de la primera lista sea asignada;
 
 @smallexample
-(setcdr domesticated-animals '(cat dog))
+(setcdr animales-domesticos '(gato perro))
 @end smallexample
 
 @noindent
@@ -8012,15 +8013,15 @@ se puede ver evaluando la variable @code{domesticated-animals}:
 
 @smallexample
 @group
-domesticated-animals
-     @result{} (horse cat dog)
+animales-domesticos
+     @result{} (caballo gato perro)
 @end group
 @end smallexample
 
 @noindent
-En realidad, la lista es cambiada desde @code{(horse cow sheep goat)}
-a @code{(horse cat dog)}. El @sc{cdr} de la lista es cambiada desde
-@code{(cow sheep goat)} a @code{(cat dog)}.
+En realidad, la lista es cambiada desde @code{(caballo vaca oveja cabra)}
+a @code{(caballo gato perro)}. El @sc{cdr} de la lista es cambiada desde
+@code{(vaca oveja cabra)} a @code{(gato perro)}.
 
 @node Ejercicio cons
 @section Ejercicio
@@ -9943,8 +9944,8 @@ forma especial provee una ruta dentro de los comando de
 Personalizaci@'on. (@xref{defcustom, , Especificando Variables usando
 @code{defcustom}}.)  
 
-Cuando tu especificaste una variable usando la forma especial
-@code{defvar}, tu podr@'{@dotless{i}}as distinguir una variable que un
+Cuando se especifica una variable usando la forma especial
+@code{defvar}, se podr@'{@dotless{i}}a distinguir una variable que un
 usuario podr@'{@dotless{i}}a querer cambiar desde otros escribiendo,
 @samp{*}, en la primera columna de su cadena de documentaci@'on. Por
 ejemplo:
@@ -12060,7 +12061,7 @@ recursivamente. Aqu@'{@dotless{i}} est@'a el c@'odigo, incluyendo una
 expresi@'on para asignar el valor de la variable @code{animales} a una
 lista.
 
-Si est@'as leyendo esto en el Info de Emacs, se puede evaluar esta
+Si est@'a leyendo esto en el Info de Emacs, se puede evaluar esta
 expresi@'on directamente en Info. De otro modo, se debe copiar el
 ejemplo al b@'uffer @file{*scratch*} y eval@'ua cada expresi@'on
 aqu@'{@dotless{i}}. Usa @kbd{C-u C-x C-e} para evaluar la expresi@'on
@@ -14176,7 +14177,7 @@ b@'usqueda de la expresi@'on regular para @code{sp-parstart}.
 La definici@'on completa para la funci@'on @code{forward-paragraph} no
 solo incluye c@'odigo para avanzar, tambi@'en c@'odigo para retroceder.
 
-Si est@'as leyendo esto dentro de GNU Emacs y quieres ver la funci@'on
+Si est@'a leyendo esto dentro de GNU Emacs y quieres ver la funci@'on
 completa, se puede escribir @kbd{C-h f} (@code{describe-function}) y
 el nombre de la funci@'on. Esto da la documentaci@'on de funci@'on
 y el nombre de la librer@'{@dotless{i}}a conteniendo las fuentes de la
@@ -14205,7 +14206,7 @@ tabla @file{TAGS}, dado el nombre de un fichero @file{TAGS} tal como
 te cuento la localizaci@'on que provee tanto mi C y mis fuentes de
 Emacs Lisp.)
 
-Puedes tambi@'en crear tu propio fichero @file{TAGS} para los directorios
+Se puede tambi@'en crear tu propio fichero @file{TAGS} para los directorios
 que faltan.
 
 Con frecuencia se necesita construir e instalar etiquetas de tablas
@@ -14704,7 +14705,7 @@ parece a esto:
 B@'usqueda fallida: "\\w+\\W*"
 @end smallexample
 
-Si est@'as leyendo esto en Info en GNU Emacs, se puede testear para
+Si est@'a leyendo esto en Info en GNU Emacs, se puede testear para
 estos errores por s@'{@dotless{i}} mismo.
 
 Primero, eval@'ua la funci@'on en la manera usual para instalarlo.
@@ -19546,7 +19547,7 @@ M-x cancel-debug-on-entry RET triangle-bugged RET
 @end smallexample
 
 @noindent
-(Si est@'as leyendo esto en Info, cancela @code{debug-on-entry} ahora.)
+(Si est@'a leyendo esto en Info, cancela @code{debug-on-entry} ahora.)
 
 @node debug-on-quit
 @section @code{debug-on-quit} y @code{(debug)}
