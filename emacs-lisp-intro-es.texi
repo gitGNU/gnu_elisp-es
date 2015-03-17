@@ -8107,7 +8107,7 @@ aparecer@'a en el @'area echo:
 
 Con las funciones @code{car} y @code{nthcdr}, se puede recuperar
 siempre la pieza de texto que se quiere. Por ejemplo, en el siguiente
-c@'odigo, @code{nthcdr 1 @dots{}} se devuelve la lista con el primer
+c@'odigo, @code{nthcdr 1 @dots{}} devuelve la lista con el primer
 @'{@dotless{i}}tem eliminado; y el @code{car} devuelve el primer
 elemento de este resto --- el segundo elemento de la lista
 original:
@@ -8124,13 +8124,13 @@ original:
 Las funciones actuales en Emacs son m@'as complejas que esto, de
 acuerdo. El c@'odigo para cortar y recuperar texto tiene que ser
 escrito de modo que Emacs pueda ver qu@'e elemento en la lista se
-quiere --- el primero, segundo, tercer o cualquier otro. Adem@'as,
+quiere --- el primer, segundo, tercer o cualquier otro. Adem@'as,
 cuando tiene el fin de la lista, Emacs dar@'{@dotless{i}}a el primer
 elemento de la lista, en lugar de nada.
 
 La lista que maneja las piezas de texto se llama @dfn{kill ring}
 (anillo de la muerte). Este cap@'{@dotless{i}}tulo lidera una
-descripci@'on del anillo de la muerte y como eso es usado por la
+descripci@'on del anillo de la muerte y como eso se usa por la
 primera traza de c@'omo la funci@'on @code{zap-to-char} funciona. Esta
 funci@'on usa (o `llama') a una funci@'on que invoca a otra funci@'on
 que manipula el anillo de la muerte. De este modo, antes de lograr las
@@ -8252,15 +8252,16 @@ un `prefijo procesado'. El argumento prefijo es pasado escribiendo
 @kbd{C-u} y un n@'umero, o @kbd{M-} y un n@'umero. Si la funci@'on es
 llamada interactivamente sin un prefijo, el n@'umero que se pasa es 1.
 
-La segunda parte de @code{"p\ncZap a caracter:@: "} es @samp{cZap to
+La segunda parte de @code{"p\ncZap a caracter:@: "} es @samp{cZap a
 car@'acter:@:}. En esta parte, la tecla baja @samp{c} indica que
 @code{interactive} espera una consola que el argumento ser@'a un
-caracter. La consola sigue el @samp{c} y es la cadena @samp{Zap to
-caracter:@: } (con un espacio despu@'es del punto y coma para hacerlo bien).
+caracter. La consola sigue el @samp{c} y es la cadena @samp{Zap a
+caracter:@: } (con un espacio despu@'es del punto y coma para hacerlo
+bien).
 
-Tod lo que hace es preparar los argumentos para @code{zap-to-char}
-as@'{@dotless{i}} ellos est@'an en el tipo correcto, y dan al usuario
-un prompt.
+Todo lo que se hace es preparar los argumentos para @code{zap-to-char}
+as@'{@dotless{i}} est@'an en el tipo correcto, y dan al usuario un
+prompt.
 
 En un b@'uffer de solo lectura, la funci@'on @code{zap-to-char} copia
 el texto al anillo de la muerte, no se elimina. El @'area echo muestra
@@ -8296,7 +8297,7 @@ est@'a descrita en este documento. @xref{Array, , Arrays, elisp, El
 Manual de Referencia de GNU Emacs Lisp}.)
 
 @noindent
-@code{(point)} es la posici@'on actual del cursor.
+Lo que devuelve @code{(point)} es la posici@'on actual del cursor.
 
 La siguiente parte del c@'odigo es una expresi@'on usando
 @code{progn}. El cuerpo del @code{progn} se basa en llamadas a
@@ -8310,13 +8311,13 @@ acerca de @code{search-forward}, as@'{@dotless{i}} se ver@'a en
 @subsection La funci@'on @code{search-forward}
 @findex search-forward
 
-La funci@'on @code{search-forward} es usada para localizar el
+La funci@'on @code{search-forward} se usa para localizar el
 zapped-for-character en @code{zap-to-char}. Si la b@'usqueda es
 exitosa, @code{search-forward} deja el punto inmediatamente despu@'es
 del @'ultimo car@'acter en la cadena objetivo. (En @code{zap-to-char},
 la cadena objetivo es solo un car@'acter largo. @code{zap-to-char} usa
 la funci@'on @code{char-to-string} para asegurar que el ordenador
-trata este car@'acter como una cadena.) Si la b@'usqueda es hacia
+trata este car@'acter como una cadena). Si la b@'usqueda es hacia
 atr@'as, @code{search-forward} deja el punto solo antes del primer
 car@'acter en el objetivo. Tambi@'en, @code{search-forward} devuelve
 @code{t} para verdad. (Moviendo el punto all@'{@dotless{i}} es un
@@ -8354,7 +8355,7 @@ la funci@'on @code{search-forward} fallar@'a. La funci@'on
 @item
 El segundo argumento asocia la b@'usqueda; eso se especifica como
 una posici@'on en el b@'uffer. En este caso, la b@'usqueda puede ir al
-fin del b@'uffer, as@'{@dotless{i}} no se asigna y el segundo
+final del b@'uffer, as@'{@dotless{i}} no se asigna y el segundo
 argumento es @code{nil}.
 
 @item
@@ -8378,10 +8379,10 @@ as@'{@dotless{i}}:
 
 @smallexample
 @group
-(search-forward "@var{target-string}"
-                @var{limit-of-search}
-                @var{what-to-do-if-search-fails}
-                @var{repeat-count})
+(search-forward "@var{cadena-a-buscar}"
+                @var{limite-de-busqueda}
+                @var{que-hacer-si-la-busqueda-falla}
+                @var{repetir-contaje})
 @end group
 @end smallexample
 
@@ -8415,7 +8416,7 @@ lejos se copia.
 El primer argumento de @code{progn} es @code{search-forward}. Cuando
 @code{search-forward} encuentra la cadena, la funci@'on deja el punto
 inmediatamente despu@'es del @'ultimo caracter en la cadena
-objetivo. (En este caso la cadena objetivo es solo un caracter de
+objetivo. (En este caso la cadena objetivo es solo un car@'acter
 largo.) Si la b@'usqueda es hacia atr@'as, @code{search-forward} deja
 el punto justo antes del primer car@'acter en el objetivo. El
 movimiento del punto es un efecto lateral.
@@ -8530,7 +8531,7 @@ explicar@'an. @code{condition-case} es una forma especial importante.
 En esencia, la funci@'on @code{kill-region} llama a
 @code{condition-case}, que toma tres argumentos. En esta funci@'on, el
 primer argumento no hace nada. El segundo argumento contiene el
-c@'odigo que hace el trabajo cuando todo va bien. El tercer argumento
+c@'odigo hace el trabajo cuando todo va bien. El tercer argumento
 contiene el c@'odigo que se llama en el evento de un error.
 
 @menu
@@ -8587,7 +8588,7 @@ El comando \\[yank] puede recuperarse desde all@'{@dotless{i}}. @dots{}
       ;;    Empieza con una funci@'on `let' que extrae la cadena
       ;;    y chequea si existe. Si es as@'{@dotless{i}} (esto es lo
       ;;    que `when' chequea), eso llama a una funci@'on `if' que
-      ;;    determina si el comando previo que era otra llamada para
+      ;;    determina si el comando previo que era otra llamada
       ;;    si el comando previo fu@'e otra llamada a `kill-region';
       ;;    si lo era, entonces el siguiente texto se a@~nade
       ;;    cuando se chequea), eso llama a una funci@'on `if' que
@@ -8608,7 +8609,7 @@ El comando \\[yank] puede recuperarse desde all@'{@dotless{i}}. @dots{}
       ;;    de nuevo chequea si la cadena actual existe; 
       ;;    por a@~nadidura, eso chequea si el comando previo fuese
       ;;    otra llamada a `kill-region'. Si una u otra condici@'on
-      ;;    es verdadero, entoncese eso configura el actual comando a 
+      ;;    es verdadero, entonces eso configura el actual comando a 
       ;;    ser `kill-region'.
 @end group
 @group
@@ -8788,7 +8789,7 @@ errores de nombres de condici@'on.
 Un manejador de errores es el tercer argumento para
 @code{condition-case}. Un manejador de errores tiene dos partes, un
 @var{condition-name} y un @var{body}. Si la parte @var{condition-name}
-de un manejador de errores encuentra un nombre de condici@'on generado
+tiene un manejador de errores encuentra un nombre de condici@'on generado
 por un error, entonces la parte del @var{body} del manejador de errores
 se ejecuta.
 
@@ -8970,19 +8971,19 @@ De normal, esta funci@'on puede ser dividida dentro sus componentes:
 
 Los argumentos son @code{beg} y @code{end} y la funci@'on es
 interactiva con @code{"r"}, as@'{@dotless{i}} los dos argumentos deben
-referir al principio y el fin de la regi@'on. Si has estado leyendo a
-trav@'es de este documento desde el principio, comprediendo estas
-partes de una funci@'on es casi llegando a ser rutina.
+referirse al principio y al final de la regi@'on. Si ha estado
+leyendo a trav@'es de este documento desde el principio, comprendiendo
+estas partes de una funci@'on casi llegar@'{@dotless{i}}a a ser rutina.
 
-La documentaci@'on es algo confusa a menos que recuerdes que la
-palabra `kill' tiene un significado diferente del usual. La `Marca
-Transitoria' y @code{interprogram-cut-function} comenta explicar
-cientos efectos laterales.
+La documentaci@'on es algo confusa a menos que se recuerde que la
+palabra `kill' @emph{matar, cortar} tiene un significado diferente de la
+usual. La `Marca Transitoria' y @code{interprogram-cut-function}
+comenta explicar ciertos efectos laterales.
 
 Despu@'es de que se ha asignado una marca, un b@'uffer siempre
 contiene una regi@'on. Si se desea se puede usar el modo Marca
 Transitoria para iluminar la regi@'on temporalmente. (Nadie quiere
-ilumihnar la regi@'on todo el rato, as@'{@dotless{i}} el modo Marca
+iluminar la regi@'on todo el rato, as@'{@dotless{i}} el modo Marca
 Transitoria subrraya solo en el momento apropiado. Muchas personas
 desactivan el modo Marca Transitoria, as@'{@dotless{i}} la regi@'on
 nunca se ilumina.)
@@ -8995,9 +8996,9 @@ Emacs.
 
 El cuerpo de la funci@'on @code{copy-region-as-kill} empieza con una
 cl@'ausula @code{if}. Lo que esta cl@'ausula hace es distinguir entre
-dos situaciones diferentes: si este comando es ejecutado o no
+dos situaciones diferentes: si este comando se ejecuta o no
 inmediatamente despu@'es de un comando previo @code{kill-region}. En
-el primer caso, la nueva regi@'on es concatenada al texto copiado
+el primer caso, la nueva regi@'on se concatena al texto copiado
 previamente. De otro modo, eso se inserta al principio del anillo de
 la muerte @emph{kill ring} como una pieza separada de texto desde la
 pieza previa.
@@ -9208,13 +9209,13 @@ dos cadenas de texto. El resultado es una cadena. Por ejemplo:
 @end group
 
 @group
-(concat "new "
-        (car '("first element" "second element")))
-     @result{} "new first element"
+(concat "nuevo "
+        (car '("primer elemento" "segundo elemento")))
+     @result{} "nuevo primer elemento"
 
 (concat (car
-        '("first element" "second element")) " modified")
-     @result{} "first element modified"
+        '("primer elemento" "segundo elemento")) " modificado")
+     @result{} "primer elemento modificado"
 @end group
 @end smallexample
 
@@ -9333,11 +9334,11 @@ Las l@'{@dotless{i}}neas cr@'{@dotless{i}}ticas son estas:
 @smallexample
 @group
   (if (and replace kill-ring)
-      ;; @r{then}
+      ;; @r{entonces}
       (setcar kill-ring string)
 @end group
 @group
-    ;; @r{else}
+    ;; @r{resto}
   (push string kill-ring)
 @end group
 @group
@@ -9439,7 +9440,7 @@ siguiente expresi@'on:
 @findex push, @r{ejemplo}
 
 @smallexample
-(push "a third clause" example-list)
+(push "una tercera cl@'ausula" lista-de-ejemplo)
 @end smallexample
 
 @need 800
@@ -9455,7 +9456,7 @@ example-list
 @end smallexample
 
 @noindent
-De este modo, la tercera cla@'usula se a@~nadide a la lista con @code{push}.
+De este modo, la tercera cla@'usula se a@~nade a la lista con @code{push}.
 
 @need 1200
 Ahora para la segunda parte de la cla@'usula @code{if}. Esta
@@ -9562,14 +9563,14 @@ Ahora, para devolver r@'apido una expresi@'on en el cuerpo de la funci@'on:
 @noindent
 Empieza con una expresi@'on @code{if}
 
-En este caso, la expresi@'on chequea primero ve si
+En este caso, la expresi@'on chequea primero si
 @code{menu-bar-update-yank-menu} existe como una funci@'on, y si
 as@'{@dotless{i}}, se llama. La funci@'on @code{fboundp} devuelve
 cierto si el s@'{@dotless{i}}mbolo que se chequea tiene una
 definici@'on de funci@'on que `no es vac@'{@dotless{i}}a'. Si el
 s@'{@dotless{i}}mbolo de la definici@'on de funci@'on fuera
-vac@'{@dotless{i}}o, recibir@'{@dotless{i}}a un mensaje de erro, como
-se hizo cuando se cre@'o errores intencionalmente (@pxref{Creando
+vac@'{@dotless{i}}o, recibir@'{@dotless{i}}a un mensaje de error, como
+se hizo cuando se crearon errores intencionalmente (@pxref{Creando
 errores, , Genera un Mensaje de Error}).
 
 @noindent
@@ -9578,7 +9579,7 @@ funci@'on @code{and}.
 
 @findex and
 La forma especial @code{and} eval@'ua cada uno de sus argumentos hasta
-que uno de los argumento devuelva un valor de @code{nil}, en cuyo caso
+que uno de los argumentos devuelva un valor de @code{nil}, en cuyo caso
 la expresi@'on @code{and} devuelve @code{nil}; sin embargo, si
 ninguno de los argumentos devuelve una valor de @code{nil}, el valor
 resultante desde la evaluaci@'on el @'ultimo argumento es
@@ -9588,7 +9589,7 @@ devuelve un valor cierto solo si todos sus argumentos son
 verdaderos. (@xref{Revisar el segundo b@'uffer relacionado}.)
 
 La expresi@'on determina si el segundo argumento
-@code{menu-bar-update-yank-menu} es verdader o no.
+@code{menu-bar-update-yank-menu} es verdadero o no.
 @ignore
     ;; If we're supposed to be extending an existing string, and that
     ;; string really is at the front of the menu, then update it in place.
@@ -9596,9 +9597,9 @@ La expresi@'on determina si el segundo argumento
 
 @code{menu-bar-update-yank-menu} es una de la funciones que lo hace
 posible para usar el menu `Seleccionar y Pegar' en el
-@'{@dotless{i}}tem Edit de una barra de menu; usando un rat@'on, se
-puede mirar en varias piezas de texto que se guardado y selecciona una
-pieza para pegar.
+@'{@dotless{i}}tem Editar de una barra de menu; usando un rat@'on, se
+pueden mirar varias piezas de texto que se han guardado y se
+selecciona una pieza para pegar.
 
 La @'ultima expresi@'on en la funci@'on @code{kill-new} a@~nade las
 cadenas nuevamente copiadas a aquella facilidad que existe copiando y
@@ -9617,9 +9618,9 @@ La expresi@'on se ve como:
 @end group
 @end smallexample
 
-Si una @code{interprogram-cut-fuction} existe, entonces Emacs ejecuta
-@code{funcall}, que en vez llama su primer argumento como una
-funci@'on y pasan los argumentos que permanecen a
+Si @code{interprogram-cut-function} existe, entonces Emacs ejecuta
+@code{funcall}, que en vez de llamar a su primer argumento como una
+funci@'on, pasa los argumentos que permanecen en
 eso. (Incidentalmente, tan lejos como se puede ver, esta expresi@'on
 @code{if} podr@'{@dotless{i}}a ser reemplazado por una expresi@'on
 @code{and} similar a uno en la primera parte de la funci@'on.)
@@ -9633,8 +9634,8 @@ ring}, concatenado con un elemento existente o como un nuevo elemento,
 nos lidera al c@'odigo para traer texto que ha sido cortado del
 b@'uffer --- los comandos de corte. Sin embargo, antes de discutir los
 comandos de corte, es mejor aprender c@'omo las listas son implementadas
-en un ordenador. Esto har@'a claro tales misterios como el uso del
-t@'ermino `puntero'. Pero antes de esto, desviaremos dentro de C.
+en un ordenador. Esto dejar@'a claro tales misterios como el uso del
+t@'ermino `puntero'. Pero antes de esto, nos desviaremos a C.
 
 @ignore
 @c is this true in Emacs 22?   Does not seems to be
@@ -9749,9 +9750,9 @@ tener. Esta funci@'on demanda exactamente 2 argumentos.
 @item
 La sexta parte est@'a cerca del argumento que sigue la declaraci@'on
 @code{interactive} en una funci@'on escrita en Lisp: una carta
-seguida, quiz@'as, por una consola. La @'unica diferencia desde el
-Lisp es cuando la macro se llama sin argumentos. Entonces escribe un
-@code{0} (que es una `cadena nula'), como en esta macro.
+seguida, quiz@'as, por una consola. La @'unica diferencia con Lisp es
+que si la macro se llama sin argumentos. Entonces se escribe un @code{0}
+(que es una `cadena nula'), como en esta macro.
 
 Si se fueran a especificar argumentos, se emplazar@'{@dotless{i}}an
 entre marcas de comillas. La macro C para @code{goto-char} incluye
@@ -9784,8 +9785,8 @@ return del_range_1 (XINT (start), XINT (end), 1, 1);
 
 La funci@'on @code{validate_region} chequea si los valores pasados
 como el principio y fin de la regi@'on son el tipo apropiado y son del
-mismo rango. Si las posiciones del principio y fin son lo mismo, entonces
-devuelve una cadena vac@'{@dotless{i}}a.
+mismo rango. Si las posiciones del principio y fin son las mismas, entonces
+se devuelve una cadena vac@'{@dotless{i}}a.
 
 La funci@'on @code{del_range_1} actualmente borra el texto. Eso es una
 funci@'on compleja que no miraremos. Eso actualiza el b@'uffer y hace
@@ -9797,7 +9798,7 @@ Tan lejos como el lenguaje C es concebido, @code{start} y @code{end}
 son dos enteros que marcan el principio y el fin de la regi@'on para
 ser borrada@footnote{M@'as precisamente, y requiriendo conocimiento
 m@'as experto para comprender, los dos enteros son del tipo
-`Lisp_Object', que puede tambi@'es ser una uni@'on C en vez de un tipo
+`Lisp_Object', que puede tambi@'en ser una uni@'on C en vez de un tipo
 de entero.}.
 
 En las primeras versiones de Emacs, estos dos n@'umeros fueron 32 bits
@@ -9807,7 +9808,7 @@ para especificar el tipo de informaci@'on; los bits permanecen ser
 usados como `contenido'.
 
 @samp{XINT} es una macro C que extrae los n@'umeros relevantes desde
-la colecci@'on larga de bits; los otro tres bits son descartados.
+la colecci@'on larga de bits; los otros tres bits se descartan.
 
 @need 800
 El comando en @code{delete-and-extract-region} se parece a esto:
@@ -9855,7 +9856,7 @@ eso no es un corpus de anillo, pero un anillo de texto resucitable.)
 
 En Emacs Lisp, una variable tal como @code{kill-ring} es creada y dada
 por un valor inicial usando la forma especial @code{defvar}. El nombre
-desde ``define variable''.
+viene de ``definir variable''.
 
 La forma especial @code{defvar} es similar a @code{setq} en este se
 configura el valor de una variable. Eso no es @code{setq} en dos
@@ -10109,8 +10110,8 @@ Opcionalmente, que haces si la b@'usqueda falla, devuelve @code{nil} o
 un mensaje de error.
 
 @item
-Opcionalmente, cu@'antas veces repetir la b@'usqueda; si negativa, la
-b@'usqueda va hacia atr@'as.
+Opcionalmente, cu@'antas veces se puede repetir la b@'usqueda; si es
+negativa, la b@'usqueda va hacia atr@'as.
 @end enumerate
 
 @item kill-region
@@ -10682,7 +10683,7 @@ El anillo de la muerte @emph{kill ring} es una lista de cadenas
 textuales. Esto es lo que se ve:
 
 @smallexample
-("algun texto" "una pieza diferente pieza de texto"
+("alg@'un texto" "una pieza diferente pieza de texto"
 "todav@'{@dotless{i}}a m@'as texto")
 @end smallexample
 
@@ -10735,7 +10736,7 @@ asignada al valor de lo que apunta, como cualquier otra variable Lisp.
 De este modo, si el valor del kill ring es:
 
 @smallexample
-("algun texto" "una pieza diferente pieza de texto"
+("alg@'un texto" "una pieza diferente pieza de texto"
 "todav@'{@dotless{i}}a m@'as texto")
 @end smallexample
 
@@ -10952,8 +10953,8 @@ La plantilla para una expresi@'on @code{while} se ve as@'{@dotless{i}}:
 
 @smallexample
 @group
-(while @var{true-or-false-test}
-  @var{body}@dots{})
+(while @var{test-verdadero-o-falso}
+  @var{cuerpo}@dots{})
 @end group
 @end smallexample
 
@@ -10987,7 +10988,7 @@ siempre. Rec@'{@dotless{i}}procamente, si el valor devuelto nunca es
 cierto, las expresiones en el cuerpo nunca ser@'an evaluadas. La
 fortaleza de escribir un bucle @code{while} consiste de elegir un
 mecanismo tal que el true-or-false-test devuelva cierto solo el
-n@'umero de veces que se quieren las subsiguientes expresiones para
+n@'umero de veces que requieren las subsiguientes expresiones para
 ser evaluadas, y entonces tener el test devuelto a falso.
 
 El valor devuelto evaluando @code{while} es el valor del
@@ -11007,12 +11008,13 @@ las expresiones en el bucle son repetidamente evaluadas.
 
 Un camino com@'un para controlar un bucle @code{while} es chequear si
 una lista tiene cualquier elemento. Si eso se hace, el bucle se
-repite; pero si no, la repetici@'on se finaliza. Desde esto es una
-t@'ecnica importante, crear@'a un corto ejemplo para ilustrarlo.
+repite; pero si no, la repetici@'on se finaliza. Puesto que esto es
+una t@'ecnica importante, se crear@'a un breve ejemplo para
+ilustrarlo.
 
 Un camino simple para chequear si una lista tiene elementos es evaluar
 la lista: si eso no tiene elementos, si es una lista
-vac@'{@dotless{i}}a y devolver@'a la lista vac@'{@dotless{i}}a,
+vac@'{@dotless{i}}a y devuelve la lista vac@'{@dotless{i}}a,
 @code{()}, que es un sin@'onimo para @code{nil} o falso. Por otro
 lado, una lista con elementos devolver@'a estos elementos cuando eso
 se eval@'ua. Puesto que Emacs Lisp considera como cierto cualquier
@@ -11024,17 +11026,17 @@ Por ejemplo, se puede asignar la variable @code{empty-list} a
 @code{nil} para evaluar la siguiente expresi@'on @code{setq}:
 
 @smallexample
-(setq empty-list ())
+(setq lista-vacia ())
 @end smallexample
 
 @noindent
 Despu@'es de evaluar la expresi@'on @code{setq}, se puede evaluar la
-variable @code{empty-list} es el camino normal, posicionando el cursor
+variable @code{lista-vacia} es el camino normal, posicionando el cursor
 despu@'es del s@'{@dotless{i}}mbolo y escribiendo @kbd{C-x C-e};
 @code{nil} aparecer@'a en tu @'area echo:
 
 @smallexample
-empty-list
+lista-vacia
 @end smallexample
 
 Por otro lado, si se asigna una variable para ser una lista con
@@ -11110,10 +11112,10 @@ funci@'on que va a trav@'es de una lista e imprime cada elemento de la
 lista en una l@'{@dotless{i}}nea de s@'{@dotless{i}} misma.
 
 @node print-elements-of-list
-@subsection Un ejemplo: @code{print-elements-of-list}
+@subsection Un ejemplo: @code{imprimir-elementos-de-la-lista}
 @findex print-elements-of-list
 
-La funci@'on @code{print-elements-of-list} ilustra un bucle
+La funci@'on @code{imprimir-elementos-de-la-lista} ilustra un bucle
 @code{while} con una lista.
 
 @cindex @file{*scratch*} buffer
@@ -11138,8 +11140,8 @@ entonces provee realimentaci@'on visual). En el b@'uffer
 
 Despu@'es de haber copiado las expresiones al b@'uffer
 @file{*scratch*}, se eval@'ua cada expresi@'on en orden. Aseg@'urese
-de evaluar la @'ultima expresi@'on, @code{(print-elements-of-list
-animals)}, escribiendo @kbd{C-u C-x C-e}, que es, dando un argumento
+de evaluar la @'ultima expresi@'on, @code{(imprimir-elementos-de-la-lista
+animales)}, escribiendo @kbd{C-u C-x C-e}, que es, dando un argumento
 para @code{eval-last-sexp}. Esto causar@'a el resultado de la
 evaluaci@'on para ser impreso en el b@'uffer @file{*scratch*} en vez
 de siendo impreso en el @'area echo. (De otro modo se ver@'a alguna
@@ -11156,13 +11158,13 @@ para mostrar los resultados.
 @group
 (setq animales '(gacela jirafa leon tigre))
 
-(defun print-elements-of-list (list)
+(defun imprimir-elementos-de-la-lista (list)
   "Imprime cada elemento de LIST en una l@'{@dotless{i}}nea."
   (while list
     (print (car list))
     (setq list (cdr list))))
 
-(print-elements-of-list animales)
+(imprimir-elementos-de-la-lista animales)
 @end group
 @end smallexample
 
@@ -11206,15 +11208,15 @@ veces el bucle se repite a s@'{@dotless{i}} mismo.
 @end ifnottex
 
 El test para un bucle con un contador de incremento puede ser una
-expresi@'on tal como @code{(< count desired-numberj)} que devuelve
-@code{t} para verdad si el valor de @code{count} es menor que el
-@code{desired-number} de repeticiones y @code{nil} para falso si el
-valor de @code{count} es igual a o es mayor que el
-@code{desired-number}. La expresi@'on que incrementa el contador puede
-ser un simple @code{setq} tal como @code{(setq count (1+ count))},
+expresi@'on tal como @code{(< contador numero-deseado)} que devuelve
+@code{t} para verdad si el valor de @code{contador} es menor que el
+@code{numero-deseado} de repeticiones y @code{nil} para falso si el
+valor de @code{contador} es igual a o es mayor que el
+@code{numero-deseado}. La expresi@'on que incrementa el contador puede
+ser un simple @code{setq} tal como @code{(setq contador (1+ contador))},
 donde @code{1+} es una funci@'on construida en Emacs Lisp que a@~nade
-1 a su argumento. (La expresi@'on @w{@code{(1+ count)}} tiene el mismo
-resultado que @w{@code{(+ count 1)}}, que es f@'acil de leer para un
+1 a su argumento. (La expresi@'on @w{@code{(1+ contador)}} tiene el mismo
+resultado que @w{@code{(+ contador 1)}}, que es f@'acil de leer para un
 humano.)
 
 @need 1250
@@ -11223,15 +11225,15 @@ que se incrementa se parece a esto:
 
 @smallexample
 @group
-@var{set-count-to-initial-value}
-(while (< count desired-number)         ; @r{true-or-false-test}
+@var{asignar-contador-al-valor-inicial}
+(while (< contador numero-deseado)         ; @r{true-or-false-test}
   @var{body}@dots{}
-  (setq count (1+ count)))              ; @r{incrementer}
+  (setq contador (1+ contador)))              ; @r{incremento}
 @end group
 @end smallexample
 
 @noindent
-Note que se necesita asignar el valor inicial de @code{count};
+Note que se necesita asignar el valor inicial de @code{contador};
 normalmente asignado a 1.
 
 @menu
@@ -11295,7 +11297,7 @@ requiere estar preparado para una lista muy larga, entonces se
 necesita dise@~nar la adici@'on, esto es, repetir un proceso simple
 muchas veces en vez de hacer un proceso m@'as complejo.
 
-Por ejemplo, en vez de a@~nadir todas los asteriscos a la vez, lo que
+Por ejemplo, en vez de a@~nadir todos los asteriscos a la vez, lo que
 se puede hacer es a@~nadir el n@'umero de asteriscos en la primera
 fila, 1, para el n@'umero en la segunda fila, 2, y entonces a@~nadir
 el total de estas dos filas a la tercera fila, 3. Entonces se puede
@@ -11539,8 +11541,8 @@ mayor que cero y entonces se hace m@'as peque@~no y peque@~no por una
 forma que es evaluada repetidamente.
 
 El test ser@'a una expresi@'on tal como @code{(> counter 0)} que
-devuelve @code{t} para cierto si el valor de @code{counter} es mayor
-que cero, y @code{nil} para falso si el valor de @code{counter} es
+devuelve @code{t} @emph{cierto} si el valor de @code{counter} es mayor
+que cero, y @code{nil} @emph{falso} si el valor de @code{counter} es
 igual a o menor que cero. La expresi@'on hace que el n@'umero menor y
 menor puede ser un simple @code{setq} tal como @code{(setq counter (1-
 counter)}, donde @code{1-} es una funci@'on construida en Emacs Lisp
@@ -11552,7 +11554,7 @@ as@'{@dotless{i}}:
 
 @smallexample
 @group
-(while (> counter 0)                    ; @r{true-or-false-test}
+(while (> counter 0)                    ; @r{test-verdadero-o-falso}
   @var{body}@dots{}
   (setq counter (1- counter)))          ; @r{decremento}
 @end group
@@ -11575,7 +11577,7 @@ Esto es lo inverso de la versi@'on temprana de la funci@'on. En este
 caso, para encontrar cu@'antos asteriscos son necesarios para crear un
 tri@'angulo con 3 filas, a@~nade el n@'umero de asteriscos en la
 tercera fila, 3, para el n@'umero en la fila precedente, 2, y entonces
-a@~nade el total de estas dos filas a la fila que lo precede, que es 1.
+a@~nade el total de estas dos filas a la fila que lo precede, 1.
 
 M@'as all@'a, para encontrar el n@'umero de asteriscos en un
 tri@'angulo con 7 filas, a@~nade el n@'umero de asteriscos en la fila
@@ -11612,7 +11614,7 @@ empezar@'a con la fila m@'as larga.
 
 @need 1250
 Esto significa que el principio de la expresi@'on @code{let} se ver@'a
-como esto:
+as@'{@dotless{i}}:
 
 @smallexample
 @group
@@ -11672,7 +11674,7 @@ La definici@'on de funci@'on se ve como esto:
 @group
 ;;; @r{Primero la versi@'on substractiva.}
 (defun triangle (number-of-rows)
-  "Add up the number of pebbles in a triangle."
+  "A@~nade el n@'umero de asteriscos en un tri@'angulo."
   (let ((total 0)
         (number-of-pebbles-in-row number-of-rows))
     (while (> number-of-pebbles-in-row 0)
@@ -11704,8 +11706,8 @@ poco m@'as limpiamente:
 
 @smallexample
 @group
-(defun triangle (number)                ; @r{Second version.}
-  "Return sum of numbers 1 through NUMBER inclusive."
+(defun triangle (number)                ; @r{Segunda versi@'on.}
+  "Devuelve la suma de n@'umeros 1 a trav@'es de NUMBER inclusive."
   (let ((total 0))
     (while (> number 0)
       (setq total (+ total number))
@@ -11877,8 +11879,8 @@ devuelve. Se necesita proveer el valor del segundo argumento, que es
 cu@'antas veces la macro hace el bucle.
 
 @need 1250
-Por ejemplo, lo siguiente asocia los n@'umeros desde 0 a, pero no
-incluyendo, el n@'umero 3 al primer argumento, @var{n@'umero}, y
+Por ejemplo, lo siguiente asocia los n@'umeros de 0 en adelante, pero
+no incluyendo, el n@'umero 3 al primer argumento, @var{n@'umero}, y
 entonces construye una lista de los tres n@'umeros. (El primer
 n@'umero es 0, el segundo n@'umero es 1, y el tercer n@'umero es 2;
 esto crea un total de tres n@'umeros en todo, empezando con cero como
@@ -11928,9 +11930,9 @@ incluso aunque el programa tenga el mismo nombre, no es la misma
 entidad. Eso es diferente. En la jerga, se dice es una `instancia'
 diferente.
 
-Finalmente, si el programa es escrito correctamente, los `argumentos
+Finalmente, si el programa se escribe correctamente, los `argumentos
 ligeramente diferentes' llegan a ser suficientemente diferentes puesto
-los primeros argumentos de la instancia final se parar@'an.
+que los primeros argumentos de la instancia final se parar@'an.
 
 @menu
 * Construyendo robots::      Mismo modelo, diferente n@'umero serie ...
@@ -11952,7 +11954,7 @@ Algunas veces es @'util pensar en un programa en ejecuci@'on como un
 robot que hace un trabajo. Haciendo su trabajo, una funci@'on
 recursiva llama a un segundo robot para que le ayude. El segundo robot es
 id@'entico al primero en cada paso, excepto que el segundo robot
-ayuda al primero y ha sido pasado diferentes argumentos que el primero.
+ayuda al primero y se han pasado diferentes argumentos en vez del primero.
 
 En una funci@'on recursiva, el segundo robot puede llamar a un
 tercero; y el tercero puede llamar a un cuarto, y
@@ -11977,11 +11979,11 @@ impresiones. As@'{@dotless{i}} ellos tienen, como estaban, el mismo
 
 Nosotros con frecuencia decimos que una funci@'on recursiva `se llama
 as@'{@dotless{i}} misma'. Esto significa que las instrucciones en una
-funci@'on recursiva causa el int@'erprete de Lisp para ejecutar una
+funci@'on recursiva causa que el int@'erprete de Lisp ejecute una
 funci@'on diferente que tiene el mismo nombre y hace el mismo trabajo
-como el primer, pero con diferentes argumentos.
+que el primero, pero con diferentes argumentos.
 
-Eso es importante que los argumentos difieren desde una instancia a la
+Es importante que los argumentos difieran desde una instancia a la
 siguiente; de otro modo, el proceso nunca parar@'a.
 
 @node Partes de definici@'on recursiva
@@ -12007,8 +12009,8 @@ Una expresi@'on que devuelve un valor diferente cada vez que la
 funci@'on se llama, aqu@'{@dotless{i}} llamada la
 @dfn{next-step-expression}. Consecuentemente, el argumento (o
 argumentos) pasados a la nueva instancia de la funci@'on ser@'an
-diferentes desde que se pasa a la instancia previa. Esto causa la
-expresi@'on condicional, que el @dfn{do-again-test}, para devuelva
+diferentes puesto que se pasa a la instancia previa. Esto causa la
+expresi@'on condicional, que el @dfn{do-again-test}, devuelva
 falso despu@'es del n@'umero correcto de repeticiones.
 @end enumerate
 
@@ -12046,10 +12048,10 @@ El valor devuelto por la next-step-expression es pasada a las nuevas
 instancias de la funci@'on, que lo eval@'ua (o alguna transformaci@'on
 de eso) para determinar si continuar o parar. El next-step-expression
 est@'a dise@~nado as@'{@dotless{i}} que el do-again-test devuelve
-falso cuando la funci@'on no ser@'{@dotless{i}}a largamente repetida.
+falso cuando la funci@'on no se repetir@'{@dotless{i}}a mucho.
 
 El do-again-test es algunas veces llamado la @dfn{condici@'on de
-parar}, puesto que sirve para parar las repeticiones cuando devuelve
+parar}, puesto que sirve para parar las repeticiones cuando se devuelve
 falso.
 
 @node Recursi@'on con lista
@@ -12081,9 +12083,8 @@ el int@'erprete Lisp intentar@'a evaluar el comentario.
 (setq animales '(gacela jirafa leon tigre))
 
 (defun print-elements-recursively (list)
-  "Imprime cada elemento de LISTA en una l@'{@dotless{i}}nea de
-  s@'{@dotless{i}}.
-Usa recursi@'on."
+  "Imprime cada elemento de la LISTA de la l@'{@dotless{i}}nea en
+  s@'{@dotless{i}}. Usa recursi@'on."
   (when list                            ; @r{do-again-test}
         (print (car list))              ; @r{body}
         (print-elements-recursively     ; @r{recursive call}
@@ -12183,7 +12184,7 @@ definici@'on de la funci@'on, antes del comentario.) La funci@'on
 se eval@'ua a 28.
 
 Para comprender c@'omo funciona la funci@'on, hay que considerar qu@'e
-ocurre en los varios casos cuando la funci@'on se le pasa 1, 2, 3, o 4
+ocurre en varios casos cuando la funci@'on se le pasa 1, 2, 3, o 4
 como el valor a su argumento.
 
 @menu
@@ -12196,7 +12197,7 @@ como el valor a su argumento.
 @unnumberedsubsubsec Un argumento de 1 o 2
 @end ifnottex
 
-Primero, veamos qu@'e ocurre si el valor del argumento es 1
+Primero, veamos qu@'e ocurre si el valor del argumento es 1.
 
 La funci@'on tiene una expresi@'on @code{if} despu@'es de la cadena de
 documentaci@'on. Esto chequea si el valor de @code{number} es igual a
@@ -12234,7 +12235,7 @@ contenida con s@'{@dotless{i}} misma. Emacs pasa el resultado Paso 1
 como el argumento usado por esta instancia de la funci@'on
 @code{triangle-recursively}
 
-En este caso, Emacs eval@'ua @code{triangle-recusrively} con un
+En este caso, Emacs eval@'ua @code{triangle-recursively} con un
 argumento de 1. Esto significa que esta evaluaci@'on de
 @code{triangle-recursively} devuelve 1.
 
@@ -12271,8 +12272,8 @@ se chequea como falso, no cuando eso se chequea como verdadero.)
 
 @item Paso 2 @w{ } Eval@'ua la expresi@'on propia de la parte else.
 
-La expresi@'on propia de la parte es evaluada, decrementa 3 a 2. Esta
-la next-step-expression.
+La expresi@'on propia de la parte que es evaluada, decrementa 3 a
+2. Esta la next-step-expression.
 
 @item Paso 3 @w{ } Eval@'ua la funci@'on @code{triangle-recursively}.
 
@@ -12294,7 +12295,7 @@ al n@'umero con el que la funci@'on se llam@'o, que es 3.
 El valor devuelto por la funci@'on como un todo ser@'a 6.
 
 Ahora que sabemos qu@'e ocurrir@'a cuando @code{triangle-recursively}
-llama con un argumento 3, es evidente lo que ocurrir@'a si se llamado
+llama con un argumento 3, es evidente lo que ocurrir@'a si se llama
 con el argumento 4:
 
 @quotation
@@ -12325,7 +12326,7 @@ Cada vez que @code{triangle-recursively} se eval@'ua, se interpreta
 una versi@'on de s@'{@dotless{i}} misma --- una instancia diferente en
 s@'{@dotless{i}} --- con un peque@~no argumento, hasta que el
 argumento es suficientemente peque@~no as@'{@dotless{i}} que no se
-eval@'ua por s@'{@dotless{i}}.
+eval@'ua en s@'{@dotless{i}}.
 
 Note que este particular dise@~no para una funci@'on recursiva
 requiere que las operaciones sean diferidas.
@@ -12467,12 +12468,12 @@ Aqu@'{@dotless{i}} est@'a el ejemplo:
 @smallexample
 @group
 (defun square-each (numbers-list)
-  "Square each of a NUMBERS LIST, recursively."
-  (if (not numbers-list)                ; do-again-test
+  "El cuadrado de cada LISTA DE NUMEROS, recursivamente."
+  (if (not numbers-list)                ; test-hazlo-de-nuevo
       nil
     (cons
      (* (car numbers-list) (car numbers-list))
-     (square-each (cdr numbers-list))))) ; next-step-expression
+     (square-each (cdr numbers-list))))) ; expresion-siguiente-paso
 @end group
 
 @group
@@ -12508,9 +12509,8 @@ La funci@'on @code{print-elements-recursively} se parece a esto:
 
 @group
 (defun print-elements-recursively (list)
-  "Imprime cada elemento de LISTA en una l@'{@dotless{i}}nea de
-  s@'{@dotless{i}}.
-Usa recursi@'on."
+  "Imprime cada elemento de la LISTA de la l@'{@dotless{i}}nea en
+  s@'{@dotless{i}}. Usa recursi@'on."
   (when list                            ; @r{do-again-test}
         (print (car list))              ; @r{body}
         (print-elements-recursively     ; @r{recursive call}
@@ -12530,7 +12530,7 @@ Cuando la lista est@'a vac@'{@dotless{i}}a, no hacer nada.
 Pero cuando la lista tiene al menos un elemento,
 @itemize
 @item act@'ua al principio de la lista (el @sc{car} de la lista),
-@item y crea una llamada recursiva en el resto (el @sc{cdr} de la lista.
+@item y crea una llamada recursiva en el resto (el @sc{cdr} de la lista).
 @end itemize
 @end itemize
 
@@ -12545,7 +12545,7 @@ cada elemento de una lista y el resultado de esta acci@'on se acumula
 con los resultados de desarrollar la acci@'on en otros elementos.
 
 Esto es como `cada' patr@'on usando @code{cons}, excepto que este
-@code{cons} no se est@'e usando, pero alg@'un otro combine.
+@code{cons} no se est@'e usando, pero que alg@'un otro combine.
 
 @need 1500
 El patr@'on es:
@@ -12651,8 +12651,8 @@ Aqu@'{@dotless{i}} hay un ejemplo que usa @code{cond}:
 @end group
 @end smallexample
 
-Eso va sin decir que no se necesita usar @code{nil} como el test para
-cuando para; y se puede, de acuerdo, combinar estos patrones.
+Eso va sin decir que no se necesita usar @code{nil} como si el test
+para cuando para; y se puede, de acuerdo, combinar estos patrones.
 
 @node Sin Aplazar
 @subsection Recursi@'on sin diferir
@@ -12661,7 +12661,7 @@ cuando para; y se puede, de acuerdo, combinar estos patrones.
 
 Permita considerar de nuevo qu@'e ocurre con la funci@'on
 @code{triangle-recursively}. Nosotros encontraremos que los c@'alculos
-se difieran hasta que todo pueda ser hecho.
+difieran hasta que todo pueda ser hecho.
 
 @need 800
 Aqu@'{@dotless{i}} est@'a la definici@'on de funci@'on:
@@ -12753,7 +12753,7 @@ constante'.}. Esto requiere escribir a un patr@'on diferente, con
 frecuencia uno que involucra escribiendo dos definiciones de
 funci@'on, una funci@'on de `inicializaci@'on' y una funci@'on `ayuda'.
 
-La funci@'on `inicializacti@'on' configura el trabajo; la funci@'on
+La funci@'on `inicializacion' configura el trabajo; la funci@'on
 `ayudante' hace el trabajo.
 
 @need 1200
@@ -12763,8 +12763,8 @@ as@'{@dotless{i}} de simple, aunque se encuentre duro de comprender.
 @smallexample
 @group
 (defun triangle-initialization (number)
-  "Devuelve la suma de los n@'umero 1 a trav@'es de NUMBER inclusive.
-Este es el componenete de `inicializaci@'on' de una funci@'on duo que 
+  "Devuelve la suma de los n@'umeros 1 a trav@'es de NUMBER inclusive.
+Este es el componente de `inicializaci@'on' de una funci@'on d@'uo que 
 usa recursi@'on"
   (triangle-recursive-helper 0 0 number))
 @end group
@@ -12916,7 +12916,7 @@ tiene un valor que es la ra@'{@dotless{i}}z del n@'umero de la
 fila. Usa un bucle @code{while}.
 
 @item
-Escribe una funci@'on similar para @code{triangle} multiplica en vez
+Escribe una funci@'on similar para @code{triangle} que multiplique en vez
 de a@~nadir los valores.
 
 @item
@@ -12972,8 +12972,8 @@ Las b@'usquedas de expresiones regulares son descritas en
 @ref{B@'usqueda de Regexp, , B@'usqueda de Expresi@'on Regular, emacs,
 El Manual de GNU Emacs}, tan bien como en @ref{Expresiones Regulares,
 , , elisp, El Manual de Referencia de GNU Emacs Lisp}. Escribiendo
-este cap@'{@dotless{i}}tulo, estoy presumiendo que tienes al menos una
-intimidad con ellos. El mayor punto para recordar es que las
+este cap@'{@dotless{i}}tulo, estoy presuponiendo que tiene al menos una
+familiaridad con esto. El mayor punto para recordar es que las
 expresiones regulares te permiten buscar patrones tan bien como para
 cadenas literales de caracteres. Por ejemplo, el c@'odigo en
 @code{forward-sentence} busca para el patr@'on de posibles caracteres
@@ -13014,7 +13014,7 @@ esta expresi@'on regular?
 Claramente, una frase puede ser finalizada por un periodo, una marca
 de inicio de interrogaci@'on, o una marca de exclamaci@'on. Puesto que
 viene del ingl@'es, solo las cla@'usulas que finalizan con uno de
-estos tres caracteres deber@'{@dotless{i}}an ser consideradas el fin de
+estos tres caracteres deber@'{@dotless{i}}an ser consideradas al fin de
 una frase. Esto significa que el patr@'on incluir@'{@dotless{i}}a el
 conjunto de caracteres:
 
@@ -13024,17 +13024,18 @@ conjunto de caracteres:
 
 Sin embargo, no queremos que @code{forward-sentence} salte a un
 periodo, una marca de pregunta, o una marca de exclamaci@'on, porque
-tal car@'acter podr@'{@dotless{i}}a ser usada en el medio de una
+tal car@'acter podr@'{@dotless{i}}a ser usado en el medio de una
 frase. Un periodo, por ejemplo, se usa despu@'es de
-abreviaciones. As@'{@dotless{i}} otra informaci@'on es necesaria.
+abreviaciones. As@'{@dotless{i}}, otra informaci@'on es necesaria.
 
 De acuerdo a la convenci@'on, escribe dos espacios despu@'es de cada
 frase, pero solo un espacio despu@'es de un periodo, una marca de
 pregunta, o una marca de exclamaci@'on seguida por dos espacios es un
 buen indicador de un fin de frase. Sin embargo, en un fichero, los dos
-espacios puede en vez de ser un tabulador o el fin de una
+espacios pueden ser un tabulador o el fin de una
 l@'{@dotless{i}}nea. Esto significa que la expresi@'on regular
-incluir@'{@dotless{i}}a estos tres @'{@dotless{i}}tems como alternativas.
+incluir@'{@dotless{i}}a estos tres @'{@dotless{i}}tems como
+alternativas.
 
 @need 800
 Este grupo de alternativas se parece a esto:
@@ -13105,11 +13106,11 @@ sentence-end
 @end smallexample
 
 @noindent
-(Bien, no en GNU Emacs 22; esto es porque un esfuerzo para crear el
-proceso simple y manejar m@'as s@'{@dotless{i}}mbolos y
-lenguajes. Cuando el valor de @code{sentence-end} es @code{nil},
-entonces usa el valor definido por la funci@'on @code{sentence-end} es
-@code{nil}, entonces usa el valor definido por la funci@'on
+(Bien, no en GNU Emacs 22; porque es un esfuerzo crear el proceso
+simple y manejar m@'as s@'{@dotless{i}}mbolos y lenguajes. Cuando el
+valor de @code{sentence-end} es @code{nil}, entonces usa el valor
+definido por la funci@'on @code{sentence-end} es @code{nil}, entonces
+usa el valor definido por la funci@'on
 @code{sentence-end}. (Aqu@'{@dotless{i}} se usa la diferencia entre un
 valor y una funci@'on en Emacs Lisp.) La funci@'on devuelve un valor
 construido desde las variables @code{sentence-end-base},
@@ -13189,7 +13190,7 @@ b@'uffer.
 
 @item
 El tercer argumento opcional especifica c@'omo la funci@'on responde al
-fallo: @code{nil} como tercer argumento causa la funci@'on para
+fallo: @code{nil} como tercer argumento que causa la funci@'on para
 se@~nalar un error (e imprime un mensaje) cuando la b@'usqueda falla;
 cualquier otro valor causa devolver @code{nil} si la b@'usqueda falla
 y @code{t} si la b@'usqueda tiene @'exito.
@@ -13265,8 +13266,8 @@ Aqu@'{@dotless{i}} est@'a la c@'odigo para @code{forward-sentence}:
 @smallexample
 @group
 (defun forward-sentence (&optional arg)
-  "Ve al siguiente `sentence-end'. Con argumento, repite.
-Con argumento negativo, mueve atr@'as repetidamente a `sentence-beginning'.
+  "Ve al siguiente `sentence-end'. Con el argumento, repite.
+Con el argumento negativo, mueve atr@'as repetidamente a `sentence-beginning'.
 La variable `sentence-end' es una expresi@'on regular que empareja el
 fin de frases. Tambi@'en, cada p@'arrafo asociado termina las frases
 bien.
@@ -13381,7 +13382,7 @@ Lo siguiente es un @code{let}. Que especifica los valores de dos
 variables locales @code{point} y @code{sentence-end}. El valor local
 de punto, desde antes de la b@'usqueda, es usada en la funci@'on
 @code{constrain-to-field} que maneja formularios y equivalentes. La
-variable @code{sentence-end} est@'a asignado por la funci@'on
+variable @code{sentence-end} est@'a asignada por la funci@'on
 @code{sentence-end}.
 
 @node Bucles while fwd-sentence
@@ -13389,7 +13390,7 @@ variable @code{sentence-end} est@'a asignado por la funci@'on
 
 Sigue dos bucles @code{while}. El primer @code{while} tiene un
 true-or-false-test que chequea cierto si el argumento prefijo para
-@code{forward-sentence} es un n@'umero negativo. Esto para volver
+@code{forward-sentence} es un n@'umero negativo. Esto es para volver
 hacia atr@'as. El cuerpo de este bucle es similar al cuerpo de la
 segunda cl@'ausula @code{while}, pero eso no es exactamente el
 mismo. Se escapar@'a este bucle @code{while} y concentra en el segundo
@@ -13445,8 +13446,8 @@ b@'usqueda de la expresi@'on regular. Si la b@'usqueda falla para
 encontrar una frase apropiada finalizando en el p@'arrafo, eso
 se parar@'a logrando el fin del p@'arrafo.
 
-Pero primero, perm@'{@dotless{i}}tenos examinar c@'omo @code{par-end} se
-asocia a la variable del fin del p@'arrafo. Qu@'e ocurre es que el
+Pero primero, perm@'{@dotless{i}}tenos examinar c@'omo @code{par-end}
+se asocia a la variable del fin del p@'arrafo. Lo que ocurre es que el
 @code{let} asigna el valor de @code{par-end} al valor devuelto cuando
 el int@'erprete eval@'ua la expresi@'on.
 
@@ -13484,7 +13485,7 @@ int@'erprete Emacs Lisp eval@'ua la parte else. El true-or-false-test
 de la expresi@'on @code{if} es la b@'usqueda de la expresi@'on regular.
 
 Puede estar mal tener que mirar como el `trabajo real' de la funci@'on
-@code{forward-sentence} vista aqu@'{@dotless{i}}, pero esto es un
+@code{forward-sentence} es vista aqu@'{@dotless{i}}, pero esto es un
 camino com@'un de este tipo de operaci@'on traida en Lisp.
 
 @node Volver a buscar la frase en sentido directo
@@ -13499,7 +13500,7 @@ hace dos cosas:
 @enumerate
 @item
 La funci@'on @code{re-search-forward} trae un efecto lateral, que es
-mover el punto al fin de la ocurrencia encontrada.
+mover el punto al final de la ocurrencia encontrada.
 
 @item
 La funci@'on @code{re-search-forward} devuelve un valor de
@@ -13515,7 +13516,7 @@ conclusi@'on de la b@'usqueda.
 Cuando la funci@'on @code{if} recibe el valor de verdad desde una
 llamada exitosa a @code{re-search-forward}, el @code{if} eval@'ua la
 parte then que es la expresi@'on @code{(skip-chars-backward
-"\t\n")}. Esta expresi@'on mueve atr@'as a trav@'es de espacios en
+"\t\n")}. Esta expresi@'on se mueve atr@'as a trav@'es de espacios en
 blanco, los tabuladores o retornos de carro hasta un caracter impreso
 es encontrado y entonces deja el punto correcto despu@'es del caracter
 impreso cerrado de la frase, que es normalmente un periodo.
@@ -13524,7 +13525,7 @@ Por otro lado, si la funci@'on @code{re-search-forward} falla para
 encontrar un patr@'on marcando el fin de la frase, la funci@'on
 devuelve falso. Lo falso causa el @code{if} para evaluar su tercer
 argumento, que es @code{(goto-char par-end)}: eso mueve el punto al
-fin del p@'arrafo.
+final del p@'arrafo.
 
 (Y si el texto est@'a en una forma o equivalente, y apunta a que no
 puede moverse completamente entonces la funci@'on
@@ -13700,7 +13701,7 @@ caracteres que se repite al principio de cada
 l@'{@dotless{i}}nea. Por ejemplo, en c@'odigo Lisp, es una
 convenci@'on para empezar cada l@'{@dotless{i}}nea de un comentario de
 p@'arrafo largo con @samp{;;; }. En modo Texto, cuatro espacios en
-blanco crea otro prefijo de relleno @emph{fill prefix} com@'un,
+blanco crean otro prefijo de relleno @emph{fill prefix} com@'un,
 creando un p@'arrafo indentado. (@xref{Fill Prefix, , , emacs, The GNU
 Emacs Manual} para m@'as informaci@'on acerca de prefijos de relleno
 @emph{fill prefix}.)
@@ -14028,7 +14029,7 @@ funci@'on @code{not} significa exactamente como se esperaba; eso es
 otro nombre de @code{null}, una funci@'on que devuelve cierto cuando
 su argumento es falso.)
 
-De manera interesante, el bucle cuenta que no est@'a decrementado
+De manera interesante, el bucle cuenta que no se decrementa
 hasta que deje el espacio entre p@'arrafos, a menos que vuelva al fin
 del b@'uffer o pare viendo el valor local del separador del p@'arrafo.
 
@@ -14040,11 +14041,11 @@ efecto lateral, que es mover el punto al margen izquierdo de la
 l@'{@dotless{i}}nea actual.
 
 @findex looking-at
-La funci@'on @code{looking-at} es tambi@'e auto-explicativo; eso
+La funci@'on @code{looking-at} es tambi@'en auto-explicativa; eso
 devuelve cierto si el texto despu@'es del punto asocia la expresi@'on
 regular dada como su argumento.
 
-El resto del cuerpo del bucle se ve dif@'icil al principio, pero tiene
+El resto del cuerpo del bucle se ve compleja al principio, pero tiene
 sentido cuando se comprende.
 
 @need 800
@@ -14082,7 +14083,7 @@ El siguiente punto no separa p@'arrafos.
 El patr@'on que sigue el punto es la expresi@'on regular prefija rellena.
 @end enumerate
 
-La @'ultima condici@'on puede ser un puzzle, hasta que recuerdes que
+La @'ultima condici@'on puede ser un puzzle, hasta que se recuerde qu@'e
 punto fu@'e movido al principio de la l@'{@dotless{i}}nea temprana en
 la funci@'on @code{forward-paragraph}. Esto significa que si el texto
 tiene el prefijo relleno, la funci@'on @code{looking-at} se ver@'a.
@@ -14170,9 +14171,9 @@ La @'ultima expresi@'on cuando no hay prefijos es
 @end smallexample
 
 @noindent
-Esto dice que si no hay prefijo lleno y no estamos al punto final
-mover@'{@dotless{i}}a al principio de lo que fu@'e encontrado por la
-b@'usqueda de la expresi@'on regular para @code{sp-parstart}.
+Esto dice que si no hay prefijo lleno y no estamos al punto final que
+se mover@'{@dotless{i}}a al principio de lo que fu@'e encontrado por
+la b@'usqueda de la expresi@'on regular para @code{sp-parstart}.
 
 La definici@'on completa para la funci@'on @code{forward-paragraph} no
 solo incluye c@'odigo para avanzar, tambi@'en c@'odigo para retroceder.
@@ -14221,7 +14222,7 @@ Emacs se construye. (@code{etags} no es una funci@'on Lisp o una parte
 de Emacs; eso es un programa C.)
 
 @need 1250
-Para crear el fichero @file{TAGS}, primero camibia el directorio en el
+Para crear el fichero @file{TAGS}, primero cambia el directorio en el
 que se quiere crear el fichero. En Emacs se puede hacer esto con el
 comando @kbd{M-x cd}, o visitando un fichero en el directorio, o
 listando el directorio @w{@code{etags *.el}} como el comando a ejecutar
@@ -14233,7 +14234,7 @@ M-x compile RET etags *.el RET
 @noindent
 crear un fichero de @file{TAGS} para Emacs Lisp.
 
-Por ejemplo, si tu tienes un n@'umero largo de ficheros en tu
+Por ejemplo, si se tiene un gran n@'umero de ficheros en el
 directorio @file{~/emacs}, como se hace --- Yo tengo 137 @file{.el}
 dentro, de que se carguen 12 --- se puede crear un fichero @file{TAGS}
 para los ficheros Emacs Lisp en este directorio.
@@ -14369,8 +14370,8 @@ Opcionalmente, que haces si la b@'usqueda falla, devuelve @code{nil} o
 un mensaje de error.
 
 @item
-Opcionalmente, cu@'antas veces repetir la b@'usqueda; si negativa, la
-b@'usqueda va hacia atr@'as.
+Opcionalmente, cu@'antas veces se puede repetir la b@'usqueda; si es
+negativa, la b@'usqueda va hacia atr@'as.
 @end enumerate
 
 @item let*
@@ -14419,7 +14420,7 @@ o m@'as l@'{@dotless{i}}neas blancas en secuencia.
 Escribe una funci@'on para buscar palabras duplicadas, tales como `el
 el'. @xref{Regexps, , Sintaxis para Expresiones Regulares, emacs, El
 Manual de GNU Emacs}, para informaci@'on de c@'omo escribir un regexp
-(una expresi@'on regular) para asociar una cadena que es compuesto de
+(una expresi@'on regular) para asociar una cadena que se compone de
 dos mitades id@'enticas. Se puede disponer de varios regexps; algunos
 son mejores que otros. La funci@'on que se usa es descrito en un
 ap@'endice, a lo largo de varios regexps. @xref{the-the, , Funci@'on
@@ -14467,7 +14468,7 @@ en un documento por cinco.
 
 Hay mucho caminos para implementar un comando para contar
 palabras. Aqu@'{@dotless{i}} hay algunos ejemplos, que pueden desear
-compara con el comando de Emacs est@'andar,
+compararse con el comando de Emacs est@'andar,
 @code{count-words-region}.
 
 @node @value{COUNT-WORDS}
@@ -14480,10 +14481,10 @@ b@'uffer. @questiondown{}Qu@'e comando funcionar@'{@dotless{i}}a? Se
 podr@'{@dotless{i}}a dise@~nar el comando para contar el n@'umero de
 palabras en un b@'uffer completo. Sin embargo, la tradici@'on Emacs
 anima a la flexibilidad --- se puede querer contar palabras solo en
-una secci@'on, en vez de en todo un buffer. As@'{@dotless{i}}, tiene
+una secci@'on, en vez de en todo un b@'uffer. As@'{@dotless{i}}, tiene
 m@'as sentido dise@~nar el comando para contar el n@'umero de palabras
 en una regi@'on. Una vez tienes un comando @code{count-words-region},
-se puede, si lo deseas, contar palabras en un buffer completo
+se puede, si desea, contar palabras en un b@'uffer completo
 marc@'andolo con @w{@kbd{C-x h}} (@code{mark-whole-buffer}).
 
 Claramente, contar palabras es un acto repetitivo: empezando desde el
@@ -14550,8 +14551,7 @@ tercero, enviar un mensaje al usuario.
 Cuando un usuario llama a @code{@value{COUNT-WORDS}}, apunta a que
 puede estar al principio o fin de la regi@'on. Sin embargo, el proceso
 de conteo debe empezar al principio de la regi@'on. Esto significa que
-querremos poner punto si eso no est@'a all@'{@dotless{i}}. Esto
-significa que querremos poner el punto que hay si eso no est@'a
+querremos poner el punto que hay si eso no est@'a
 all@'{@dotless{i}}. Ejecutando @code{(goto-char beginning)} asegura
 esto. De acuerdo, querremos devolver el punto a su posici@'on esperada
 cuando la funci@'on finalice su trabajo. Por esta raz@'on, el cuerpo
@@ -14559,8 +14559,8 @@ debe ser encerrado en una expresi@'on @code{save-excursion}.
 
 La parte central del cuerpo de la funci@'on consiste en un bucle
 @code{while} en el que una expresi@'on salta el punto hacia delante
-palabra por palabra, y otra expresi@'on cuenta estos saltos. El
-true-or-false-test del bucle @code{while} si es verdadero, el punto
+palabra por palabra, y otra expresi@'on cuenta estos saltos. Si el
+test-verdadero-o-falso del bucle @code{while} es verdadero, el punto
 saltar@'{@dotless{i}}a hacia adelante, y si es falso el punto
 estar@'{@dotless{i}}a al fin de la regi@'on.
 
@@ -14580,16 +14580,16 @@ palabras tan bien a trav@'es de las palabras en s@'{@dotless{i}}. Una
 expresi@'on regexp que rechaza para saltar a trav@'es de espacios en
 blanco entre palabras @exclamdown{}nunca saltar@'{@dotless{i}}a m@'as
 de una palabra!. Esto significa que el regexp incluir@'{@dotless{i}}a
-el espacio en blanco y la puntuaci@'on que sigue a una palabra, si
+el espacio en blanco y la puntuaci@'on sigue a una palabra
 cualquiera, como la palabra en s@'{@dotless{i}}. (Una palabra puede
 finalizar un b@'uffer y no tiene cualquier espacio en blanco o
 puntuaci@'on, as@'{@dotless{i}} esta parte del regexp debe ser
 opcional.)
 
 De este modo, queremos para el regexp es un patr@'on definiendo una o
-m@'as palabras caracteres que constituyen caracteres seguidos,
+m@'as palabras de caracteres que constituyen caracteres seguidos,
 opcionalmente, por uno o m@'as caracteres que no son palabras
-consituyentes. La expresi@'on regular para esto es:
+constituyentes. La expresi@'on regular para esto es:
 
 @smallexample
 \w+\W*
@@ -14633,8 +14633,8 @@ Finalmente, se quiere contar al usuario cu@'antas palabras hay en la
 regi@'on. La funci@'on @code{message} presenta este tipo de
 informaci@'on al usuario. El mensaje tiene que ser fraseado
 de manera que se lea apropiadamente sin cuidado de cuantas palabras
-hay en la regi@'on: no queremos decir que ``hay una palabra en la
-regi@'n''. El conflicto entre singular y plural es no gramatical. Se
+hay en la regi@'on: no se quiere decir que ``hay una palabra en la
+regi@'on''. El conflicto entre singular y plural no es gramatical. Se
 puede resolver este problema usando una expresi@'on condicional que
 eval@'ua diferentes mensajes dependiendo en el n@'umero de palabras en
 la regi@'on. Hay tres posibilidades: no palabras en la regi@'on, una
@@ -14678,10 +14678,10 @@ sintaxis del b@'uffer determina qu@'e caracteres hay."
               "La regi@'on no tiene palabras."))
             ((= 1 count)
              (message
-              "The regi@'on tiene 1 palabra."))
+              "La regi@'on tiene 1 palabra."))
             (t
              (message
-              "The regi@'on tiene %d palabras." count))))))
+              "La regi@'on tiene %d palabras." count))))))
 @end group
 @end smallexample
 
@@ -14691,7 +14691,7 @@ Como se escribe, la funci@'on funciona, pero no en todas las circunstancias.
 @node Error de espacio en blanco
 @subsection El error de espacio en blanco en @code{@value{COUNT-WORDS}}
 
-El comando @code{@value{COUNT-WORDS}} descrito en las secci@'on
+El comando @code{@value{COUNT-WORDS}} descrito en la secci@'on
 precedente tiene dos errores, o incluso, un error con dos
 manifestaciones. Primero, si se marca una regi@'on conteniendo solo
 espacio en blanco en el medio de alg@'un texto el comando
@@ -14708,7 +14708,7 @@ B@'usqueda fallida: "\\w+\\W*"
 Si est@'a leyendo esto en Info en GNU Emacs, se puede testear para
 estos errores por s@'{@dotless{i}} mismo.
 
-Primero, eval@'ua la funci@'on en la manera usual para instalarlo.
+Primero, eval@'ua la funci@'on de la manera usual para instalarlo.
 @ifinfo
 Aqu@'{@dotless{i}} hay una copia de la definici@'on. Emplaza tu cursor
 despu@'es de cerrar los par@'entesis y escribir @kbd{C-x C-e} para
@@ -14797,9 +14797,9 @@ te cuenta que el espacio en blanco al principio de la
 l@'{@dotless{i}}nea contiene una palabra. Lo que ocurre es esto: El
 comando @code{M-x @value{COUNT-WORDS}} mueve el punto al principio de
 la regi@'on. El test @code{while} si el valor del punto es m@'as
-peque@~no que el valor de @code{end}, que es. Por consiguiente, en la
-expresi@'on regular se busca y encuentra la primera palabra. Eso deja
-el punto despu@'es de la palabra. @code{count} se establece a
+peque@~no de lo que el valor de @code{end}, que es. Por consiguiente,
+en la expresi@'on regular se busca y encuentra la primera palabra. Eso
+deja el punto despu@'es de la palabra. @code{count} que se establece a
 uno. El bucle @code{while} repite; pero esta vez el valor del punto es
 m@'as largo que el valor de @code{end}, el bucle sale; y la funci@'on
 muestra un mensaje diciendo el n@'umero de palabras en la regi@'on es
@@ -14857,15 +14857,15 @@ un tercer argumento de @code{t}, que causa la funci@'on para devolver
 
 Sin embargo, si se crea este cambio y se intenta, se ver@'a el mensaje
 ``Contando palabras en la regi@'on ...'' y @dots{} se guardar@'a
-viendo que mensaje @dots{}, hasta se escribe @kbd{C-g}
+viendo qu@'e mensaje @dots{}, hasta que se escribe @kbd{C-g}
 (@code{keyboard-quit}).
 
 Aqu@'{@dotless{i}} est@'a lo que ocurre: la b@'usqueda est@'a limitada
 a la regi@'on, como antes, y eso falla porque no hay caracteres no
 constituyentes de palabras en la regi@'on, como se
-espera. Consiguientemente, la expresi@'on @code{re-search-forward}
+espera. Por tanto, la expresi@'on @code{re-search-forward}
 devuelve @code{nil}. Eso no hace nada m@'as. En particular, no mueve
-el punto, que hace como un efecto lateral si eso encuentra la
+el punto, que hace como un efecto lateral si se encuentra la
 b@'usqueda objetiva. Despu@'es la expresi@'on @code{re-search-forward}
 devuelve @code{nil}, la siguiente expresi@'on en el bucle @code{while}
 est@'a evaluado. Esta expresi@'on incrementa el contador. Entonces el
@@ -14950,10 +14950,10 @@ lo que parece:
               "La regi@'on no tiene palabras."))
             ((= 1 count)
              (message
-              "The regi@'on tiene 1 palabra."))
+              "La regi@'on tiene 1 palabra."))
             (t
              (message
-              "The regi@'on tiene %d palabras." count))))))
+              "La regi@'on tiene %d palabras." count))))))
 @end group
 @end smallexample
 
@@ -15030,11 +15030,11 @@ mostrar el valor al usuario.
 Con frecuencia, uno piensa que se puede asociar una expresi@'on
 @code{let} como algo secundario al trabajo `primario' de una
 funci@'on. Pero en este caso, se podr@'{@dotless{i}}a considerar el
-trabajo `primario' de la funci@'on, contando palabras, es hecho con la
-expresi@'on @code{let}.
+trabajo `primario' de la funci@'on, contando palabras, esto es hecho
+con la expresi@'on @code{let}.
 
 @need 1250
-Usando @code{let}, la definici@'on de funci@'on se parece a esto:
+Usando @code{let}, la definici@'on de funci@'on se parece a:
 
 @smallexample
 @group
@@ -15062,10 +15062,10 @@ Usando @code{let}, la definici@'on de funci@'on se parece a esto:
               "La regi@'on no tiene palabras."))
             ((= 1 count)
              (message
-              "The regi@'on tiene 1 palabra."))
+              "La regi@'on tiene 1 palabra."))
             (t
              (message
-              "The regi@'on tiene %d palabras." count))))))
+              "La regi@'on tiene %d palabras." count))))))
 @end group
 @end smallexample
 
@@ -15086,18 +15086,18 @@ puede usar la funci@'on @code{point} para localizar el
 punto. Claramente, se debe pasar el valor del fin de la regi@'on a la
 funci@'on de contaje recursivo como un argumento.
 
-Adem@'as, el do-again-test tambi@'en chequear@'{@dotless{i}}a si la
-b@'usqueda encuentra una palabra. Si no, la funci@'on no se
+Adem@'as, el do-again-test tambi@'en chequea si la b@'usqueda
+encuentra una palabra. Si no, la funci@'on no se
 llamar@'{@dotless{i}}a de nuevo.
 
 La next-step-expression cambia un valor as@'{@dotless{i}} que cuando
 la funci@'on recursiva se supone que debe parar de llamarse
 as@'{@dotless{i}} misma, se para. M@'as precisamente, los cambios de
-next-step-expression cambia un valor as@'{@dotless{i}} que en el
-momento adecuado, el do-again-test para la funci@'on recursiva de la
-llamada en s@'{@dotless{i}} de nuevo. En este caso, la
-next-step-expression puede ser la expresi@'on que mueve el punto hacia
-adelante, palabra por palabra.
+next-step-expression cambia un valor as@'{@dotless{i}} en el momento
+adecuado, el do-again-test para la funci@'on recursiva de la llamada
+en s@'{@dotless{i}} de nuevo. En este caso, la next-step-expression
+puede ser la expresi@'on que mueve el punto hacia adelante, palabra
+por palabra.
 
 La tercera parte de una funci@'on recursiva es la llamada recursiva.
 
@@ -15195,9 +15195,9 @@ Considera varias casos:
 @itemize @bullet
 @item
 Si hay dos palabras en la regi@'on, la funci@'on devolver@'a un valor
-resultante de a@~nadir uno al valor devuelto cuando eso cuenta la
-primera palabra, m@'as el n@'umero devuelto cuando eso cuenta las
-palabras que permanecen en la regi@'on, que en este caso es una.
+resultante de a@~nadir uno al valor devuelto al contar la primera
+palabra, m@'as el n@'umero devuelto al contar las palabras que
+permanecen en la regi@'on, que en este caso es una.
 
 @item
 Si hay una palabra en la regi@'on, la funci@'on
@@ -15211,7 +15211,7 @@ Si no hay palabras en la regi@'on, la funci@'on
 devolver@'{@dotless{i}}a cero.
 @end itemize
 
-Desde el esquema podemos ver que la parte else del @code{if} devuelve
+Desde el esquema se puede ver que la parte else del @code{if} devuelve
 cero para el caso en el que no hay palabras. Esto significa que la
 parte then del @code{if} debe devolver un valor resultante de a@~nadir
 uno al valor devuelto desde el contaje de las palabras que permanecen.
@@ -15251,13 +15251,13 @@ parecer@'a e esto:
 Perm@'{@dotless{i}}teme examinar c@'omo esto funciona:
 
 Si no hay palabras en la regi@'on, la parte else de la expresi@'on
-@code{if} es evaluada y consecuentemente la funci@'on devuelve cero.
+@code{if} es evaluada y, por tanto, la funci@'on devuelve cero.
 
 Si hay una palabra en la regi@'on, el valor del punto es menor que el
 valor de @code{region-end} y la b@'usqueda tiene @'exito. En este
 caso, el true-or-false-test de la expresi@'on @code{if} chequea
 cierto, y la then-part de la expresi@'on @code{if} es evaluada. La
-expresi@'on de contaje es evaluada. Esta expresi@'on devuelve un valor
+expresi@'on de contaje se eval@'ua. Esta expresi@'on devuelve un valor
 (que ser@'a el valor devuelto por la funci@'on completa) que es la
 suma de uno a@~nadida al valor devuelto por una llamada recursiva.
 
@@ -15273,15 +15273,15 @@ a@~nadido a uno, y la evaluaci@'on original de
 la cantidad correcta.
 
 Claramente, si hay dos palabras en la regi@'on, la primera llamada a
-@code{recursive-count-words} devuelve uno a@~nadido al valor devuelto
-llamando @code{recursive-count-words} en una regi@'on contiendo la
-palabra que permanece --- que es, eso a@~nadir uno a uno, produciendo
-dos, que es la cantidad correcta.
+@code{recursive-count-words} devuelve uno que se a@~nade al valor
+devuelto por el siguiente @code{recursive-count-words} en una regi@'on
+donde est@'a la palabra que permanece --- que es, eso a@~nadir uno a
+uno, produciendo dos, que es la cantidad correcta.
 
 Similarmente, si hay tres palabras en la regi@'on, la primera llamada
 @code{recursive-count-words} devuelve uno a@~nadido al valor devuelto
 llamado @code{recursive-count-words} en una regi@'on conteniendo las
-dos palabras que permanecen --- y as@'{@dotless{i}} y as@'{@dotless{i}}.
+dos palabras que faltan --- y as@'{@dotless{i}}.
 
 @need 1250
 @noindent
@@ -23043,7 +23043,7 @@ un contrato con una editorial que restringir@'{@dotless{i}}a eso,
 as@'{@dotless{i}} que no puede usarlo.
 
 Debido a que escribir buen ingl@'es es una habilidad rara entre
-programadores, se pueden perder manuales por esto.
+programadores, se pueden perder manuales por este motivo.
 
 La documentaci@'on, como el software, es una cuesti@'on de libertad,
 no de precio. El problema con estos manuales no eran que O'Reilly
@@ -23193,11 +23193,11 @@ MENU ENTRY: NODE NAME.
 @quotation
 Robert J. Chassell ha trabajado con GNU Emacs desde 1985. @'El
 escribe, edita y ense@~na Emacs y Emacs Lisp, y habla alrededor del
-mundo acerca de la libertad del software. Chassell estuvo fu@'e un
-Director fundador y Tesorero de la Fundaci@'on por el Software Libre,
-Inc. @'El se gradu@'o la Universidad de Cambridge, en Inglaterra. @'El
-tiene un inter@'es cont@'inuo en historia econ@'omica y social y vuela
-su propio aeroplano
+mundo acerca de la libertad del software. Chassell es Director
+fundador y Tesorero de la Fundaci@'on por el Software Libre (FSF). @'El
+se gradu@'o la Universidad de Cambridge, en Inglaterra. @'El tiene un
+inter@'es cont@'inuo en historia econ@'omica y social y vuela su
+propio aeroplano
 @end quotation
 
 @c @page
