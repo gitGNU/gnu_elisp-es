@@ -1916,7 +1916,7 @@ fichero; este otro tipo de acci@'on es llamada @dfn{efecto
 lateral}. Acciones que los humanos pensamos que son importantes tales
 como imprimir resultados son, con frecuencia, ``efectos laterales'' al
 int@'erprete Lisp. La jerga puede sonar peculiar, pero cambiar que es
-f@'acilmente f@'acil aprender a usar efectos laterales.
+f@'acil aprender a usar efectos laterales.
 
 En resumen, evaluando una expresi@'on simb@'olica normalmente
 causa que el int@'erprete devuelva un valor y quiz@'as trajo un efecto
@@ -5576,9 +5576,9 @@ La expresi@'on se ve como:
 (other-buffer (current-buffer) t)
 @end smallexample
 
-El segundo y tercer argumento a la expresi@'on @code{list} son
+El segundo y tercer argumento de la expresi@'on @code{list} son
 @code{(region-beginning)} y @code{(region-end)}. Estas dos funciones
-especifican el principio el y el fin del texto para ser adjunto.
+especifican el principio el y el final del texto que se adjunta.
 
 @need 1250
 Originalmente, el comando usaba las letras @samp{B} y @samp{r}. La
@@ -17048,15 +17048,15 @@ probablemente usar@'{@dotless{i}}as un programa tal como
 @code{gnuplot} para hacer el trabajo. (@code{gnuplot} est@'a bien
 integrado dentro de GNU Emacs.) En este caso, sin embargo, creamos uno
 desde cero, y en el proceso lo reconstruimos nosotros mismos con algo de
-lo que aprendemos antes y as@'{@dotless{i}} aprender m@'as.
+lo que se aprende antes y as@'{@dotless{i}} poder aprender m@'as.
 
-En este cap@'{@dotless{i}}tulo, primero escribiremos un grafo simple
-imprimiendo funci@'on. Esta primera definici@'on ser@'a un
+En este cap@'{@dotless{i}}tulo, primero se escribe un grafo simple
+imprimiendo la funci@'on. Esta primera definici@'on ser@'a un
 @dfn{prototipo}, una funci@'on escrita r@'apidamente nos permite
-reconocer este territorio creando un grafo. Nosotros descubriremos
-dragones, o encontramos que son mitos. Despu@'es de olisquear el
-terreno, nos sentiremos m@'as confidentes y mejoraremos la funci@'on
-para etiquetar las coordenadas autom@'aticamente.
+reconocer este territorio de crear un grafo. Se descubren dragones, o
+resulta que son mitos. Despu@'es de olisquear el terreno, nos
+sentiremos m@'as confidentes y mejoraremos la funci@'on para etiquetar
+las coordenadas autom@'aticamente.
 
 @menu
 * Columnas de un grafo::
@@ -17076,7 +17076,7 @@ todo tipo de terminales, incluyendo los terminales de caracteres, el
 grafo necesitar@'a ser hecho desde s@'{@dotless{i}}mbolos de
 `escritura'. Un asterisco har@'a; como nosotros mejoramos la funci@'on
 de impresi@'on del grafo, se puede crear la elecci@'on del
-s@'{@dotless{i}}mbolo una opci@'on de usuario.
+s@'{@dotless{i}}mbolo como una opci@'on de usuario.
 
 Se puede llamar a esta funci@'on @code{graph-body-print}; se tomar@'a
 un @code{numbers-list} como su @'unico argumento. En esta fase, no se
@@ -17106,16 +17106,16 @@ los s@'{@dotless{i}}mbolos que se asocian a una expresi@'on regular,
 incluyendo funciones que no son interactivas.
 @findex apropos
 
-Lo que queremos buscar es alg@'un comando que imprima o inserte
+Lo que se quiere buscar es alg@'un comando que imprima o inserte
 columnas. Muy probablemente, el nombre de la funci@'on contendr@'a la
 palabra `print' o la palabra `insert' o la palabra `column'. Por esta
 raz@'on, podemos simplemente escribir @kbd{M-x apropos RET print
-\|insert\|column RET} y mira el resultado. En mi sistema, este comando
-toma todav@'{@dotless{i}}a alg@'un tiempo, y entonces produjo una
-lista de 79 funciones y variables. Ahora no toma mucho en todo y
+\|insert\|column RET} y se ve el resultado. En mi sistema, este comando
+toma todav@'{@dotless{i}}a alg@'un tiempo, y entonces se produce una
+lista de 79 funciones y variables. Ahora no se tarda mucho y se
 produce una lista de 211 funciones y variables. Escaneando la lista,
-la @'unica funci@'on que mira como si pudiera hacer el trabajo que es
-@code{insert-rectangle}.
+la @'unica funci@'on que se ve como si se pudiera hacer el trabajo que
+es @code{insert-rectangle}.
 
 @need 1200
 En realidad, esta es la funci@'on que queremos; su documentaci@'on dice:
@@ -17140,7 +17140,7 @@ Aqu@'{@dotless{i}} est@'a el resultado de emplazar el cursor despu@'es
 de la expresi@'on @code{insert-rectangle} y escribiendo @kbd{C-u C-x
 C-e} (@code{eval-last-sexp}). La funci@'on inserta las cadenas
 @samp{"primero"}, @samp{"segundo"}, y @samp{"tercero"} en el
-punto. Tambi@'es la funci@'on devuelve @code{nil}.
+punto. Tambi@'en la funci@'on devuelve @code{nil}.
 
 @smallexample
 @group
@@ -17151,33 +17151,33 @@ punto. Tambi@'es la funci@'on devuelve @code{nil}.
 @end smallexample
 
 @noindent
-De acuerdo, nosotros no estaremos insertando el texto de la
-expresi@'on @code{insert-rectangle} en s@'{@dotless{i}} dentro del
-b@'uffer en el que estamos marcando el grafo, pero llamar@'a la
-funci@'on de nuestro programa. Nosotros, sin embargo, tendremos que
-asegurar que el punto est@'a en el b@'uffer en el lugar donde la
-funci@'on @code{insert-rectangle} insertar@'a la columna de cadenas.
+De acuerdo, no se inserta el texto de la expresi@'on
+@code{insert-rectangle} en s@'{@dotless{i}} dentro del b@'uffer en el
+que se marca el grafo, pero se llamar@'a la funci@'on de nuestro
+programa. Nosotros, sin embargo, tenemos que asegurar que el punto
+est@'a en el b@'uffer en el lugar donde la funci@'on
+@code{insert-rectangle} insertar@'a la columna de cadenas.
 
 Si se est@'a leyendo esto en Info, se puede ver como este trabajo
 cambia a otro b@'uffer, tal como el b@'uffer @file{*scratch*},
-emplazando el punto a alg@'un lugar en el b@'uffer, escribiendo
-@kbd{M-:}, escribiendo la expresi@'on @code{insert-rectangle} dentro
-del minibuffer en la consola, y entonces escribiendo @key{RET}. Esto
-causa Emacs para evaluar la expresi@'on en el minibuffer, pero usa
-como el valor del punto la posici@'on del punto en el b@'uffer
-@file{*scratch*}. (@kbd{M-:} es el atajo para
-@code{eval-expression}. Tambi@'en, @code{nil} no aparece en el
-b@'uffer @file{*scratch*} desde que la expresi@'on es evaluada en el
-minibuffer.)
+emplazando el punto a alg@'un lugar en el b@'uffer, se escribe
+@kbd{M-:}, despu@'es se escribe la expresi@'on @code{insert-rectangle}
+dentro del minib@'uffer en la consola, y entonces se escribe
+@key{RET}. Esto causa que Emacs eval@'ue la expresi@'on en el
+minib@'uffer, pero usa como el valor del punto la posici@'on del punto
+en el b@'uffer @file{*scratch*}. (@kbd{M-:} es el atajo para
+@code{eval-expression}. @code{nil} tampoco aparece en el b@'uffer
+@file{*scratch*} desde que la expresi@'on se eval@'ua en el
+minib@'uffer.)
 
-Se encuentra cuando hacer esto que punto finaliza al fin de la
-@'ultima l@'{@dotless{i}}nea insertada --- esto es decir, que esta
-funci@'on mueve el punto como un efecto lateral. Si nosotros
-est@'abamos para repetir el comando, con el punto en esta posici@'on,
-la siguiente inserci@'on ser@'{@dotless{i}}a debajo y a la derecha de
-la inserci@'on previa. @exclamdown{}Nosotros no queremos esto! Si
-estamos yendo a crear un gr@'afico de barras, las columnas necesitan
-estar debajo unas de otras.
+Se encuentra cuando hacer esto hasta el punto que finaliza al fin de
+la @'ultima l@'{@dotless{i}}nea insertada --- es decir, esta funci@'on
+mueve el punto como un efecto lateral. Si se iba a repetir el comando,
+con el punto en esta posici@'on, la siguiente inserci@'on
+ser@'{@dotless{i}}a debajo y a la derecha de la inserci@'on
+previa. @exclamdown{}Nosotros no queremos esto!. Si se est@'a yendo a
+crear un gr@'afico de barras, las columnas necesitan estar debajo unas
+de otras.
 
 As@'{@dotless{i}} se descubre que cada ciclo del bucle @code{while}
 de column-inserting debe reposicionar el punto al lugar que queremos,
@@ -17214,17 +17214,18 @@ requiere un argumento que se parezca a esto:
 @end smallexample
 
 Esta @'ultima propuesta no es tan dif@'{@dotless{i}}cil, de hecho se
-puede determinar la altura de la columna. Hay dos caminos para nosotros
-especificar la altura de la columna: se puede arbitrariamente situar
-que ser@'a, lo que funcionar@'{@dotless{i}}a bien para gr@'aficas de
-esta altura; o podemos buscar a trav@'es de la lista de n@'umeros y
-usar la altura m@'axima de la lista como la altura m@'axima del
-grafo. Si la @'ultima operaci@'on fuera dif@'{@dotless{i}}cil,
-entonces el procedimiento formal ser@'{@dotless{i}}a f@'acil, pero hay
-una funci@'on construida en Emacs para determinar el m@'aximo de sus
-argumentos. Se puede usar esta funci@'on. La funci@'on se llamaba
-@code{max} y eso devuelve el mayor de sus argumentos, que deben ser
-n@'umeros. De este modo, por ejemplo,
+puede determinar la altura de la columna. Hay dos caminos para
+nosotros especificar la altura de la columna: se puede arbitrariamente
+situar lo que ser@'a, lo que funcionar@'{@dotless{i}}a bien para
+gr@'aficas de esta altura; o podemos buscar a trav@'es de la lista de
+n@'umeros y usar la altura m@'axima de la lista como la altura
+m@'axima del grafo. Si la @'ultima operaci@'on fuera
+dif@'{@dotless{i}}cil, entonces el procedimiento formal
+ser@'{@dotless{i}}a f@'acil, pero hay una funci@'on construida en
+Emacs para determinar el m@'aximo de sus argumentos. Se puede usar
+esta funci@'on. La funci@'on se llamaba @code{max} y eso devuelve el
+mayor de sus argumentos, que deben ser n@'umeros. De este modo, por
+ejemplo,
 
 @smallexample
 (max  3 4 6 5 7 3)
@@ -17289,11 +17290,11 @@ tambi@'en devuelve 8:
 (apply 'max '(4 8 5))
 @end smallexample
 
-Este camino tard@'{@dotless{i}}o es como se usar@'a @code{apply}. La
-funci@'on @code{recurisive-lengths-list-many-files} devuelve una lista
-de n@'umeros que se puede aplicar a @code{max} (nosotros
-podr@'{@dotless{i}}amos tambi@'en aplicar @emph{(hacer apply)} a la
-lista de n@'umeros ordenados; eso no importa si la lista est@'a o no.)
+Este camino tard@'{@dotless{i}}o usar@'a @code{apply}. La funci@'on
+@code{recursive-lengths-list-many-files} devuelve una lista de
+n@'umeros que se puede aplicar a @code{max} (se podr@'{@dotless{i}}a
+tambi@'en aplicar @emph{(hacer apply)} a la lista de n@'umeros
+ordenados; eso no importa si la lista est@'a o no).
 
 @need 800
 Aqu@'{@dotless{i}}, la operaci@'on para encontrar el tama@~no m@'aximo
@@ -17309,7 +17310,7 @@ n@'umero de asteriscos que aparecer@'{@dotless{i}}an en la columna, la
 funci@'on devolver@'a una lista de cadenas para el comando a insertar
 @code{insert-rectangle}.
 
-Cada columna es realiza con asteriscos o espacios en blanco. Puest que
+Cada columna se realiza con asteriscos o espacios en blanco. Puesto que
 la funci@'on pasa el valor del alto de la columna y el n@'umero de
 asteriscos en el columna, el n@'umero de espacios en blanco puede ser
 encontrado sustrayendo el n@'umero de asteriscos desde lo alto de la
@@ -17452,13 +17453,12 @@ usa @code{cons} para adjuntar un s@'{@dotless{i}}mbolo gr@'afico a la
 lista; entonces eso usa @code{cons} de nuevo para adjuntar el `alto de
 espacios en blanco' a la lista.
 
-Es f@'acil ver como escribir tal funci@'on, pero desde que no se
+Es f@'acil ver como escribir tal funci@'on, pero puesto que no se
 necesita eso, no se har@'a. Pero el trabajo podr@'{@dotless{i}}a ser
-hecho, y si eso fuera hecho, eso ser@'{@dotless{i}}a hecho con
+hecho, y si eso se hiciera, se har@'{@dotless{i}}a con
 @code{column-of-graph}. Incluso m@'as importante, no se valora nada
-m@'as que pocos cambios que tendr@'{@dotless{i}}a que ser hecho de
-cualquier otra manera. La mejora, si nosotros siempre deseamos
-hacerla, es simple.
+m@'as que pocos cambios que tendr@'{@dotless{i}}an que ser hechos de
+cualquier otra manera. La mejora, que se desea hacer, es simple.
 
 Ahora, finalmente, volvemos a nuestra primera funci@'on de grafo
 impresa. Esto imprime el cuerpo de un grafo, no las etiquetas para los
@@ -17575,7 +17575,8 @@ pantalla. Puesto aqu@'{@dotless{i}}, eso causa que Emacs redibuje la
 pantalla columna por columna. Sin eso, Emacs no
 redibujar@'{@dotless{i}}a la pantalla hasta que la funci@'on exista.
 
-Se puede chequear @code{graph-body-print} con una corta lista de n@'umeros.
+Se puede chequear @code{graph-body-print} con una peque@~na lista de
+n@'umeros.
 
 @enumerate
 @item
@@ -17605,7 +17606,7 @@ que el grafo empiece.
 Escribe @kbd{M-:} (@code{eval-expression}).
 
 @item
-Pega la expresi@'on @code{graph-body-print} dentro del minibuffer con
+Pega la expresi@'on @code{graph-body-print} dentro del minib@'uffer con
 @kbd{C-y} (@code{yank}).
 
 @item
@@ -17660,13 +17661,13 @@ El numbers-list consiste en los valores del eje Y."
 La funci@'on recursiva es un poco m@'as dif@'{@dotless{i}}cil. Eso
 tiene cuatro partes: el `do-again-test', el c@'odigo impreso, la
 llamada recursiva, y la `next-step-expression'. El `do-again-test' es
-una expresi@'on @code{when} que determina si el @code{numbers-list}
-contiene cualquier elementos que permanecen; si hace eso, la funci@'on
+una expresi@'on @code{when} determina si la @code{numbers-list}
+contiene cualquier elemento que permanece; si hace eso, la funci@'on
 imprime una columna del grafo usando el c@'odigo impreso y se llama
-as@'{@dotless{i}} mismo de nuevo. La funci@'on llama as@'{@dotless{i}}
-misma de nuevo de acuerco al valor producido por la
-`next-steup-expression' que causa para llamar a actuar en una
-versi@'on ordenada de la @code{numbers-list}.
+as@'{@dotless{i}} mismo de nuevo. La funci@'on se llama as@'{@dotless{i}}
+misma de nuevo de acuerdo al valor producido por la
+`next-step-expression' que causa para llamar a actuar en una versi@'on
+ordenada de la @code{numbers-list}.
 
 @smallexample
 @group
@@ -17692,8 +17693,8 @@ Usado con la funci@'on recursive-graph-body-print."
 @end smallexample
 
 @need 1250
-Despu@'es la siguiente instalaci@'on, esta expresi@'on puede ser
-testeado; aqu@'{@dotless{i}} hay un ejemplo:
+Despu@'es de la siguiente instalaci@'on, esta expresi@'on puede ser
+chequeada; aqu@'{@dotless{i}} hay un ejemplo:
 
 @smallexample
 (recursive-graph-body-print '(3 2 5 6 7 5 3 4 6 4 3 2 1))
@@ -17727,7 +17728,7 @@ pero un grafo dibuja la funci@'on que puede ser usada m@'as de una vez.
 
 Por esta raz@'on, se han escrito mejoras a la funci@'on b@'asica
 @code{print-graph-body} que autom@'aticamente imprime etiquetas para
-los ejes horizontal y vertical. Desde la etiqueta de imprimir
+los ejes horizontal y vertical. Puesto que la etiqueta de imprimir
 funciones no contiene mucho material nuevo, se ha emplazado su
 descripci@'on en un ap@'endice @xref{Grafo completo, , Un Grafo con
 Ejes Etiquetados}.
@@ -17749,7 +17750,7 @@ parece una frase parad@'ojica es el secreto de GNU Emacs. En realidad,
 Emacs es una herramienta gen@'erica. La mayor@'{@dotless{i}}a de la
 gente que usa Emacs, lo personaliza para ajustarlo a sus necesidades.
 
-GNU Emacs est@'a mayoritariamente escrito en Emacs Lisp; este
+GNU Emacs est@'a mayoritariamente escrito en Emacs Lisp; esto
 significa que escribiendo expresiones en Emacs Lisp se puede modificar
 o extender Emacs.
 
@@ -17784,7 +17785,7 @@ en modo Fortran cuando se edita un fichero Fortran, y empieza en modo
 Fundamental cuando se edita un fichero no adornado. Esto tiene
 sentido, si no sabes quien est@'a yendo a usar
 Emacs. @questiondown{}Qui@'en sabe lo que una persona espera hacer con
-un fichero no adornado? El modo fundamental es el modor correcto por
+un fichero no adornado? El modo fundamental es el modo correcto por
 defecto para tal fichero, tal como el modo C es lo correcto para
 editar c@'odigo C. (Suficientes lenguajes de programaci@'on tienen
 sintaxis que permiten compartir funcionalidades, tal como el modo C es
@@ -17809,10 +17810,10 @@ consistente con las conveniciones de nombre del fichero Emacs Lisp; el
 viejo formato guarda la escritura.}
 
 Un fichero @file{~/.emacs} contiene c@'odigo Emacs Lisp. Se puede
-escribir este c@'odigo por t@'{@dotless{i}} mismo; o se puede usar la
-funcionalidad @code{customize} para escribir el c@'odigo para ti. Se
-puede combinar tus propias expresiones y expresiones auto-escritas
-personalizadas en tu fichero @file{.emacs}.
+escribir este c@'odigo por uno mismo; o se puede usar la funcionalidad
+@code{customize} para escribir el c@'odigo para ti. Se puede combinar
+tus propias expresiones y expresiones auto-escritas personalizadas en
+tu fichero @file{.emacs}.
 
 (Yo prefiero por m@'{@dotless{i}} mismo escribir mis propias
 expresiones, excepto para estas, fuentes particularmente, que se
@@ -17820,11 +17821,11 @@ encuentran f@'aciles de manipular usando el comando
 @code{customize}. Yo combino los dos m@'etodos.)
 
 La mayor@'{@dotless{i}}a de este cap@'{@dotless{i}}tulo es acerca de
-escribir expresiones por t@'{@dotless{i}} mismo. Eso describe un
-fichero @file{.emacs} simple; para m@'as informaci@'on, mira
-@ref{Fichero de Inicio, , El Fichero de Inicio, emacs, El Manual GNU
-Emacs}, y @ref{Fichero de Inicio, , El Fichero de Inicio, elisp, El
-Manual de Referencia GNU Emacs Lisp}.
+escribir expresiones por uno mismo. Eso describe un fichero
+@file{.emacs} simple; para m@'as informaci@'on, mira @ref{Fichero de
+Inicio, , El Fichero de Inicio, emacs, El Manual GNU Emacs}, y la
+@ref{Fichero de Inicio, , El Fichero de Inicio, elisp, El Manual de
+Referencia GNU Emacs Lisp}.
 
 @node Site-wide Init
 @section Fichero de inicializaci@'on site-wide
@@ -17834,29 +17835,29 @@ Manual de Referencia GNU Emacs Lisp}.
 @cindex fichero @file{site-load.el}
 Adem@'as de tu fichero de inicializaci@'on personal, Emacs
 autom@'aticamente carga varios ficheros de inicializaci@'on amplios,
-si existen. Estos tienen la misma forma que tu fichero @file{.emacs},
-pero son cargados por cualquiera.
+si existen. Tienen la misma forma que tu fichero @file{.emacs}, pero
+se cargan por cualquiera.
 
 Dos ficheros de incializaci@'on, @file{site-load.el} y
 @file{site-init.el}, est@'an cargados dentro de Emacs y volcados
 @emph{dumped} sin una versi@'on dumped de Emacs se cre@'o, como es
 m@'as com@'un. (Las copias dumped de Emacs cargan m@'as
-r@'apidamente. Sin embargo, desde que un fichero se carga y compila,
-un cambio no llega a ser un cambio en Emacs a menos que cargues por
-t@'{@dotless{i}} o recompiles Emacs. @xref{Construyendo Emacs, ,
+r@'apidamente. Sin embargo, puesto que un fichero se carga y compila,
+un cambio no llega a ser un cambio en Emacs a menos que se cargue por
+uno mismo o se recompile Emacs. @xref{Construyendo Emacs, ,
 Construyendo Emacs, elisp, El Manual de Referencia de GNU Emacs Lisp},
 y el fichero @file{INSTALL})
 
-Los tres otros ficheros de inicializaci@'on son cargados
-autom@'aticamente cada vez que se inicia Emacs, si existen. Esto son
-@file{site-start.el}, que es cargado @emph{antes} que tu fichero
+Los otros tres ficheros de inicializaci@'on se cargan
+autom@'aticamente cada vez que se inicia Emacs, si existen. Son
+@file{site-start.el}, que se carga @emph{antes} que tu fichero
 @file{.emacs}, y @file{default.el}, y el tipo de fichero terminal, que
-son cargados @emph{despu@'es} de tu fichero @file{.emacs}.
+se cargan @emph{despu@'es} de tu fichero @file{.emacs}.
 
 Las configuraciones y definiciones en tu fichero @file{.emacs}
 sobreescribir@'an las configuraciones en conflicto y definiciones en
 un fichero @file{site-start.el}, si eso existe; pero las
-configuraciones y definiciones en un @file{default.el} o tipo de
+configuraciones y definiciones en un @file{default.el} o el tipo de
 fichero terminal sobreescribir@'a estos en tu fichero
 @file{.emacs}. (Se pueden prevenir interferencias desde un tipo de
 fichero terminal configurando @code{term-file-prefix} para
@@ -17879,12 +17880,12 @@ fichero de inicializaci@'on amplio.
 @findex defcustom
 
 Se pueden especificar variables usando @code{defcustom}
-as@'{@dotless{i}} que tu y otros pod@'eis usar la funcionalidad de
+as@'{@dotless{i}} que la gente pueda usar la funcionalidad de
 Emacs @code{customize} para asignar sus valores. (No se puede usar
 @code{customize} para escribir definiciones de funci@'on; pero se
 pueden escribir @code{defuns} en tu fichero @file{.emacs}. En vez de
 eso, se puede escribir cualquier expresi@'on Lisp en tu fichero
-@file{.emacs})
+@file{.emacs}).
 
 La funcionalidad @code{customize} depende de la forma especial
 @code{defcustom}. Aunque se puede usar @code{defvar} o @code{setq}
@@ -17950,7 +17951,7 @@ Considere @code{text-mode-hook} como un ejemplo.
 
 Hay dos caminos para personalizar esta variable. Se puede usar el
 comando de personalizaci@'on o escribir las expresiones apropiadas por
-t@'{@dotless{i}} mismo.
+uno mismo.
 
 @need 800
 Usando el comando de personalizaci@'on, se puede escribir:
@@ -17960,7 +17961,7 @@ M-x customize
 @end smallexample
 
 @noindent
-y encuentre que el grupo para editar ficheros datos se llama
+y encuentre que el grupo para editar ficheros de datos se llama
 `datos'. Introduzca este grupo. El Hook @emph{Disparador} es el primer
 miembro. Se puede hacer click en sus opciones varias, tal como
 @code{turn-on-auto-fill}, para asignar los valores. Despu@'es de hacer
@@ -17978,7 +17979,7 @@ parecer@'a a esto:
 @group
 (custom-set-variables
   ;; custom-set-variables fu@'e a@~nadido por Custom.
-  ;; Si se edita a mano, tu podr@'{@dotless{i}}as liartte,
+  ;; Si se edita a mano, tu podr@'{@dotless{i}}as liarte,
   ;; as@'{@dotless{i}} que ten cuidado.
   ;; Tu fichero init contendr@'{@dotless{i}}a solo esta instancia.
   ;; Si hay m@'as de uno, ellos no quieren trabajar.
@@ -18160,10 +18161,10 @@ Ahora regresa a la parte que `vuelve' al modo Texto y modo Auto Relleno.
 fichero @file{.emacs} que hace alguna cosa bajo recuerdo de un humano
 olvidado!
 
-La primera de las dos l@'{@dotless{i}}neas en par@'entesis cuentan a
+La primera de las dos l@'{@dotless{i}}neas entre par@'entesis cuentan a
 Emacs a cambiar al modo Texto que se encuentra un fichero, @emph{a menos
 que} el fichero ir@'{@dotless{i}}a dentro de alg@'un otro modo, tal
-como modo C.
+como el modo C.
 
 @cindex Por b@'uffer, lista de variables locales
 @cindex Lista de variables locales, por b@'uffer,
@@ -18195,7 +18196,7 @@ Ahora, regresa al fichero @file{.emacs}.
 
 @need 800
 Aqu@'{@dotless{i}} est@'a la l@'{@dotless{i}}nea de nuevo;
-@questiondown{}c@'mo funciona?
+@questiondown{}c@'omo funciona?
 
 @cindex Modo Texto activado
 @smallexample
@@ -18234,8 +18235,9 @@ En esta l@'{@dotless{i}}nea, el comando @code{add-hook} a@~nade
 que se adivina!, cambia al modo Auto Fill.
 
 Cada vez que Emacs cambia al modo texto, Emacs ejecuta el comando
-`hooked' dentro de modo Texto. As@'{@dotless{i}} cada vez que Emacs
-cambia al modo Texto, Emacs tambi@'en cambia al modo de autoajuste.
+`hooked' dentro de modo Texto. As@'{@dotless{i}} que cada vez que
+Emacs cambia al modo Texto, Emacs tambi@'en cambia al modo de
+autoajuste.
 
 En breve, la primera l@'{@dotless{i}}nea causa a Emacs a entrar en
 modo Texto cuando se edite un fichero, a menos que la extensi@'on del
@@ -18243,12 +18245,12 @@ nombre del fichero, una l@'{@dotless{i}}nea no en blanco, variables
 locales para contar a Emacs de otro modo.
 
 El modo texto entre otras acciones, asigna la tabla de sintaxis para
-trabajar adecuadamente a escritores. En modo texto, Emacs considera
-un ap@'ostrofe como parte de una palabra como una letra; pero Emacs no
-considera un per@'{@dotless{i}}odo o un espacio como parte una
+trabajar adecuadamente a escritores. En modo texto, Emacs considera un
+ap@'ostrofe como parte de una palabra como una letra; pero Emacs no
+considera un per@'{@dotless{i}}odo o un espacio como parte de una
 palabra. De este modo, @kbd{M-f} se mueve hacia t@'{@dotless{i}} a
-trav@'e de @samp{eso es}. Por otro lado, en modo C, @kbd{M-f} para
-solo despu@'es del @samp{t} de @samp{eso es}.
+trav@'es de @samp{eso}. Por otro lado, en modo C, @kbd{M-f} para solo
+despu@'es del @samp{t} de @samp{eso}.
 
 La segunda l@'{@dotless{i}}nea causa que Emacs active el modo Auto
 Fill cuando cambia al modo Texto. En modo Auto Fill, Emacs
@@ -18258,15 +18260,16 @@ de debajo a la siguiente l@'{@dotless{i}}nea. Emacs rompe
 l@'{@dotless{i}}neas entre palabras con ellas.
 
 Cuando el modo Auto Fill est@'a desactivado, las l@'{@dotless{i}}neas
-continuan a la derecha como se escriben. Dependiendo de como
-configuras el valor de @code{truncate-lines}, las palabras que escribe
-si desaparecen al lado derecho de la pantalla, o lo dem@'as son
-mostradas, en un modo feo e ilegible, como una l@'{@dotless{i}}nea de
-continuaci@'on en la pantalla.
+contin@'uan a la derecha como se escriben. Dependiendo de como
+configuras el valor de @code{truncate-lines}, las palabras que se
+escribe si desaparecen al lado derecho de la pantalla, o lo dem@'as
+son mostradas, en un modo feo e ilegible, como una l@'{@dotless{i}}nea
+de continuaci@'on en la pantalla.
 
 @need 1250
 Adem@'as, en esta parte de mi fichero @file{.emacs}, yo cuento a Emacs
-el ajuste comandos para insertar dos espacios despu@'es de dos puntos:
+el ajuste de comandos para insertar dos espacios despu@'es de dos
+puntos:
 
 @smallexample
 (setq colon-double-space t)
@@ -18333,7 +18336,7 @@ Lo siguiente desactiva el modo de Indentar Tabulaciones:
 
 Note que esta l@'{@dotless{i}}nea usa @code{setq-default} en vez de el
 comando @code{setq} que hemos visto antes. El comando
-@code{setq-default} asigna valores solo en buffers que no tienen sus
+@code{setq-default} asigna valores solo en b@'uffers que no tienen sus
 propios valores locales para la variable.
 
 @ifinfo
@@ -18363,7 +18366,7 @@ Ahora para algunos atajos personales:
 
 @findex compare-windows
 @code{compare-windows} es un comando excelente que compara el texto en
-tu ventana actual con texto en la siguiente ventana. Eso hace la
+tu ventana actual con texto de la siguiente ventana. Eso hace la
 comparaci@'on empezando al punto en cada ventana, moviendo a trav@'es
 del texto en cada ventana tan lejos como ellos asocian. Yo uso este
 comando todo el tiempo.
@@ -18379,7 +18382,7 @@ El comando es @code{global-set-key}. Es seguido por el atajo. En un
 fichero @file{.emacs}, el atajo es escrito como se ve: @code{\C-c} que
 se asocia a `control-c', que significa `presionar la tecla de control
 y la tecla @key{c} al mismo tiempo'. La @code{w} significa `presionar
-la tecla @key{w}'. El atajo es rodeador por dobles comillas. En la
+la tecla @key{w}'. El atajo es rodeado por dobles comillas. En la
 documentaci@'on, se escribir@'{@dotless{i}}a esto como @w{@kbd{C-c
 w}}. (Si estuviera asociando una tecla @key{META}, tal como @kbd{M-c},
 en vez de una tecla de @key{CTRL}, se escribir@'{@dotless{i}}a
@@ -18402,13 +18405,13 @@ Como para el atajo en s@'{@dotless{i}}: @kbd{C-c w}, combina la tecla
 prefija, @kbd{C-c}, con un caracter simple, en este caso,
 @kbd{w}. Este conjunto de teclas, @kbd{C-c} seguido por un caracter
 simple, es estrictamente reservado para un uso propio
-individual. (Esto se llama teclas `propias', desde que estas son para
-su propio uso.) Siempre ser@'{@dotless{i}}a capaz de crear tal atajo
+individual. (Esto se llama teclas `propias', puesto que estas son para
+su propio uso). Siempre ser@'{@dotless{i}}a capaz de crear tal atajo
 para el uso propio sin pisar fuerte en alg@'un atajo m@'as. Si siempre
-se escribe una extensi@'on a Emacs, por favor evite tomar cualquier de
-estas teclas para uso p@'ublico. Se cree que una tecla como @kbd{C-c
-C-w} en vez de eso. De otra manera, ejecutar@'a sin sus `propias'
-teclas.
+se escribe una extensi@'on a Emacs, por favor, evite tomar cualquiera
+de estas teclas para uso p@'ublico. Se cree que una tecla como
+@kbd{C-c C-w} en vez de eso. De otra manera, ejecutar@'a sin sus
+`propias' teclas.
 
 @need 1250
 Aqu@'{@dotless{i}} hay otro atajo, con un comentario:
@@ -18446,7 +18449,7 @@ Hay una raz@'on para esta no asociaci@'on: Yo encontr@'e
 inadvertidamente escrito @w{@kbd{C-x f}} cuando signific@'o escribir
 @kbd{C-x C-f}. En vez de encontrar un fichero, como se pretende,
 accidentalmente asigna el ancho para el fichero lleno, casi siempre a
-un tama@~no que no quer@'{@dotless{i}}a. Desde que duramente se
+un tama@~no que no quer@'{@dotless{i}}a. Puesto que duramente se
 resete@'o mi ancho por defecto, yo simplemente disoci@'e la tecla.
 
 @findex list-buffers, @r{reasociar}
@@ -18519,7 +18522,7 @@ Aqu@'{@dotless{i}} est@'a la definici@'on de funci@'on
 @smallexample
 @group
 (defun texinfo-insert-@@group ()
-  "Inserta la cadena @@group en un buffer Texinfo."
+  "Inserta la cadena @@group en un b@'uffer Texinfo."
   (interactive)
   (beginning-of-line)
   (insert "@@group\n"))
@@ -18648,9 +18651,9 @@ eval@'ua el fichero que contiene la definici@'on, y entonces llama a
 la funci@'on.
 
 Emacs empieza r@'apido con funciones de autocarga, puesto que sus
-librer@'{@dotless{i}}as son no cargadas bien; pero si necesita esperar
-un momento cuando su primer uso tal como una funci@'on, mientras el
-fichero que lo contiene es evaluado.
+librer@'{@dotless{i}}as no se cargan bien; pero si necesita esperar un
+momento cuando su primer uso tal como una funci@'on, mientras que el
+fichero que lo contiene se eval@'ua.
 
 Raramente las funciones usadas son frecuentemente autocargadas. La
 librer@'{@dotless{i}}a @file{loaddefs.el} coniene cientos de funciones
@@ -18689,15 +18692,15 @@ Aqu@'{@dotless{i}} hay un ejemplo t@'{@dotless{i}}pico:
 
 @noindent
 (@code{html-helper-mode} es una vieja alternativa a @code{html-mode},
-que es un parte est@'andar de la distribuci@'on.)
+que es una parte est@'andar de la distribuci@'on.)
 
 @noindent
 Esta expresi@'on autocarga la funci@'on @code{html-helper-mode}. Esto
-lo toma desde el fichero @file{html-helper-mode-el} (o desde la
-versi@'on compilada @file{html-helper-mode.elc}, si esto existe.) El
-fichero debe ser localizada en un directorio espec@'{@dotless{i}}fico
+se toma desde el fichero @file{html-helper-mode-el} (o desde la
+versi@'on compilada @file{html-helper-mode.elc}, si eso existe). El
+fichero debe ser localizado en un directorio espec@'{@dotless{i}}fico
 por @code{load-path}. La documentaci@'on dice que esto es un modo para
-ayudarte a editar documentos escritos en Lenguaje de Marcas de Hiper
+ayudar a editar documentos escritos en Lenguaje de Marcas de Hiper
 Texto. Se puede llamar este modo interactivamente escribiendo @kbd{M-x
 html-helper-mode}. (Se necesitan duplicar las funciones regulares de
 documentaci@'on en la expresi@'on de autocarga porque la funci@'on
@@ -18714,14 +18717,14 @@ Emacs Lisp}, para m@'as informaci@'on.
 
 Aqu@'{@dotless{i}} hay una simple extensi@'on a Emacs que mueve el
 punto de l@'{@dotless{i}}nea arriba de la ventana. Yo uso esto todo el
-tiempo, para hacer f@'acil leer el texto.
+tiempo, para hacer f@'acil de leer el texto.
 
 Se puede poner el siguiente c@'odigo dentro de un fichero separado y
 entonce cargarlo desde tu fichero @file{.emacs}, o se puede incluir
 con tu fichero @file{.emacs}.
 
 @need 1250
-Aqu@'{@dotless{i}} es la definici@'on
+Aqu@'{@dotless{i}} est@'a la definici@'on
 
 @smallexample
 @group
@@ -18739,11 +18742,12 @@ Ahora el atajo.
 
 En estos d@'{@dotless{i}}as, las teclas de funci@'on as@'{@dotless{i}}
 como los eventos del rat@'on y caracteres no @sc{ascii} son escritos
-con corchetes, sin marcas de citas. (En Emacs versi@'on 18 y antes, se
-ten@'{@dotless{i}}a que escribir diferentes teclas de funci@'on
-asignadas por cada diferente creaci@'on del terminal.)
+con corchetes, sin marcas de citas. (En Emacs versi@'on 18 y
+anteriores, se ten@'{@dotless{i}}a que escribir diferentes teclas de
+funci@'on asignadas por cada diferente creaci@'on del terminal.)
 
-Yo asocio @code{line-to-top-of-window} a mi funci@'on @key{F6} como esta:
+Se puede asociar @code{line-to-top-of-window} a la tecla de funci@'on
+@key{F6} as@'{@dotless{i}}:
 
 @smallexample
 (global-set-key [f6] 'line-to-top-of-window)
@@ -18820,12 +18824,11 @@ usando un conjunto m@'as sofisticado de opciones, emacs -Q - D
 Se pueden especificar colores cuando se usa Emacs con el Sistema de
 Ventanas X del MIT.
 
-Me disgustan los colores de por defecto y especificar los
-m@'{@dotless{i}}os.
+Si disgustan los colores por defecto y especifica unos propios.
 
 @need 1250
-Aqu@'{@dotless{i}} est@'an las expresiones en mi fichero @file{.emacs}
-que establecen valores:
+Aqu@'{@dotless{i}} est@'an las expresiones en un fichero @file{.emacs}
+que establecen los valores:
 
 @smallexample
 @group
@@ -19182,14 +19185,14 @@ La nueva cadena de formato tiene una sintaxis especial:
 @noindent
 El @code{#(} empieza una lista. El primer elemento de la lista es la
 cadena en s@'{@dotless{i}}, solo un @samp{-}. El segundo y tercer
-elemento especifica el rango a trav@'es con el cuarto elemento
+elemento especifica el rango a trav@'es del cuarto elemento
 aplicado. Un rango empieza @emph{despu@'es} un car@'acter,
 as@'{@dotless{i}} un cero significa el rango que empieza solo
 despu@'es del primer caracter; un 1 significa que el rango finaliza
 solo despu@'es del primer caracter. El tercer elemento es la propiedad
 para el rango. Eso consiste en una lista de propiedades, un nombre de
 propiedad, en este caso, @samp{help-echo}, seguido por un valor, en
-este caso, una cadena. El segundo, tercer y cuarto elementos de este
+este caso, una cadena. El segundo, tercer y cuarto elemento de este
 nuevo formato de cadena puede ser repetido.
 
 @xref{Propiedades de Texto, , Propiedades de Texto, elisp, El Manual
@@ -19232,14 +19235,14 @@ Esta es la expresi@'on:
 @samp{%[} y @samp{%]} causa un par de corchetes que aparezcan por cada
 edici@'on nivel de edici@'on recursiva editando el nivel. @samp{%n}
 dice `Encoger' cuando esto puede hacerse. @samp{%P} te cuenta el
-porcentaje del buffer que est@'a debajo debajo de la ventana, o
-`arriba', `abajo', o `todo'. (Una min@'uscula @samp{p} cuenta el
-porcentaje bajo el alto de la ventana.) @samp{%-} inserta suficientes
-guiones para rellenar la l@'{@dotless{i}}nea.
+porcentaje del b@'uffer que est@'a debajo de la ventana, o `arriba',
+`abajo', o `todo'. (Una min@'uscula @samp{p} cuenta el porcentaje bajo
+el alto de la ventana.) @samp{%-} inserta suficientes guiones para
+rellenar la l@'{@dotless{i}}nea.
 
-Recuerda, ``No tiene que gustarte Emacs para que le gustes'' --- tu
-Emacs puede tener diferentes colores, diferentes comandos, y
-diferentes teclas que un Emacs por defecto.
+Recuerda, ``No tiene que gustarte Emacs para que le gustes'' --- Emacs
+puede tener diferentes colores, diferentes comandos, y diferentes
+teclas que un Emacs por defecto.
 
 Por otro lado, si se quiere traer un plano `fuera de la caja' Emacs,
 sin personalizaci@'on, escribe:
@@ -21247,7 +21250,7 @@ quiere el eje etiquetado para empezar.
 Escribe @kbd{M-:} (@code{eval-expression}).
 
 @item
-Pega la expresi@'on @code{graph-body-print} dentro del minibuffer con
+Pega la expresi@'on @code{graph-body-print} dentro del minib@'uffer con
 @kbd{C-y} (@code{yank}).
 
 @item
