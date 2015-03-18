@@ -233,10 +233,9 @@
 Esto es una @cite{Introducci@'on a la Programaci@'on en Emacs Lisp},
 para personas que no son programadoras.
 @sp 1
-Edici@'on @value{edition-number}, @value{update-date}
+Traducido desde la edici@'on @value{edition-number}.
 @sp 1
-Copyright @copyright{} 1990--1995, 1997, 2001--2013 Free Software
-Foundation, Inc.
+Copyright @copyright{} 2015 Libremanuals.
 @sp 1
 
 @iftex
@@ -366,7 +365,7 @@ indexa; entonces lista cada nodo en cada cap@'{@dotless{i}}tulo.
 * Grafo completo::           C@'omo crear un grafo con ejes etiquetados.
 * Software Libre y Manuales Libres::
 * GNU Free Documentation License::
-* @'Indice::
+* @'Indice de palabras::
 * Acerca del Autor::         
 
 @detailmenu
@@ -1227,12 +1226,8 @@ Gracias a todos quienes me ayudaron con este libro. Especialmente
 agradecido a @r{Jim Blandy}, @r{Noah Friedman}, @w{Jim Kingdon},
 @r{Roland McGrath}, @w{Frank Ritter}, @w{Randy Smith}, @w{Richard M.
 Stallman}, and @w{Melissa Weisshaus}. Gracias tambi@'en a @w{Philip
-Johnson} y @w{David Stampe} por su for @'animo paciente. Mis errores
+Johnson} y @w{David Stampe} por su @'animo paciente. Mis errores
 son m@'{@dotless{i}}os.
-
-Gracias al equipo inicial de traductores al español @r{Antonio
-Barrones}, @r{Suso Pereira} y @r{David V@'azquez P@'erez} por el primer
-impulso.
 
 @flushright
 Robert J. Chassell
@@ -19309,7 +19304,7 @@ definici@'on rota:
 @end smallexample
 
 Si se est@'a leyendo esto en Info, se puede evaluar esta definici@'on
-en el modo normal. Se ver@'a @code{triangle-bugged} aparece en el
+en el modo normal. Se ver@'a que @code{triangle-bugged} aparece en el
 @'area echo.
 
 @need 1250
@@ -19417,7 +19412,7 @@ entonces se puede testear de nuevo.
 @findex debug-on-entry
 
 Un GNU Emacs actual abre el depurador autom@'aticamente cuando la
-funci@'on tenga un error.
+funci@'on tiene un error.
 
 @ignore
 GNU Emacs version 20 and before did not; it simply
@@ -19591,10 +19586,10 @@ El Depurador Lisp, elisp, El Manual de Referencia GNU Emacs Lisp}.
 @cindex Depurador de nivel de c@'odigo
 @findex edebug
 
-Edebug es un depurador a nivel de fuentes Edebug normalmente muestra
-las fuentes del c@'odigo que se est@'a depurando, con una flecha a la
-izquierda que muestra que l@'{@dotless{i}}nea se est@'a actualmente
-ejecutando.
+Edebug es un depurador a nivel de fuentes Edebug que normalmente
+muestra las fuentes del c@'odigo que se est@'a depurando, con una
+flecha a la izquierda que muestra que l@'{@dotless{i}}nea se est@'a
+actualmente ejecutando.
 
 Se puede pasear a trav@'es de la ejecuci@'on de una funci@'on,
 l@'{@dotless{i}}nea a l@'{@dotless{i}}nea, o ejecutarse r@'apidamente
@@ -19652,13 +19647,14 @@ de la siguiente expresi@'on y escribe @kbd{C-x C-e} (@code{eval-last-sexp}):
 @end smallexample
 
 @noindent
-Se volver@'a a las fuentes de @code{triangle-recursively-bugged} y el
-cursor posicion@'o al principio del @code{if} l@'{@dotless{i}}nea de
-la funci@'on. Tambi@'en, ver@'a una flecha a la mano izquierda al
-lado de esta l@'{@dotless{i}}nea donde la funci@'on se est@'a
-ejecutando. (En los siguientes ejemplos, se muestra la flecha con
-@samp{=>}; en un sistema de ventanas, se puede ver la flecha como un
-tri@'angulo s@'olido en el `borde' de la ventana.)
+Se vuelve a las fuentes de @code{triangle-recursively-bugged} y el
+cursor se posiciona al principio del @code{if} de la
+l@'{@dotless{i}}nea de la funci@'on. Tambi@'en, se ver@'a una flecha
+en la mano izquierda al lado de esta l@'{@dotless{i}}nea donde la
+funci@'on se est@'a ejecutando. (En los siguientes ejemplos, se
+muestra la flecha con @samp{=>}; en un sistema de ventanas, se puede
+ver la flecha como un tri@'angulo s@'olido en el `borde' de la
+ventana.)
 
 @smallexample
 =>@point{}(if (= number 1)
@@ -19696,7 +19692,7 @@ Resultado: 3 (#o3, #x3, ?\C-c)
 @noindent
 Esto significa el valor de @code{number} es 3, que son tres octales,
 tres hexadecimales, y @sc{ascii} `control-c' (la tercera letra del
-alfabeto, en caso de que necesites conocer esta informaci@'on).
+alfabeto, en caso de que se necesite conocer esta informaci@'on).
 
 Uno puede continuar movi@'endose a trav@'es del c@'odigo hasta que
 logre la l@'{@dotless{i}}nea con el error. Antes de la evaluaci@'on,
@@ -19726,12 +19722,11 @@ instrumente. Por ejemplo, se podr@'{@dotless{i}}a posicionar su cursor
 despu@'es de la definici@'on cerrando par@'entesis y escribiendo
 @kbd{C-x C-e}. 
 
-Edebug hace un gran trato m@'as antes de entrar en una funci@'on. Se
-puede asignar as@'{@dotless{i}} conducir a s@'{@dotless{i}} mismo,
-parando solo en un error o en punto espec@'{@dotless{i}}ficos, se
-puede causar para mostrar los valores cambiantes de varias
-expresiones; se puede encontrar cuantas veces una funci@'on es
-llamada, y m@'as.
+Edebug hace un gran trato antes de entrar en una funci@'on. Se puede
+dirigir as@'{@dotless{i}} mismo, parando solo en un error o en puntos
+espec@'{@dotless{i}}ficos, se puede causar para mostrar los valores
+cambiantes de varias expresiones; se puede encontrar cuantas veces una
+funci@'on se llama, y m@'as.
 
 Edebug se describe en @ref{edebug, , Edebug, elisp, El Manual de
 Referencia de GNU Emacs Lisp}.
@@ -19781,7 +19776,7 @@ letra may@'uscula @kbd{T} para @code{edebug-Trace-fast-mode}.
 
 @item
 Asigna un punto de ruptura, entonces ejecuta Edebug en modo Traza
-hasta que logre el punto de parada.
+hasta que se logre el punto de parada.
 @end itemize
 
 @node Conclusi@'on
@@ -19798,7 +19793,7 @@ aprender m@'as por uno mismo.
 
 Se han aprendido algunas bases de programaci@'on. Pero solo
 algunas. Todav@'{@dotless{i}}a hay muchas cosas que son f@'aciles de
-usar que no se ha tocado.
+usar que no se han tocado.
 
 Otra idea para seguir es leer las fuentes de Emacs o 
 @ifnotinfo
@@ -19845,18 +19840,18 @@ no se han estudiado: @code{skip-chars-forward}, @code{indent-to},
 @code{current-column} y @code{insert-and-inherit}.
 
 Considera la funci@'on @code{skip-chars-forward}. (Eso es parte de la
-definici@'on de funci@'on para @code{back-to-indentation}, que es
-mostrado @ref{Revisar, , Revisar}.)
+definici@'on de funci@'on para @code{back-to-indentation}, que
+muestra la @ref{Revisar, , Revisar}.)
 
 En GNU Emacs, se puede encontrar m@'as acerca de
 @code{skip-chars-forward} escribiendo @kbd{C-h f}
 (@code{describe-function}) y el nombre de la funci@'on. Esto te da la
 documentaci@'on de funci@'on.
 
-Se puede ser capaz de adivinar que es hecho por una funci@'on bien
+Se puede ser capaz de adivinar que se hace por una funci@'on bien
 llamada tal como @code{indent-to}; o se puede buscar,
 tambi@'en. Incidentalmente, la funci@'on @code{describe-function} en
-s@'{@dotless{i}} est@'a en @file{help.el}; eso es una de estos largas,
+s@'{@dotless{i}} est@'a en @file{help.el}; esta es una de estas largas,
 pero descifrables funciones. @exclamdown{}Se puede buscar
 @code{describe-function} usando el comando @kbd{C-h f}!
 
@@ -19906,8 +19901,8 @@ variables y listas; no se ha dicho nada acerca de como escribir
 programas que escriben programas. Esto son asuntos para otro tipo
 diferente de libro, un diferente tipo de aprendizaje.
 
-Lo que has hecho es aprender lo suficiente para hacer mucho trabajo
-pr@'actico con GNU Emacs. Lo realizado es comenzar. Este es el
+Lo que se ha hecho es aprender lo suficiente para hacer mucho trabajo
+pr@'actico con GNU Emacs. Lo que se ha hecho es comenzar. Este es el
 fin del principio de una gran amistad.
 
 @c ================ Appendix ================
@@ -19938,9 +19933,9 @@ l@'{@dotless{i}}neas. Sin embargo, eso no detecta palabras duplicadas
 en diferentes l@'{@dotless{i}}neas, desde la finalizaci@'on de la
 primera palabra, el fin de la l@'{@dotless{i}}nea, es diferente desde
 el fin de la segunda palabra, un espacio. (Para m@'as informaci@'on
-acerca de expresiones regulares, mira @ref{Buscar regexp, , B@'usquedas
-de Expresiones Regulares}, tan bien como @ref{Regexps, , Sintaxis de
-Expresiones Regulares, emacs, El Manual de GNU Emacs}, y
+acerca de expresiones regulares, mira el @ref{Buscar regexp, , B@'usquedas
+de Expresiones Regulares}, tan bien como la @ref{Regexps, , Sintaxis de
+Expresiones Regulares, emacs, El Manual de GNU Emacs}, y la
 @ref{Expresiones Regulares, , Expresiones Regulares, elisp, El Manual
 de Referencia GNU Emacs Lisp}.)
 
@@ -19950,7 +19945,7 @@ en `with the'.
 
 Otro posible regexp busca caracteres constituyentes de palabras
 seguidos por caracteres de no palabras constituyentes,
-reduplicados. Aqu@'{@dotless{i}}, @w{@samp{\\w+}} asocia a una o m@'as
+reduplicadas. Aqu@'{@dotless{i}}, @w{@samp{\\w+}} asocia a una o m@'as
 caracteres de palabras constituyente y @w{@samp{\\W*}} asocia cero o
 m@'as caracteres que no constituyen palabras.
 
@@ -20002,7 +19997,7 @@ en mi fichero @file{.emacs}, a lo largo de un atajo global manejable:
 @end smallexample
 
 @sp 1
-Aqu@'{@dotless{i}} est@'a el test de texto:
+Aqu@'{@dotless{i}} est@'a el test del texto:
 
 @smallexample
 @group
@@ -20012,7 +20007,7 @@ cinco seis siete
 @end smallexample
 
 Se pueden sustituir las otras expresiones regulares mostradas debajo en
-la definici@'on de funci@'on y prueba cada una de ellas en esta lista.
+la definici@'on de funci@'on y se prueba cada una de ellas en esta lista.
 
 @node Kill Ring
 @appendix Manejando el anillo de la muerte
@@ -20024,9 +20019,9 @@ El anillo de la muerte es una lista que es transformada dentro de un
 anillo que trabaja con la funci@'on @code{current-kill}. Los comandos
 @code{yank} y @code{yank-pop} usan la funci@'on @code{current-kill}.
 
-Este ap@'endice describe la funci@'on @code{current-kill} tan bien
-como ambos comandos @code{yank} y @code{yank-pop}, pero primero,
-considera los trabajo del kill ring. 
+Este ap@'endice describe la funci@'on @code{current-kill} y los
+comandos @code{yank} y @code{yank-pop}, pero primero, considere los
+trabajo del kill ring. 
 
 @menu
 * Qu@'e hace el anillo de la muerte::
@@ -20062,14 +20057,14 @@ puede cortar cada l@'{@dotless{i}}nea con @kbd{C-k} o marcarla y
 copiarla con @kbd{M-w}.
 
 @noindent
-(En un buffer de solo lectura, tal como el buffer @file{*info*}, el
+(En un b@'uffer de solo lectura, tal como el b@'uffer @file{*info*}, el
 comando kill, @kbd{C-k} (@code{kill-line}), no eliminar@'a el texto,
 solamente lo mueve al anillo de la muerte @emph{kill ring}. Sin
 embargo, el ordenador puede avisar con un beep. Alternativamente, para
 silenciar, se puede copiar la regi@'on de cada l@'{@dotless{i}}nea con
 el comando @kbd{M-w} (@code{kill-ring-save}). Se debe marcar cada
 l@'{@dotless{i}}nea de este comando para tener @'exito, pero no
-importa si al final se posiciona en el punto o la marca.)
+importa si al final se posiciona en el punto o la marca).
 
 @need 1250
 @noindent
@@ -20120,11 +20115,11 @@ Para devolver el viejo valor para el tama@~no del kill ring, eval@'ue:
 @findex current-kill
 
 La funci@'on @code{current-kill} cambia el elemento en el anillo de la
-muerte @emph{kill ring} para el que @code{kill-ring-yank-pointer}
+muerte @emph{kill ring} para el que el @code{kill-ring-yank-pointer}
 apunta. (Tambi@'en, la funci@'on @code{kill-new} asigna
 @code{kill-ring-yank-pointer} para apuntar al @'ultimo elemento del
-anillo de la muerte @emph{kill ring}. La funci@'on @code{kill-new} es
-usada directamente o indirectamente por @code{kill-append},
+anillo de la muerte @emph{kill ring}. La funci@'on @code{kill-new} se
+usa directamente o indirectamente por @code{kill-append},
 @code{copy-region-as-kill}, @code{kill-ring-save}, @code{kill-line}, y
 @code{kill-region}.)
 
@@ -20360,17 +20355,17 @@ El c@'odigo se parece a esto:
 
 Esto necesita alg@'un examen. A menos que no se suponga mover el
 puntero, la funci@'on @code{current-kill} cambia donde
-@code{kill-ring-yank-pointer} apunta. Esto es lo que el @w{@code{(setq
-kill-ring-yank-pointer ARGth-kill-element)}} expresi@'on
+@code{kill-ring-yank-pointer} apunta. Esto es lo que la expresi@'on
+@w{@code{(setq kill-ring-yank-pointer ARGth-kill-element)}}
 hace. Tambi@'en, claramente, @code{ARGth-kill-element} est@'a siendo
-asignado a ser igual para alg@'un @sc{cdr} del anillo de la muerte
+asignado para ser igual a alg@'un @sc{cdr} del anillo de la muerte
 @emph{kill ring}, usando la funci@'on @code{nthcdr} que est@'a
 descrita en una secci@'on temprana. (@xref{copy-region-as-kill}.)
 ¿C@'omo se hace?
 
 Como se ha visto antes (@pxref{nthcdr}), la funci@'on @code{nthcdr}
 funciona repetidamente tomando el @sc{cdr} de una lista --- eso toma
-el @sc{cdr} del @sc{cdr} del @sc{cdr} @dots{}
+el @sc{cdr}, del @sc{cdr}, del @sc{cdr}, @dots{}
 
 @need 800
 Las siguientes dos expresiones producen el mismo resultado:
@@ -20390,8 +20385,8 @@ funci@'on @code{mod} para determinar que @sc{cdr} para seleccionar.
 tendremos que ir dentro del @code{mod}.)
 
 La funci@'on @code{mod} devuelve el valor de su primer argumento
-modulo el segundo; que es decir, eso devuelve el resto despu@'es de
-dividir el primer argumento por el segundo. El valor devulto tiene el
+m@'odulo el segundo; que es decir, eso devuelve el resto despu@'es de
+dividir el primer argumento por el segundo. El valor devuelto tiene el
 mismo signo que el segundo argumento.
 
 @need 800
@@ -20419,10 +20414,10 @@ segundo. Que est@'a bien.
 @end group
 @end smallexample
 
-Se puede adivinar que la funci@'on @code{-} hace. Eso es como @code{+}
-pero sustrae en vez de a@~nadir; la funci@'on @code{-} sustrae su
-segundo argumento desde el primero. Tambi@'en, ya se sabe que la
-funci@'on @code{length} hace (@pxref{length}). Eso devuelve el
+Se puede adivinar lo que la funci@'on @code{-} hace. Eso es como
+@code{+} pero sustrae en vez de a@~nadir; la funci@'on @code{-}
+sustrae su segundo argumento desde el primero. Tambi@'en, ya se sabe
+que la funci@'on @code{length} hace (@pxref{length}). Eso devuelve el
 tama@~no de una lista.
 
 Y @code{n} es el nombre del argumento requerido a la funci@'on
@@ -20483,7 +20478,7 @@ lista de argumentos (y con expresiones llamadas por ellos).
 Despu@'es de aprender acerca de @code{current-kill}, el c@'odigo para
 la funci@'on @code{yank} es casi f@'acil.
 
-La funci@'on @code{yank} no usa variable @code{kill-ring-yank-pointer}
+La funci@'on @code{yank} no usa la variable @code{kill-ring-yank-pointer}
 directamente. Eso llama a @code{insert-for-yank} que llama a
 @code{current-kill} que asigna la variable @code{kill-ring-yank-pointer}.
 
@@ -20498,7 +20493,7 @@ El c@'odigo se parece a esto:
 M@'as precisamente, reinserta el texto cortado m@'as recientemente. 
 Pon el punto al final, y asigna la marca al principio.
 Solo con \\[universal-argument] como argumento, lo mismo pero pon el 
-punto al principio (y marca al final). Con el argumento N, reinserta 
+punto al principio (y la marca al final). Con el argumento N, reinserta 
 el N m@'as recientemente cortado.
 Cuando este comando inserta texto cortado dentro del b@'uffer, eso
 honra a `yank-excluded-properties' y `yank-handler' como se describe
@@ -20522,7 +20517,7 @@ Ver tambi@'en el comando \\[yank-pop]."
       ;; Esto es como like exchange-point-and-mark,
       ;;     pero no activa la marca.
       ;; Es limpio evitar la activaci@'on, incluso aunque el comando
-      ;; loop would deactivar@'{@dotless{i}}a la marca porque se
+      ;; loop would desactivar@'{@dotless{i}}a la marca porque se
       ;; insertara el texto.
       (goto-char (prog1 (mark t)
                    (set-marker (mark-marker) (point) (current-buffer)))))
@@ -20839,16 +20834,15 @@ construyen e insertan los n@'umeros y marcas apropiados.
 @end ifnottex
 
 Es suficientemente f@'acil ver en la figura que la etiqueta del eje Y
-se mirar@'{@dotless{i}}a as@'{@dotless{i}}; pero decir en palabras, y
-entonces escribir una definici@'on de funci@'on para hacer el trabajo
-es otra materia. No es bastante verdad decir que se quiere un n@'umero
-y un tic cada cinco l@'{@dotless{i}}neas: solo hay tres
-l@'{@dotless{i}}neas entre el @samp{1} y el @samp{5}
-(l@'{@dotless{i}}neas 2, 3 y 4), pero cuatro l@'{@dotless{i}}neas
-entre el @samp{5} y el @samp{10} (l@'{@dotless{i}}neas 6, 7, 8 y
-9). Es mejor decir que se quiere un n@'umero y un tic en la quinta
-l@'{@dotless{i}}nea desde abajo a cada l@'{@dotless{i}}nea que es un
-m@'ultiplo de cinco.
+pero se puede decir en palabras, y entonces escribir una definici@'on
+de funci@'on para hacer el trabajo es otra materia. No es bastante
+verdad decir que se quiere un n@'umero y un tic cada cinco
+l@'{@dotless{i}}neas: solo hay tres l@'{@dotless{i}}neas entre el
+@samp{1} y el @samp{5} (l@'{@dotless{i}}neas 2, 3 y 4), pero cuatro
+l@'{@dotless{i}}neas entre el @samp{5} y el @samp{10}
+(l@'{@dotless{i}}neas 6, 7, 8 y 9). Es mejor decir que se quiere un
+n@'umero y un tic en la quinta l@'{@dotless{i}}nea desde abajo a cada
+l@'{@dotless{i}}nea que es un m@'ultiplo de cinco.
 
 @ifnottex
 @node Altura de etiqueta
@@ -20875,15 +20869,15 @@ la altura m@'axima m@'as de lo que es necesario para redondear el
 m@'ultiplo de cinco. Una expresi@'on m@'as compleja es requerida.
 
 Como es normal en casos como este, un problema complejo llega a ser
-simple si eso est@'a dividido en varios problemas peque@~nos.
+simple si est@'a dividido en varios problemas peque@~nos.
 
-Primero, considera el caso cuando el valor superior del grafo es un
+Primero, considere el caso cuando el valor superior del grafo es un
 m@'ultiplo integral de cinco --- cuando eso es 5, 10, 15, o alg@'un
 m@'ultiplo de cinco. Se puede usar este valor como la altura del eje Y.
 
 Un camino simple y limpio para determinar si un n@'umero es m@'ultiplo
 de cinco se divide por cinco y mira si la divisi@'on devuelve
-resti. Si no hay resto, el n@'umero es un m@'ultiplo de cinco. De este
+resto. Si no hay resto, el n@'umero es un m@'ultiplo de cinco. De este
 modo, siete dividido tiene un resto de dos, y siete no es un entero
 m@'ultiplo de cinco. Dicho de otra manera, recordando la escuela,
 cinco entre siete es uno y me llevo dos. Sin embargo, diez entre dos,
@@ -20951,7 +20945,7 @@ uno a este cociente y se multiplica por cinco, obtendremos el valor
 del siguiente m@'ultiplo de cinco que es m@'as largo que el
 mayor. Cinco va dentro de doce dos veces. A@~nade uno a dos, y
 multiplica por cinco; el resultado es quince, que es el siguiente
-m@'ultiplo de cinco que es mayor que doce. La expresi@'on Lisp para
+m@'ultiplo de cinco que es mayor de doce. La expresi@'on Lisp para
 esto es:
 
 @smallexample
@@ -21020,7 +21014,7 @@ configuraci@'on del valor de @code{Y-axis-label-spacing}):
 @end smallexample
 
 @noindent
-(Nota el uso de la funci@'on @code{let*}: el valor inicial de la
+(Note que el uso de la funci@'on @code{let*}: el valor inicial de la
 altura es calculada una vez por la expresi@'on @code{(apply 'max
 numbers-list)} y entonces el valor resultado de @code{height} es
 usado para computar su valor final. @xref{fwd-para let, , La
@@ -21041,7 +21035,7 @@ deben incluir una gu@'{@dotless{i}}a en blanco antes del n@'umero.
 Para figurarse el tama@~no del n@'umero, se usa la funci@'on
 @code{length}. Pero la funci@'on @code{length} funciona solo con una
 cadena, no con un n@'umero. As@'{@dotless{i}} el n@'umero tiene que
-ser convertido desde un n@'umero a una cadena. Esto es hecho con la
+ser convertido desde un n@'umero a una cadena. Esto se hace con la
 funci@'on @code{number-to-string}. Por ejemplo,
 
 @smallexample
@@ -21055,8 +21049,8 @@ funci@'on @code{number-to-string}. Por ejemplo,
 @end smallexample
 
 @noindent
-(@code{number-to-string} es tambi@'en llamado @code{int-to-string}; se
-ver@'a este nombre alternativo en varias fuentes.)
+(@code{number-to-string} se llama @code{int-to-string}; se ver@'a este
+nombre alternativo en varias fuentes.)
 
 Adem@'as, en cada etiqueta, cada n@'umero es seguido por una cadena
 tal como @w{@samp{ - }}, que llamar@'a al marcador
