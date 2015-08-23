@@ -365,7 +365,7 @@ indexa; entonces lista cada nodo en cada cap@'{@dotless{i}}tulo.
 * Grafo completo::           C@'omo crear un grafo con ejes etiquetados.
 * Software Libre y Manuales Libres::
 * GNU Free Documentation License::
-* @'Indice de palabras::
+* @'Indice::
 * Acerca del Autor::         
 
 @detailmenu
@@ -2333,13 +2333,13 @@ rojos."}} y la lista @code{(number-to-string (+ 2 fill-column))}.
 
 @noindent
 Si se eval@'ua esta expresi@'on---y si, como con mi Emacs,
-@code{fill-column} se eval@'ua a 72---@code{"Los 74 zorros rojos."}
-aparecer@'an en el @'area echo. (N@'otese que deben ponerse espacio
+@code{fill-column} se eval@'ua a 72--- aparecer@'a @code{"Los 74
+zorros rojos."} en el @'area echo. (N@'otese que se debe poner espacio
 despu@'es de la palabra @samp{Los} y antes de la palabra @samp{rojos}
-y as@'{@dotless{i}} aparecer@'an la cadena final. La funci@'on
-@code{number-to-string} convierte los enteros que la funci@'on de
-adici@'on devuelve una cadena. @code{number-to-string} tambi@'en se
-conoce como @code{int-to-string}.)
+y as@'{@dotless{i}} es como aparecer@'a en la cadena final. La
+funci@'on @code{number-to-string} convierte los enteros que la
+funci@'on de adici@'on devuelve en una cadena. @code{number-to-string}
+tambi@'en se conoce como @code{int-to-string}.)
 
 @node N@'umero de variables de argumentos
 @subsection N@'umero de variables de argumentos
@@ -5777,8 +5777,9 @@ en la varlist puedan hacer uso de los valores para los que Emacs asigna
 variables pronto en la varlist. @xref{fwd-para let, La expresi@'on
 @code{let*}}.
 
-Se escapar@'an funciones como @code{let*} y focaliza en dos: la
-funci@'on @code{set-buffer} y la funci@'on @code{insert-buffer-substring}.
+Se obviar@'an funciones como @code{let*} y se focalizar@'a en dos: la
+funci@'on @code{set-buffer} y la funci@'on
+@code{insert-buffer-substring}.
 
 @need 1250
 En anta@~no, la expresi@'on @code{set-buffer} era simple:
@@ -8144,7 +8145,7 @@ versi@'on 19 y GNU Emacs versi@'on 22. Sin embargo, @code{zap-to-char}
 llama a otra funci@'on, @code{kill-region}, que se reescribi@'o m@'as.
 
 La funci@'on @code{kill-region} en Emacs 19 es compleja, pero no usa
-c@'odigo que es importante en este momento. Se escapar@'a.
+c@'odigo que es importante en este momento. Se obviar@'a.
 
 La funci@'on @code{kill-region} en Emacs 22 es m@'as de f@'acil leer
 que la misma funci@'on en Emacs 19 e introduce un concepto muy
@@ -9316,7 +9317,7 @@ ring}.
 @end smallexample
 
 @noindent
-Permite escapar a trav@'es del resto de la documentaci@'on por el momento.
+Permite saltarse el resto de la documentaci@'on por el momento.
 
 @noindent
 Tambi@'en, permite salir de la expresi@'on inicial @code{if} y estas
@@ -10935,7 +10936,7 @@ lo que el int@'erprete Lisp hace con un @code{if}; el int@'erprete
 hace lo siguiente, sin embargo, es diferente.
 
 En una expresi@'on @code{while}, si el valor devuelto por evaluar el
-primer argumento es falso, el int@'erprete Lisp escapa del resto de la
+primer argumento es falso, el int@'erprete Lisp descarta el resto de la
 expresi@'on (el @dfn{cuerpo} de la expresi@'on) y no la eval@'ua. Sin
 embargo, si el valor es cierto, el int@'erprete Lisp eval@'ua el
 cuerpo de la expresi@'on y entonces de nuevo chequea si el primer
@@ -12386,13 +12387,13 @@ primera expresi@'on en una serie de expresiones con el cuerpo del
 @code{cond}.
 
 Si el true-or-false-test devuelve @code{nil} el resto de esta
-expresi@'on, el consecuente, se escapa y el true-or-false-test de la
+expresi@'on, el consecuente, se descarta y el true-or-false-test de la
 siguiente expresi@'on se eval@'ua. Cuando una expresi@'on encuentra un
 true-or-false-test cuyo valor no es @code{nil}, el consecuente de esta
 expresi@'on se eval@'ua. El consecuente puede ser una o m@'as
 expresiones. Si el consecuente consiste de m@'as de una expresi@'on,
-las expresiones son evaluadas en secuencia y el valor del @'ultimo es
-devuelto. Si la expresi@'on no tiene un consecuente, se devuelve el
+las expresiones son evaluadas en secuencia y el valor del @'ultimo se
+devuelve. Si la expresi@'on no tiene un consecuente, se devuelve el
 valor del true-or-false-test.
 
 Si ninguno del test true-or-false-tests es cierto, la expresi@'on
@@ -12447,11 +12448,11 @@ El patr@'on b@'asico es:
 @item
 Si una lista es vac@'{@dotless{i}}a, devuelve @code{nil}.
 @item
-Si no, act@'ua al principio de la lista (el @sc{car} de la lista)
+Si no, se va al principio de la lista (el @sc{car} de la lista) actuando
 @itemize
 @item a trav@'es de una llamada recursiva por la funci@'on en el resto
 (el @sc{cdr}) de la lista,
-@item y, opcionalmente, combina el elemento sobre el que act@'ua,
+@item y, opcionalmente, se combina el elemento sobre el que act@'ua,
 usando @code{cons}, con los resultados de actuar en el resto.
 @end itemize
  
@@ -12479,12 +12480,12 @@ Aqu@'{@dotless{i}} est@'a el ejemplo:
 
 @need 1200
 @noindent
-Si @code{numbers-list} est@'a vac@'{@dotless{i}}o, no hagas nada. Pero
-si eso tiene contenido, construye una lista combinando el
-cuadrado del primer n@'umero en la lista con el resultado de
-la llamada recursiva.
+Si @code{numbers-list} est@'a vac@'{@dotless{i}}o, no hay que hacer
+nada. Pero si tiene contenido, se construye una lista combinando el
+cuadrado del primer n@'umero en la lista con el resultado de la
+llamada recursiva.
 
-(El ejemplo sigue el patr@'on exactamente: @code{nil} es devuelto si
+(El ejemplo sigue el patr@'on exactamente: se devuelve @code{nil} si
 la lista de n@'umeros es vac@'{@dotless{i}}a. En la pr@'actica, se
 escribir@'{@dotless{i}}a el condicional, as@'{@dotless{i}} se ejecuta
 la acci@'on cuando la lista de n@'umeros no es vac@'{@dotless{i}}a.)
@@ -12535,7 +12536,7 @@ Pero cuando la lista tiene al menos un elemento,
 @cindex Patr@'on recursivo: acumular
 
 Otro patr@'on recursivo es llamado el patr@'on @code{accumulate}. En
-el patr@'on recursivo @code{accumulate}, una acci@'on se realiza en
+el patr@'on recursivo @code{accumulate}, se realiza una acci@'on en
 cada elemento de una lista y el resultado de esta acci@'on se acumula
 con los resultados de desarrollar la acci@'on en otros elementos.
 
@@ -12587,12 +12588,12 @@ del patr@'on acumulado.
 @cindex Patr@'on recursivo: keep
 
 Un tercer patr@'on es llamado el patr@'on @code{keep}. En el patr@'on
-recursivo @code{keep}, cada elemento de una lista es testeado; el
-elemento act@'ua y los resultados son guardados solo si el elemento
+recursivo @code{keep}, se chequea cada elemento de una lista; se
+act@'ua en el elemento y los resultados se guardan solo si el elemento
 encuentra un criterio.
 
-De nuevo, esto se parece a `cada' patr@'on, excepto si el elemento
-se escapa a menos que encuentre un criterio.
+De nuevo, esto se parece al patr@'on `every', excepto que el elemento
+se descarta a menos que se encuentre un criterio.
 
 @need 1500
 El patr@'on tiene tres partes:
@@ -12612,7 +12613,7 @@ de la lista.
 De otro modo, si el principio de la lista (el @sc{car} de la lista)
 falla el test
 @itemize
-@item escapa en este elemento,
+@item para en este elemento,
 @item y, recursivamente llama la funci@'on al resto (el @sc{cdr}) de
 la lista.
 @end itemize
@@ -12623,26 +12624,26 @@ Aqu@'{@dotless{i}} hay un ejemplo que usa @code{cond}:
 
 @smallexample
 @group
-(defun keep-three-letter-words (word-list)
+(defun manten-tres-letras (lista-palabras)
   "Guarda 3 palabras en WORD-LIST."
   (cond
    ;; Primero do-again-test: stop-condition
-   ((not word-list) nil)
+   ((not lista-palabras) nil)
 
    ;; Segundo do-again-test: cuando actuar
-   ((eq 3 (length (symbol-name (car word-list))))
+   ((eq 3 (length (symbol-name (car lista-palabras))))
     ;; combina el elemento que act@'ua con la llamada recursiva en la
-   lista ordenada
-    (cons (car word-list) (keep-three-letter-words (cdr word-list))))
+    ;; lista ordenada
+    (cons (car lista-palabras) (manten-tres-letras (cdr lista-palabras))))
 
-   ;; Tercero do-again-test: cuando se escape el elemento;
-   ;; recursivamente llama a la lista ordenada con la next-step expression
-   (t (keep-three-letter-words (cdr word-list)))))
+   ;; Tercero do-again-test: cuando se descarte el elemento;
+   ;; llama recursivamente a la lista ordenada con la next-step expression
+   (t (manten-tres-letras (cdr lista-palabras)))))
 @end group
 
 @group
-(keep-three-letter-words '(uno dos tres cuatro cinco seis))
-    @result{} (uno dos seis)
+(manten-tres-letras '(uno dos tres cuatro cinco seis))
+    @result{} (uno dos)
 @end group
 @end smallexample
 
@@ -13388,7 +13389,7 @@ true-or-false-test que chequea cierto si el argumento prefijo para
 @code{forward-sentence} es un n@'umero negativo. Esto es para volver
 hacia atr@'as. El cuerpo de este bucle es similar al cuerpo de la
 segunda cl@'ausula @code{while}, pero eso no es exactamente el
-mismo. Se escapar@'a este bucle @code{while} y concentra en el segundo
+mismo. Se obviar@'a este bucle @code{while} y concentra en el segundo
 bucle @code{while}.
 
 @need 1500
@@ -16648,12 +16649,12 @@ Aqu@'{@dotless{i}} est@'a la funci@'on:
 @group
        ;; chequee si el nombre del fichero es un directorio
        ((eq t (car (cdr (car current-directory-list))))
-        ;; decide si escapar o recurrir
+        ;; decide si salir o hacer recursi@'on
         (if
             (equal "."
                    (substring (car (car current-directory-list)) -1))
-            ;; entonces no hagas nada desde que el nombre del fichero es
-            ;; actual directorio o padre, "." o ".."
+            ;; entonces no hagas nada puesto que el nombre del fichero es
+            ;; el actual directorio o padre, "." o ".."
             ()
 @end group
 @group
@@ -19830,8 +19831,8 @@ complicada.
 Se puede querer pasear a trav@'es de esta funci@'on lentamente, como
 nosotros hicimos la funci@'on
 @code{forward-sentence}. (@xref{forward-sentence, La funci@'on
-@code{forward-sentence}}.) O se puede querer escapar de esta funci@'on
-y mira en otra, tal como @code{split-line}. No se necesita leer todas
+@code{forward-sentence}}.) O se puede querer salir de esta funci@'on
+y mirar en otra, tal como @code{split-line}. No se necesita leer todas
 las funciones. De acuerdo a @code{count-words-in-defun}, la funci@'on
 @code{split-line} contiene 102 palabras y s@'{@dotless{i}}mbolos.
 
