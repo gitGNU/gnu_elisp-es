@@ -998,15 +998,15 @@ hacer cuando tu le das comandos. Emacs est@'a dise@~nado
 de forma que se puede escribir nuevo c@'odigo en Emacs Lisp
 y f@'acilmente instalarlo como una extensi@'on al editor.
 
-(GNU Emacs es algunas veces llamado un ``editor extensible'', pero
+(GNU Emacs se define muchas veces como un ``editor extensible'', pero
 hace mucho m@'as que proporcionar capacidad de edici@'on. Es mejor
 referirse a Emacs como un ``entorno de computaci@'on extensible''. Sin
 embargo, esta frase es un poco pretenciosa. Es m@'as f@'acil referirse
 a Emacs simplemente como un editor. De hecho, cada cosa que se hace en
 Emacs---encontrar la fecha Maya y fases de la luna, simplificar
 polinomios, depurar c@'odigo, administrar ficheros, leer cartas,
-escribir libros---todas estas actividades son maneras de editar tal y
-como se entiende en el mundo.)
+escribir libros---todas estas actividades son maneras de editar en un
+sentido amplio de la palabra.)
 
 @menu
 * Por qu@'e::                @questiondown{}Por qu@'e aprender Emacs Lisp?
@@ -1023,53 +1023,52 @@ como se entiende en el mundo.)
 @end ifnottex
 
 Aunque Emacs Lisp normalmente se asocia solo con Emacs, es un lenguaje
-de programaci@'on completo. Se puede usar Emacs Lisp como
-har@'{@dotless{i}}as con cualquier otro lenguaje de programaci@'on.
+de programaci@'on completo. Se puede usar Emacs Lisp del mismo modo
+que con cualquier otro lenguaje de programaci@'on.
 
 Quiz@'as se quiere comprender la programaci@'on; quiz@'as se quiere
 extender Emacs; o quiz@'as se quiere llegar a ser un programador. Esta
-introducci@'on a Emacs Lisp est@'a dise@~nada para ayudar a empezar:
-para guiarse en el aprendizaje de los fundamentos de programaci@'on, y
-de manera m@'as importante, para ense@~nar como uno mismo puede ir
-m@'as all@'a.
+introducci@'on a Emacs Lisp est@'a dise@~nada para ayudar a empezar en
+todo esto: para guiarse en el aprendizaje de los fundamentos de
+programaci@'on, y de manera m@'as importante, para ense@~nar como uno
+mismo puede ir m@'as all@'a.
 
 @node Leyendo este texto
 @unnumberedsec Leyendo este texto
 
-A trav@'es de este libro, se ver@'a un peque@~no ejemplo de
-programas que se pueden ejecutar dentro de Emacs. Si se lee este
-documento en Info dentro de GNU Emacs, se pueden ejecutar los
-programas como ellos aparecen. (Esto es f@'acil de hacer y se explica
-cuando los ejemplos se presentan). Alternativamente, se puede leer
-esta introducci@'on como un libro impreso mientras se est@'a sentando
-con un ordenador ejecutando Emacs. (Esto es lo que me gusta hacer; me
-gustan los libros impresos.) Si no se est@'a ejecutando Emacs,
-todav@'{@dotless{i}}a se puede leer este libro, pero en este caso, lo
-mejor es tratarlo como una novela, o como una gu@'{@dotless{i}}a para
-un pa@'{@dotless{i}}s no visitado todav@'{@dotless{i}}a: interesante,
-pero no es lo mismo all@'{@dotless{i}}.
+A trav@'es de este libro, se ver@'an peque@~nos programas de ejemplo
+que se pueden ejecutar dentro de Emacs. Si se lee este documento en
+Info dentro de GNU Emacs, se pueden ejecutar los programas como ellos
+aparecen. (Esto es f@'acil de hacer y se explica cuando los ejemplos
+se presentan). Alternativamente, se puede leer esta introducci@'on
+como un libro impreso mientras se est@'a sentando con un ordenador
+ejecutando Emacs. (Esto es lo que me gusta hacer; me gustan los libros
+impresos.) Si no se est@'a ejecutando Emacs, todav@'{@dotless{i}}a se
+puede leer este libro, pero en este caso, lo mejor es tratarlo como
+una novela, o como una gu@'{@dotless{i}}a para un pa@'{@dotless{i}}s
+no visitado todav@'{@dotless{i}}a: interesante, pero no es lo mismo
+que estar all@'{@dotless{i}}.
 
-Mucha de esta introducci@'on se dedica a paseos guiados de c@'odigo
-usado en GNU Emacs. Estos paseos est@'an dise@~nados para dos
+Gran parte de esta introducci@'on se dedica a paseos guiados de
+c@'odigo usado en GNU Emacs. Estos paseos est@'an dise@~nados para dos
 prop@'ositos: primero, familiarizarse con c@'odigo real que funciona
 (c@'odigo que se usa cada d@'{@dotless{i}}a); y, segundo,
-familiarizarse con la manera con la que Emacs funciona. Es interesante
-ver c@'omo un entorno en funcionamiento se implementa. Tambi@'en,
-espero que se escoja el h@'abito de navegar a trav@'es del c@'odigo
-fuente. Se puede aprender comparando c@'odigo de otros con el propio
-para ganar ideas. Tener GNU Emacs es como tener una cueva del drag@'on
-de los tesoros.
+familiarizarse con c@'omo funciona Emacs. Es interesante ver c@'omo se
+implementa un entorno completamente operativo. Tambi@'en, espero que
+se adquiera el h@'abito de navegar a trav@'es del c@'odigo fuente. Se
+puede aprender mucho comparando c@'odigo de otros con el propio,
+ganando nuevas ideas. Tener GNU Emacs es como tener la cueva del
+drag@'on de los tesoros.
 
-Adem@'as de aprender acerca de Emacs como un editor y Emacs Lisp como
-un lenguaje de programaci@'on, las gu@'{@dotless{i}}as de ejemplos
+Adem@'as de aprender Emacs como un editor y Emacs Lisp como un
+lenguaje de programaci@'on, las gu@'{@dotless{i}}as de ejemplos
 guiados dar@'an una oportunidad para familiarizarse con Emacs como un
 entorno de programaci@'on Lisp. GNU Emacs soporta programaci@'on y
-provee herramientas que llegar@'an a ser confortables usando
-cosas como @kbd{M-.} (la clave que invoca el comando
-@code{find-tag}). Tambi@'en se aprender@'s acerca de b@'uffers y otros
-objetos que son parte del entorno. Aprendiendo acerca estas
-funcionalidades de Emacs es como aprender nuevas rutas alrededor de tu
-hogar.
+provee herramientas que llegar@'an a usarse c@'omodamente con cosas
+como @kbd{M-.} (la clave que invoca el comando
+@code{find-tag}). Tambi@'en se aprende acerca de b@'uffers y otros
+objetos que son parte del entorno. Aprender estas funcionalidades de
+Emacs es como aprender nuevas rutas alrededor de tu hogar.
 
 @ignore
 In addition, I have written several programs as extended examples.
@@ -1080,59 +1079,60 @@ programs used for illustrations, there is very little in here that is
 advantage of Emacs Lisp: it is easy to learn to use it for work.
 @end ignore
 
-Finalmente, son convenientes algunas habilidades usando Emacs
+Finalmente, espero poder transmitir algunas habilidades de Emacs
 para aprender aspectos de programaci@'on que no se conocen. Con
 frecuencia se puede usar Emacs para ayudar a comprender qu@'e puzzles
-encontrar o como hacer alguna cosa nueva. Esta auto-confianza no es
+encontrar o como hacer alguna cosa nueva. Este auto-descubrimiento no es
 solo un placer, tambi@'en es una ventaja.
 
 @node Quien eres
 @unnumberedsec Para quien est@'a esto escrito
 
 Este texto est@'a escrito como una introducci@'on elemental para
-personas que no son programadoras. Quien ya programa, puede no
-estar satisfecho con este libro. La raz@'on es que puede tener que
-llegar a ser experto leyendo manuales de referencia y ese no es el
-camino para el que este texto est@'a organizado.
+personas que no son programadoras. Quien ya programa, puede no estar
+satisfecho con este libro. La raz@'on es que un programador puede
+tener que convertirse en experto leyendo manuales de referencia y este
+texto no est@'a organizado como un manual de referencia.
 
-Un programador experto que revis@'o este texto me dijo a m@'{@dotless{i}}:
+Un programador experto que revis@'o este texto me dijo:
 
 @quotation
-@i{Yo prefiero aprender desde manuales de referencia. Yo ``escarbo'' cada
-p@'arrafo, y ``vienen por aire'' entre p@'arrafos.}
+@i{Prefiero aprender desde manuales de referencia. Yo ``me sumerjo'' en
+cada p@'arrafo y ``subo a por aire'' entre p@'arrafos.}
 
 @i{Cuando llego al fin de un p@'arrafo, asumo que este asunto est@'a
 hecho, finalizado, que conozco cada cosa que necesito (con la posible
-excepci@'on del caso en el que el siguiente p@'arrafo empieza hablando
-acerca de eso en m@'as detalle). Yo espero que un manual de referencia
-bien escrito no tendr@'a un mont@'on de redundancia, y tendr@'a
-excelentes punteros a (un) lugar donde la informaci@'on que quiero.}
+excepci@'on del caso en el que el siguiente p@'arrafo empiece hablando
+acerca de eso mismo en m@'as detalle). Yo espero que un manual de
+referencia bien escrito no tendr@'a un mont@'on de redundancia, y
+tendr@'a excelentes punteros a (un) lugar donde est@'a la
+informaci@'on que quiero.}
 @end quotation
 
 @exclamdown{}Esta introducci@'on no est@'a escrita para esta persona!
 
-Primeramente, intento decir cada cosa al menos tres veces: primero,
+Primero, intento decir cada cosa al menos tres veces: primero,
 introducirlo; segundo, mostrarlo en contexto; y tercero, mostrarlo en
 un contexto diferente, o revisarlo.
 
 Segundo, yo no siempre pongo toda la informaci@'on acerca de un asunto
-en un lugar, ni mucho menos en un p@'arrafo. Desde mi punto de vista,
-se necesita una carga bastante fuerte en el lector. En vez de eso
-intento explicar solo lo que se necesita saber en el momento. (Algunas
-veces incluyo una peque@~na informaci@'on extra as@'{@dotless{i}} no
-se sorprender@'a m@'as tarde cuando la informaci@'on adicional se
-presente formalmente.)
+en un mismo lugar, ni mucho menos en un p@'arrafo. Desde mi punto de
+vista, se necesita una carga bastante fuerte en el lector. En vez de
+eso intento explicar solo lo que se necesita saber en el
+momento. (Algunas veces incluyo una peque@~na informaci@'on extra,
+para que no haya sorpresas m@'as tarde cuando la informaci@'on
+adicional se presente formalmente.)
 
 Cuando uno lee este texto, no espera aprender todo la primera
 vez. Frecuentemente, solo necesita hacer un `reconocimiento' con
-alguno de los elementos mencionados. Mi esperanza es que haber
+alguno de los elementos mencionados. Mi esperanza es haber
 estructurado el texto y dar suficientes indicios que dejar@'an alerta
 de lo que es importante y concentrarse en ellos.
 
-Es necesario ``sumergirse'' de algunos p@'arrafos; no hay otro modo
-de leerlos. Pero yo he intentado guardar el n@'umero de tales
-p@'arrafos. Este libro pretende ser como una colina que se acerca, en vez
-de una monta@~na.
+Es necesario ``sumergirse'' en algunos p@'arrafos; no hay otro modo de
+leerlos. Pero yo he intentado guardar el n@'umero de tales
+p@'arrafos. Este libro pretende ser como una colina asequible, en vez
+de una monta@~na abrumadora.
 
 Esta introducci@'on de @cite{Programaci@'on en Emacs Lisp} viene
 acompa@~nado de un documento complementario.
@@ -1145,17 +1145,16 @@ Referencia de GNU Emacs Lisp}.
 @end ifnottex
 El manual de referencia tiene m@'as detalles que esta
 introducci@'on. En el manual de referencia, toda la informaci@'on
-sobre un asunto est@'a concentrado en un lugar. Se debe cambiar si se
-es como el programador citado arriba. Y, de acuerdo, despu@'es de que
-se ha leido esta @cite{Introducci@'on}, se encontrar@'a el
-@cite{Manual de Referencia} @'util cuando se escriben propios
-programas.
+sobre un asunto est@'a concentrada en un lugar. Se debe cambiar si es
+como el programador citado arriba. Y, de acuerdo, despu@'es de haber
+leido esta @cite{Introducci@'on}, ser@'a muy @'util consultar el
+@cite{Manual de Referencia} al escribir programas propios.
 
 @node Historia de Lisp
 @unnumberedsec Historia de Lisp
 @cindex Historia de Lisp
 
-Lisp fu@'e desarrollado primero en los 50 en el Instituto
+Lisp fu@'e originariamente desarrollado en los 50 en el Instituto
 Tecnol@'ogico de Massachusetts para investigar en inteligencia
 artificial. El gran poder del lenguaje Lisp lo hace superior para
 otros prop@'ositos tambi@'en, tal como escribir comandos de edici@'on y
@@ -1167,41 +1166,41 @@ GNU Emacs Lisp est@'a fuertemente inspirado en Maclisp, que est@'a
 escrito en el MIT en los sesenta. Est@'a en cierto modo inspirado en
 Common Lisp, que llega a ser un est@'andar en los 80. Sin embargo,
 Emacs Lisp es mucho m@'as simple que Common Lisp. (La distribuci@'on
-est@'andar de Emacs contiene un fichero de extensiones opctional,
+est@'andar de Emacs contiene un fichero de extensiones opcional,
 @file{cl.el}, que a@~nade muchas funcionalidades a Emacs Lisp.)
 
 @node Nota para principiantes
 @unnumberedsec Una nota para principiantes
 
-Aunque no se conozca GNU Emacs, se puede leer este documento de manera
+Aunque no se conozca GNU Emacs, este documento puede resultar
 @'util. Sin embargo, es mejor aprender Emacs, al menos aprender a
-moverse alrededor de la pantalla del ordenador. Uno puede ense@~narse
-a s@'{@dotless{i}} mismo c@'omo usar Emacs con el tutorial
-on-line. Para usarlo, se debe escribir @kbd{C-h t}. (Esto significa
-que se presione la tecla @key{CTRL} y la @kbd{h} al mismo tiempo, y
-despu@'es se presiona @kbd{t}
+moverse alrededor de la pantalla del ordenador. Uno puede aprender de
+manera autodidacta c@'omo usar Emacs con el tutorial on-line. Para
+usarlo, se debe escribir @kbd{C-h t}. (Esto significa que se presione
+la tecla @key{CTRL} y la @kbd{h} al mismo tiempo, y despu@'es se
+presiona @kbd{t}).
 
-Tambi@'en, con frecuencia, me refiero a uno de los comandos de Emacs
+Con frecuencia, tambi@'en aludo a uno de los comandos de Emacs
 est@'andar listando las teclas que se presionan para invocar el
-comando y entonces dar el nombre del comando entre par@'entesis, como
-este: @kbd{M-C-\} (@code{indent-region}). (Si lo deseas, se pueden
+comando y, entonces dar el nombre del comando entre par@'entesis, como
+este: @kbd{M-C-\} (@code{indent-region}). (Si lo desea, se pueden
 cambiar las teclas que son escritas para invocar el comando; esto se
 llama @dfn{rebinding}. @xref{Mapas de teclado, , Mapas de Teclado}.)
 La abreviaci@'on @kbd{M-C-\} significa que se escribe la tecla
 @key{META}, @key{CTRL}, y @key{\} todo al mismo tiempo. (En muchos
 teclados modernos la tecla @key{META} es etiquetada con @key{ALT}.)
-Algunas veces una combinaci@'on como esta es llamada keychord, puesto
-que es similar al camino de tocar un acorde en un piano. Si tu teclado
-no tiene una tecla @key{META}, la tecla con prefijo @key{ESC} es usada
-en lugar de la otra. En este caso @kbd{M-C-\} significa que se
-presiona @key{ESC} y entonces escribe @key{CTRL} y la tecla @key{\} al
-mismo tiempo. Pero normalmente @kbd{M-C-\} significa presionar la
-tecla @key{CTRL} alrededor con la tecla que est@'a etiquetada
-@key{ALT} y, al mismo tiempo, se presiona la tecla @key{\}.
+Algunas veces una combinaci@'on como esta se llama @emph{keychord},
+puesto que es similar a tocar un acorde en un piano. Si el teclado no
+tiene una tecla @key{META}, se usa la tecla con prefijo @key{ESC} en
+su lugar. En este caso @kbd{M-C-\} significa que se presiona @key{ESC}
+y entonces escribe @key{CTRL} y la tecla @key{\} al mismo tiempo. Pero
+normalmente @kbd{M-C-\} significa presionar la tecla @key{CTRL} junto
+a la tecla que est@'a etiquetada @key{ALT} y, al mismo tiempo, se
+presiona la tecla @key{\}.
 
-Adem@'as de escribir una sola tecla, se puede prefijar lo que se
-escribe con @kbd{C-u}, que es llamado el `argumento universal'. El
-atajo @kbd{C-u} pasa a ser un argumento para el comando
+Adem@'as de escribir una sola combinaci@'on de teclas, se puede
+prefijar lo que se escribe con @kbd{C-u}, que es llamado el `argumento
+universal'. El atajo @kbd{C-u} pasa a ser un argumento para el comando
 subsiguiente. De este modo, para indentar una regi@'on de texto plano
 a 6 espacios, se marca la regi@'on, y entonces se escribe @w{@kbd{C-u
 6 M-C-\}}. (Si no se especifica un n@'umero, Emacs pasa el n@'umero 4
@@ -1209,25 +1208,25 @@ al comando o de otra manera ejecuta el comando de manera
 diferente). @xref{Argumentos, , Argumentos Num@'ericos, emacs, El
 Manual de GNU Emacs}.
 
-Si se est@'a leyendo esto en Info usando GNU Emacs, se puede leer a
+Si se est@'a leyendo esto en Info usando GNU Emacs, se puede avanzar a
 trav@'es de este documento completo solo presionando la barra de espacio,
 @key{SPC}. (Para aprender acerca de Info, escribe @kbd{C-h i} y
 luego selecciona Info.)
 
-Una nota en terminolog@'{@dotless{i}}a: cuando yo uso la palabra Lisp
-sola, con frecuencia me estoy refiriendo a los dialectos de Lisp
-en general, pero cuando yo hablo de Emacs Lisp, yo estoy
-refiri@'endome a GNU Emacs Lisp en particular.
+Una nota en terminolog@'{@dotless{i}}a: cuando uso la palabra Lisp
+sola, con frecuencia me estoy refiriendo a los dialectos de Lisp en
+general, pero cuando yo hablo de Emacs Lisp, me estoy refiriendo a
+GNU Emacs Lisp en particular.
 
 @node Se agradece
 @unnumberedsec Se agradece
 
-Gracias a todos quienes me ayudaron con este libro. Especialmente
-agradecido a @r{Jim Blandy}, @r{Noah Friedman}, @w{Jim Kingdon},
-@r{Roland McGrath}, @w{Frank Ritter}, @w{Randy Smith}, @w{Richard M.
-Stallman}, and @w{Melissa Weisshaus}. Gracias tambi@'en a @w{Philip
-Johnson} y @w{David Stampe} por su @'animo paciente. Mis errores
-son m@'{@dotless{i}}os.
+Estoy agradecido a todas las personas que me ayudaron con este
+libro. Especialmente agradecido a @r{Jim Blandy}, @r{Noah Friedman},
+@w{Jim Kingdon}, @r{Roland McGrath}, @w{Frank Ritter}, @w{Randy
+Smith}, @w{Richard M.  Stallman}, and @w{Melissa Weisshaus}. Gracias
+tambi@'en a @w{Philip Johnson} y @w{David Stampe} por su @'animo
+paciente. Mis errores son m@'{@dotless{i}}os.
 
 @flushright
 Robert J. Chassell
@@ -1268,20 +1267,20 @@ Robert J. Chassell
 @node Procesamiento de listas
 @chapter Procesamiento de listas
 
-Para las personas nuevas, Lisp es un lenguaje de programaci@'on
-extra@~no. En c@'odigo Lisp hay par@'entesis en cada lugar. Algunas
-personas incluso reclaman que el nombre signfica `Lots of Isolated
-Silly Parentheses' (`Montones de Par@'entesis Aislados
-Est@'upidos'). Pero la advertencia es sin garant@'{@dotless{i}}as. Lisp
-es para procesamiento de listas, y el lenguaje de
-programaci@'on maneja @emph{listas} (y listas de listas) poni@'endolas
-entre par@'entesis. Los par@'entesis marcan los l@'{@dotless{i}}mites
-de la lista. Algunas veces una lista es precedida por un ap@'ostrofe
-simple o una marca de cita, @samp{'}@footnote{Los ap@'ostrofes simples
-o las marcas de citas son una abreviaci@'on para la funci@'on
-@code{quote}; tu no necesitas pensar acerca de funciones ahora; las
-funciones son definidaas en @ref{Creando errores, , Generar un mensaje
-de error}.} Las listas son las bases de Lisp.
+Para quienes no est@'an habituados, Lisp es un lenguaje de
+programaci@'on extra@~no. En c@'odigo Lisp hay par@'entesis por todas
+partes. Algunas personas incluso reclaman que el nombre signfica `Lots
+of Isolated Silly Parentheses' (`Montones de Par@'entesis Aislados
+Est@'upidos'). Pero la protesta no tiene fundamento. Lisp es para
+procesamiento de listas, y el lenguaje de programaci@'on maneja
+@emph{listas} (y listas de listas) poni@'endolas entre
+par@'entesis. Los par@'entesis marcan los l@'{@dotless{i}}mites de la
+lista. Algunas veces una lista va precedida por un ap@'ostrofe simple
+o una marca de cita, @samp{'}@footnote{Los ap@'ostrofes simples o las
+marcas de citas son una abreviaci@'on para la funci@'on @code{quote};
+no se necesita pensar acerca de funciones ahora; las funciones se
+definen en @ref{Creando errores, , Generar un mensaje de error}.}
+Las listas son el fundamento de Lisp.
 
 @menu
 * Listas Lisp::              @questiondown{}Qu@'e son listas?
@@ -1304,7 +1303,7 @@ de error}.} Las listas son las bases de Lisp.
 @cindex Listas Lisp
 
 En Lisp, una lista como esta: @code{'(rosa violeta margarita
-mantequilla)}. Esta lista es precedida por un ap@'ostrofe
+bot@'ondeoro)}. Esta lista es precedida por un ap@'ostrofe
 simple. Podr@'{@dotless{i}}a estar bien escrita como sigue, que mira
 m@'as como el tipo de lista con la que se est@'a familiarizado:
 
@@ -1313,15 +1312,14 @@ m@'as como el tipo de lista con la que se est@'a familiarizado:
 '(rosa
   violeta
   margarita
-  mantequilla)
+  bot@'ondeoro)
 @end group
 @end smallexample
 
 @noindent
-Los elementos de esta lista son los nombres de las 4 flores
-diferentes, separadas por espacios en blanco y alrededor de
-par@'entesis, como flores en un campo con un muro de piedras alrededor
-de ellas.
+Los elementos de esta lista son los nombres de 4 flores diferentes,
+separados por espacios en blanco y rodeados de par@'entesis, como
+flores en un campo con un muro de piedras alrededor de ellas.
 @cindex Flores en un campo
 
 @menu
@@ -1340,16 +1338,17 @@ Las listas pueden tambi@'en tener n@'umeros dentro, como en esta lista:
 @code{(+ 2 2)}. Esta lista tiene un signo m@'as, @samp{+}, seguido por
 dos @samp{2}, cada uno separado por espacios en blanco.
 
-En Lisp, datos y programas est@'an representados por el mismo
-camino; que son ambas listas de palabras, n@'umeros, u otras listas,
-separadas por espacios en blanco y alrededor de par@'entesis. (Desde
-que un programa mira como datos, un programa puede f@'acilmente servir
-como datos para otros; esta es una funcionalidad muy poderosa de
-Lisp.) (Incidentalmente, estas dos marcas de par@'entesis @emph{no} son
-listas Lisp, porque contienen @samp{;} y @samp{.} como marcas puntuaci@'on.) 
+En Lisp, tanto datos como programas est@'an representados de la misma
+manera; son tanto listas de palabras, como n@'umeros, u otras listas,
+separadas por espacios en blanco y rodeadas de par@'entesis. (Puesto
+que un programa son datos, un programa puede f@'acilmente servir datos
+a otros programas; esta es una funcionalidad muy poderosa de Lisp.)
+(Incidentalmente, estas dos marcas de par@'entesis @emph{no} son
+listas Lisp, porque contienen @samp{;} y @samp{.} como marcas
+puntuaci@'on.) 
 
 @need 1200
-Aqu@'{@dotless{i}} est@'a otra lista, esta vez con una lista dentro:
+Aqu@'{@dotless{i}} hay otra lista, esta vez con una lista dentro:
 
 @smallexample
 '(esta lista tiene (una lista dentro de ella))
@@ -1357,65 +1356,65 @@ Aqu@'{@dotless{i}} est@'a otra lista, esta vez con una lista dentro:
 
 Los componentes de esta lista son las palabras @samp{esta},
 @samp{lista}, @samp{tiene}, y la lista @samp{(una lista dentro de
-ella)}. La lista interior es hecha de las palabras @samp{una},
+ella)}. La lista interior se construye con las palabras @samp{una},
 @samp{lista}, @samp{dentro}, @samp{de}, @samp{ella}.
 
 @node @'Atomos Lisp
 @subsection @'Atomos Lisp
 @cindex @'Atomos Lisp
 
-En Lisp, hemos estado llamando a las palabras @dfn{@'atomos}. Este
-t@'ermino viene desde el significado de la palabra @'atomo, que
-significa indivisible. Tan lejos como Lisp es concebido, las palabras
-que hemos estado usando en las listas no pueden ser divididas dentro
-de peque@~nas partes y todav@'{@dotless{i}}a significan la misma cosa
-como parte de un programa; como con n@'umeros y caracteres de
-s@'{@dotless{i}}mbolos simples como @samp{+}. Por otro lado, no como
-un antiguo @'atomo, una lista puede ser dividida en peque@~nas
-partes. Ver @ref{Car cdr y cons, , @code{car}, @code{cdr} y
-@code{cons}, Funciones Fundamentales}.
+En Lisp, lo que hemos estado llamando a las palabras son en realidad
+@dfn{@'atomos}. Este t@'ermino viene del significado de la palabra
+@'atomo, que es indivisible. Desde que Lisp es concebido, las palabras
+que hemos estado usando en las listas no pueden ser divididas en
+peque@~nas partes, sin perder su significado dentro del programa; lo
+mismo ocurre con n@'umeros y caracteres de s@'{@dotless{i}}mbolos
+simples como @samp{+}. Por otro lado, a diferencia de un @'atomo, una
+lista puede ser dividida en peque@~nas partes. Ver @ref{Car cdr y
+cons, , @code{car}, @code{cdr} y @code{cons}, Funciones
+Fundamentales}.
 
-En una lista, los @'atomos son separados de otros por espacios en
-blanco. Ellos pueden estar a la derecha y cerca de un par@'entesis.
+En una lista, los @'atomos se separan unos de otros por espacios en
+blanco. Pueden ir pegados a un par@'entesis.
 
 @cindex @samp{lista vac@'{@dotless{i}}a} definida
 T@'ecnicamente hablando, una lista en Lisp consiste de par@'entesis
 alrededor de @'atomos separados por espacios en blanco o alrededor de
 otras lista o alrededor de ambos @'atomos u otras listas. Una lista
-puede tener solo un @'atomo en ella o no tener nada en ella para todo.
-Una lista con nada dentro se ve como esto: @code{()}, y est@'a llamado
-la @dfn{lista vac@'{@dotless{i}}a}. No como cualquier otra cosa, un
-lista vac@'{@dotless{i}}a es considerad ambos un @'atomo y una lista
-al mismo tiempo.
+puede tener solo un @'atomo en ella o no tener absolutamente nada en
+ella.  Una lista con nada dentro se ve as@'{@dotless{i}}: @code{()}, y
+se llama @dfn{lista vac@'{@dotless{i}}a}. A diferencia de cualquier
+otra cosa, una lista vac@'{@dotless{i}}a es tanto un @'atomo, como una
+lista al mismo tiempo.
 
 @cindex Expresiones simb@'olicas, introducidas
 @cindex @samp{expresi@'on} definida
 @cindex @samp{forma} definida
-La representaci@'on impresa de ambos @'atomos y listas se llaman
+La representaci@'on impresa de @'atomos y listas se llama
 @dfn{expresiones simb@'olicas} o, m@'as concisamente,
 @dfn{s-expresiones}. La palabra @dfn{expresi@'on} por s@'{@dotless{i}}
-mismo puede referir o bien la representaci@'on impresa, o para el
-@'atomo o la lista como ella es manejada internamente en el
-ordenador. Con frecuencia, la personas usan el t@'ermino
-@dfn{expresi@'on} indiscriminadamente. (Tambi@'en, en muchos textos,
-la palabra @dfn{forma} se usa como un sin@'onimo para la expresi@'on.)
+misma puede referir o bien a la representaci@'on impresa, o al @'atomo
+o a la lista como se maneja internamente en el ordenador. Con
+frecuencia, las personas usan el t@'ermino @dfn{expresi@'on}
+indiscriminadamente. (Tambi@'en, en muchos textos, la palabra
+@dfn{forma} se usa como un sin@'onimo para la expresi@'on.)
 
-Incidentalmente, los @'atomos que hacen que nuestro universo fuese
-nombrado as@'{@dotless{i}} cuando ellos fueron pensados para ser
-indivisibles; pero han sido encontrados @'atomos f@'{@dotless{i}}sicos
-que no son indivisibles. Las partes pueden dividir un @'atomo o puede
-fisionarse en 2 partes de igual tama@~no. Los @'atomos
-f@'{@dotless{i}}sicos fueron nombrados prematuramente, antes de que su
-verdadera naturaleza fuese encontrada. En Lisp, ciertos tipos de
-@'atomos, como un array, pueden ser separados en partes; pero el
-mecanismo de hacer esto es diferente de el mecanismo para dividir una
-lista. Tan lejos como las operaciones de las listas son concebidas,
-los @'atomos de una lista son indivisibles.
+En realidad, los @'atomos que componen nuestro universo se llamaron de
+ese modo cuando se penso que ser@'{@dotless{i}}an indivisibles; pero
+han sido encontrados @'atomos f@'{@dotless{i}}sicos que no son
+indivisibles. Las partes pueden dividir un @'atomo o puede fisionarse
+en 2 partes de igual tama@~no. Los @'atomos f@'{@dotless{i}}sicos
+se nombraron prematuramente, antes de que su verdadera naturaleza
+fuese encontrada. En Lisp, ciertos tipos de @'atomos, como un array,
+pueden ser separados en partes; pero el mecanismo de hacer esto es
+diferente de el mecanismo para dividir una lista. Tan lejos como las
+operaciones de las listas son concebidas, los @'atomos de una lista
+son indivisibles.
 
-Como en Ingl@'es, los significado de las letras de componentes de un
-@'atomo Lisp son diferentes desde el significado de las letras que
-crean una palabra. Por ejemplo, la palabra Suramericana @samp{ai}, es
-completamente diferente de las dos palabras @samp{a}, e @samp{i}.
+Como en español, los significados de las letras que componen un
+@'atomo Lisp son diferentes desde el significado de las letras
+compuestas como una palabra. Por ejemplo, la expresi@'on @samp{ay}, es
+completamente diferente de las dos palabras @samp{a}, e @samp{y}.
 
 Hay muchos tipos de @'atomos naturales, pero solo unos pocos en Lisp:
 por ejemplo, @dfn{n@'umeros}, tales como 37, 511, o 1729, y
@@ -2338,7 +2337,7 @@ zorros rojos."} en el @'area echo. (N@'otese que se debe poner espacio
 despu@'es de la palabra @samp{Los} y antes de la palabra @samp{rojos}
 y as@'{@dotless{i}} es como aparecer@'a en la cadena final. La
 funci@'on @code{number-to-string} convierte los enteros que la
-funci@'on de adici@'on devuelve en una cadena. @code{number-to-string}
+funci@'on de adici@'on devuelve una cadena. @code{number-to-string}
 tambi@'en se conoce como @code{int-to-string}.)
 
 @node N@'umero de variables de argumentos
@@ -2631,16 +2630,16 @@ pasan.
 @findex set
 
 Para asignar el valor del s@'{@dotless{i}}mbolo @code{flores} a la
-lista @code{'(rosa violeta margarita mantequilla)}, eval@'ua la
+lista @code{'(rosa violeta margarita bot@'ondeoro)}, eval@'ua la
 siguiente expresi@'on posicionando el cursor despu@'es de la
 expresi@'on y escribiendo @kbd{C-x C-e}.
 
 @smallexample
-(set 'flores '(rosa violeta margarita mantequilla))
+(set 'flores '(rosa violeta margarita bot@'ondeoro))
 @end smallexample
 
 @noindent
-La lista @code{(rosa violeta margarita mantequilla)} aparecer@'a en el
+La lista @code{(rosa violeta margarita bot@'ondeoro)} aparecer@'a en el
 @'area echo. Esto es lo que est@'a @emph{devuelto} por la funci@'on
 @code{set}. Como efecto lateral, el s@'{@dotless{i}}mbolo
 @code{flores} est@'a asociado a la lista; esto es, el
@@ -2663,7 +2662,7 @@ flores
 
 @noindent
 Cuando se eval@'ua @code{flores}, la lista @code{(rosa violeta margarita
-mantequilla)} aparece en el @'area echo.
+bot@'ondeoro)} aparece en el @'area echo.
 
 Incidentalmente, si se eval@'ua @code{'flores}, la variable con una
 comilla en frente, se ve en el @'area echo y es el
@@ -2679,7 +2678,7 @@ N@'otese tambi@'en, que cuando se usa @code{set}, se necesitan citar
 ambos argumentos a @code{set}, a menos que se quiera evaluar. Puesto
 que nosotros no queremos argumentos evaluados, ni la variable
 @code{flores}, ni la lista @code{(rosa violeta margarita
-mantequilla)}, se citan. (Cuando se usa @code{set} sin citar su primer
+bot@'ondeoro)}, se citan. (Cuando se usa @code{set} sin citar su primer
 argumento, el primer argumento se eval@'ua antes que cualquier cosa
 se haga. Si se hizo esto y @code{flores} no ten@'{@dotless{i}}a
 un valor ya, se tendr@'{@dotless{i}}a un mensaje de error que el
@@ -7401,14 +7400,14 @@ Lisp, que usaremos en esta introducci@'on.
 
 El @sc{car} de una lista es, bastante simple, el primer
 @'{@dotless{i}}tem en la lista. De este modo, el @sc{car} de la lista
-@code{(rosa violeta margarita mantequilla)} es @code{rosa}.
+@code{(rosa violeta margarita bot@'ondeoro)} es @code{rosa}.
 
 @need 1200
 Si est@'a leyendo en Info y en GNU Emacs, se puede ver esto evaluando
 lo siguiente:
 
 @smallexample
-(car '(rosa violeta margarita mantequilla))
+(car '(rosa violeta margarita bot@'ondeoro))
 @end smallexample
 
 @noindent
@@ -7428,19 +7427,19 @@ importante.
 El @sc{cdr} de una lista es el resto de la lista, que es, la funci@'on
 @code{cdr} que devuelve la parte de la lista que sigue el primer
 @'{@dotless{i}}tem. De este modo, mientras el @sc{car} de la lista
-@code{'(rosa violeta margarita mantequilla)} es @code{rosa}, el resto
+@code{'(rosa violeta margarita bot@'ondeoro)} es @code{rosa}, el resto
 de la lista, el valor devuelto por la funci@'on @code{cdr}, es
-@code{(violeta margarita mantequilla)}.
+@code{(violeta margarita bot@'ondeoro)}.
 
 @need 800
 Se puede ver esto evaluando lo siguiente del modo usual:
 
 @smallexample
-(cdr '(rosa violeta margarita mantequilla))
+(cdr '(rosa violeta margarita bot@'ondeoro))
 @end smallexample
 
 @noindent
-Cuando se eval@'ua esto, @code{(violeta margarita mantequilla)}
+Cuando se eval@'ua esto, @code{(violeta margarita bot@'ondeoro)}
 aparecer@'a en el @'area echo.
 
 Al igual que @code{car}, @code{cdr} no elimina los elementos desde la
@@ -7584,41 +7583,41 @@ que puede leer como `eval@'uas para'.
 
 @smallexample
 @group
-(cons 'mantequilla ())
-     @result{} (mantequilla)
+(cons 'bot@'ondeoro ())
+     @result{} (bot@'ondeoro)
 @end group
 
 @group
-(cons 'margarita '(mantequilla))
-     @result{} (margarita mantequilla)
+(cons 'margarita '(bot@'ondeoro))
+     @result{} (margarita bot@'ondeoro)
 @end group
 
 @group
-(cons 'violeta '(margarita mantequilla))
-     @result{} (violeta margarita mantequilla)
+(cons 'violeta '(margarita bot@'ondeoro))
+     @result{} (violeta margarita bot@'ondeoro)
 @end group
 
 @group
-(cons 'rosa '(violeta margarita mantequilla))
-     @result{} (rosa violeta margarita mantequilla)
+(cons 'rosa '(violeta margarita bot@'ondeoro))
+     @result{} (rosa violeta margarita bot@'ondeoro)
 @end group
 @end smallexample
 
 @noindent
 En el primer ejemplo, la lista vac@'{@dotless{i}}a se muestra como
-@code{()} y despu@'es se construye una lista de @code{mantequilla}
+@code{()} y despu@'es se construye una lista de @code{bot@'ondeoro}
 seguida por la lista vac@'{@dotless{i}}a. Como se puede ver, la lista
 vac@'{@dotless{i}}a no se muestra en la lista que fu@'e
-construida. Todo lo que se ve es @code{(mantequilla)}. La lista
+construida. Todo lo que se ve es @code{(bot@'ondeoro)}. La lista
 vac@'{@dotless{i}}a no cuenta como un elemento de una lista porque
 no hay nada en una lista vac@'{@dotless{i}}a. Generalmente hablando,
 una lista vac@'{@dotless{i}}a es invisible.
 
-El segundo ejemplo, @code{(cons 'margarita '(mantequilla))} construye
+El segundo ejemplo, @code{(cons 'margarita '(bot@'ondeoro))} construye
 una nueva lista de dos elemento poniendo @code{margarita} en frente de
-@code{mantequilla}; y el tercer ejemplo construye una lista de tres
+@code{bot@'ondeoro}; y el tercer ejemplo construye una lista de tres
 elementos poniendo @code{violeta} en frente de @code{margarita} y
-@code{mantequilla}.
+@code{bot@'ondeoro}.
 
 @node length
 @subsection Encuentra el tama@~no de una lista: @code{length}
@@ -7629,17 +7628,17 @@ funci@'on Lisp @code{length}, como en los siguientes ejemplos:
 
 @smallexample
 @group
-(length '(mantequilla))
+(length '(bot@'ondeoro))
      @result{} 1
 @end group
 
 @group
-(length '(margarita mantequilla))
+(length '(margarita bot@'ondeoro))
      @result{} 2
 @end group
 
 @group
-(length (cons 'violeta '(margarita mantequilla)))
+(length (cons 'violeta '(margarita bot@'ondeoro)))
      @result{} 3
 @end group
 @end smallexample
@@ -7800,7 +7799,7 @@ incluyendo 0, 1, y 5:
 @group
 ;; @r{Deja la lista como estaba.}
 (nthcdr 0 '(pine fir oak maple))
-     @result{} (pine fir oak maple)
+     @result{} (pino roble abeto arce)
 @end group
 
 @group
@@ -10178,14 +10177,14 @@ se guarda como una serie de direcciones electr@'onicas.
 @unnumberedsec Listas diagramadas
 @end ifnottex
 
-Por ejemplo, la lista @code{(rosa violeta mantequilla)} tiene tres
-elementos, @samp{rosa}, @samp{violeta}, y @samp{mantequilla}. En el
+Por ejemplo, la lista @code{(rosa violeta bot@'ondeoro)} tiene tres
+elementos, @samp{rosa}, @samp{violeta}, y @samp{bot@'ondeoro}. En el
 ordenador, la direcci@'on electr@'onica de @samp{rosa} se graba en un
 segmento de memoria del ordenador a trav@'es de la direcci@'on que da
 la direcci@'on electr@'onica de donde el @'atomo @samp{violeta} est@'a
 localizado; y esta direcci@'on (la que cuenta donde @samp{violeta}
 est@'a se localiza) se guarda con una direcci@'on que cuenta donde la
-direcci@'on para el @'atomo @samp{mantequilla} se localiza.
+direcci@'on para el @'atomo @samp{bot@'ondeoro} se localiza.
 
 @need 1200
 Esto parece m@'as complicado de lo que es y es m@'as f@'acil visto en
@@ -10200,7 +10199,7 @@ un diagrama:
    |___|___|--> |___|___|--> |___|___|--> nil
      |            |            |
      |            |            |
-     ---> rosa    ---> violeta ---> mantequilla
+     ---> rosa    ---> violeta ---> bot@'ondeoro
 @end group
 @end smallexample
 @end ifnottex
@@ -10223,7 +10222,7 @@ un diagrama:
    |___|___|--> |___|___|--> |___|___|--> nil
      |            |            |
      |            |            |
-     ---> rosa    ---> violeta ---> mantequilla
+     ---> rosa    ---> violeta ---> bot@'ondeoro
 @end group
 @end smallexample
 @end iftex
@@ -10248,7 +10247,7 @@ como @code{setq}, almacena la direcci@'on de la primera caja en la
 variable. De este modo, la evaluaci@'on de la expresi@'on es:
 
 @smallexample
-(setq ramo '(rosa violeta mantequilla))
+(setq ramo '(rosa violeta bot@'ondeoro))
 @end smallexample
 
 @need 1250
@@ -10265,7 +10264,7 @@ ramo
       --> |___|___|--> |___|___|--> |___|___|--> nil
             |            |            |
             |            |            |
-             --> rosa     --> violeta   --> mantequilla
+             --> rosa     --> violeta   --> bot@'ondeoro
 @end group
 @end smallexample
 @end ifnottex
@@ -10290,7 +10289,7 @@ ramo
       --> |___|___|--> |___|___|--> |___|___|--> nil
             |            |            |
             |            |            |
-             --> rosa     --> violeta   --> mantequilla
+             --> rosa     --> violeta   --> bot@'ondeoro
 @end group
 @end smallexample
 @end iftex
@@ -10312,7 +10311,7 @@ ramo
  |
  |    --------------       ----------------       --------------------
  |   | car   | cdr  |     | car     | cdr  |     | car         | cdr  |
-  -->| rosa  |   o------->| violeta |   o------->| mantequilla |  nil |
+  -->| rosa  |   o------->| violeta |   o------->| bot@'ondeoro |  nil |
      |       |      |     |         |      |     |             |      |
       --------------       ----------------       --------------------
 @end group
@@ -10337,7 +10336,7 @@ ramo
  |
  |    --------------       ----------------       --------------------
  |   | car   | cdr  |     | car     | cdr  |     | car         | cdr  |
-  -->| rosa  |   o------->| violeta |   o------->| mantequilla |  nil |
+  -->| rosa  |   o------->| violeta |   o------->| bot@'ondeoro |  nil |
      |       |      |     |         |      |     |             |      |
       --------------       ----------------       --------------------
 @end group
@@ -10353,7 +10352,7 @@ direcci@'on de la palabra impresa @samp{ramo}, una segunda de la que
 es la direcci@'on de una definici@'on de funci@'on adjunta al
 s@'{@dotless{i}}mbolo, si cualquiera, un tercero del que es la
 direcci@'on del primer par de cajas-de-direccion para la lista
-@code{(rosa violeta mantequilla)}, y
+@code{(rosa violeta bot@'ondeoro)}, y
 as@'{@dotless{i}}. Aqu@'{@dotless{i}} se est@'a mostrando que la
 tercera caja de direcci@'on del s@'{@dotless{i}}mbolo apunta al primer
 par de cajas-de-direccion para la lista.)
@@ -10384,7 +10383,7 @@ ramo        flores
        |___|___|----> |___|___|--> |___|___|--> nil
          |              |            |
          |              |            |
-          --> rosa       --> violeta  --> mantequilla
+          --> rosa       --> violeta  --> bot@'ondeoro
 @end group
 @end smallexample
 @sp 1
@@ -10412,7 +10411,7 @@ ramo        flores
        |___|___|----> |___|___|--> |___|___|--> nil
          |              |            |
          |              |            |
-          --> rosa       --> violeta  --> mantequilla
+          --> rosa       --> violeta  --> bot@'ondeoro
 @end group
 @end smallexample
 @sp 1
@@ -10420,11 +10419,11 @@ ramo        flores
 @end ifclear
 
 @noindent
-El valor de @code{flores} es @code{(violeta mantequilla)}, esto es
+El valor de @code{flores} es @code{(violeta bot@'ondeoro)}, esto es
 decir que el s@'{@dotless{i}}mbolo @code{flores} maneja la direcci@'on
 del par address-boxes el primero que maneja la direcci@'on de
 @code{violeta}, y el segundo que maneja la direcci@'on de
-@code{mantequilla}.
+@code{bot@'ondeoro}.
 
 Un par de cajas-de-direcciones se llama una @dfn{cons cell} o @dfn{par
 de puntos}. @xref{Tipo de C@'elula Cons, , la C@'elula Cons y los
@@ -10458,7 +10457,7 @@ ramo                       flores
        |___|___|----> |___|___|----> |___|___|---->|___|___|--> nil
          |              |              |             |
          |              |              |             |
-          --> lila      --> rosa       --> violeta    --> mantequilla
+          --> lila      --> rosa       --> violeta    --> bot@'ondeoro
 @end group
 @end smallexample
 @sp 1
@@ -10486,7 +10485,7 @@ ramo                       flores
        |___|___|----> |___|___|----> |___|___|---->|___|___|--> nil
          |              |              |             |
          |              |              |             |
-          --> lila      --> rosa       --> violeta    --> mantequilla
+          --> lila      --> rosa       --> violeta    --> bot@'ondeoro
 @end group
 @end smallexample
 @sp 1
@@ -10506,7 +10505,7 @@ Sin embargo, esto no cambia el valor del s@'{@dotless{i}}mbolo
 que devuelve @code{t} para verdad.
 
 Hasta que se resetea, @code{flores} todav@'{@dotless{i}}a tiene el
-valor de @code{(violeta mantequilla)}; que es, eso tiene la
+valor de @code{(violeta bot@'ondeoro)}; que es, eso tiene la
 direcci@'on de la celula cons cuya primera direcci@'on es
 @code{violeta}. Tambi@'en, esto no altera cualquier c@'elula
 prexistente cons; ellas est@'a todav@'{@dotless{i}}a all@'{@dotless{i}}.
@@ -10574,7 +10573,7 @@ Aqu@'{@dotless{i}} hay una representaci@'on visionaria:
         |    simbolo          |
         +---------------------+
         |    direcciones al   |            [mapeo a]
-        |   valor de variable |       (rosa violeta mantequilla)
+        |   valor de variable |       (rosa violeta bot@'ondeoro)
         |                     |
         +---------------------+
         |    direcciones a la |
@@ -10616,7 +10615,7 @@ Aqu@'{@dotless{i}} hay una representaci@'on visionaria:
         |    simbolo          |
         +---------------------+
         |    direcciones al   |            [mapeo a]
-        |   valor de variable |       (rosa violeta mantequilla)
+        |   valor de variable |       (rosa violeta bot@'ondeoro)
         |                     |
         +---------------------+
         |    direcciones a la |
@@ -10633,9 +10632,9 @@ Aqu@'{@dotless{i}} hay una representaci@'on visionaria:
 @node Ejercicio Lista
 @section Ejercicio
 
-Asignar @code{flores} a @code{violeta} y @code{mantequilla}. Asigna
+Asignar @code{flores} a @code{violeta} y @code{bot@'ondeoro}. Asigna
 dos flores m@'as en esta lista y asigna esta nueva lista a
-@code{more-flowers}. Asigna el @sc{car} de @code{flores} a un
+@code{mas-flores}. Asigna el @sc{car} de @code{flores} a un
 pez. @questiondown{}Qu@'e lista contiene ahora @code{mas-flores}?
 
 @node Pegando
@@ -10646,9 +10645,9 @@ pez. @questiondown{}Qu@'e lista contiene ahora @code{mas-flores}?
 @cindex Pegando Texto
 
 Siempre y cuando se corta texto fuera de un b@'uffer con un comando
-`kill' en GNU Emacs, se puede traer con un comando `copiar'. El texto
+`kill' en GNU Emacs, se puede traer con un comando `pegar'. El texto
 cortado del b@'uffer es puesto en el anillo de la muerte y en los
-comandos copiar, insertan los contenidos apropiados del kill ring
+comandos pegar, se insertan los contenidos apropiados del kill ring
 detr@'as de un b@'uffer (no necesariamente el b@'uffer original).
 
 Un simple comando @kbd{C-y} (@code{yank}) inserta el primer
@@ -16550,8 +16549,8 @@ t
 @end group
 @end smallexample
 
-(Para aprender acerca de los diferente atributos, mira en la
-documentaci@'oon de @code{file-attributes}. Tener en mente que la
+(Para aprender acerca de los diferentes atributos, mira en la
+documentaci@'on de @code{file-attributes}. Tenga en mente que la
 funci@'on @code{file-attributes} no lista el nombre del fichero,
 as@'{@dotless{i}} su primer elemento es
 @code{directory-files-and-attributes} que es el segundo elemento.)
