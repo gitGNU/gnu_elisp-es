@@ -249,7 +249,8 @@ Libremanuals,                     @hfill
 Publicado por el:
 
 @example
-Libremanuals,                     @hfill @uref{http://www.libremanuals.net/}@* @end example
+Libremanuals,                     @hfill @uref{http://www.libremanuals.net/}@* 
+@end example
 @end ifnottex
 
 @sp 1
@@ -314,7 +315,7 @@ and promoting software freedom.''
 @contents
 
 @ifnottex
-@node Arriba
+@node Top
 @top Una Introducci@'on a la Programaci@'on en Emacs Lisp
 
 @insertcopying
@@ -4177,7 +4178,8 @@ a un valor inicial de @code{nil}, como en la siguiente expresi@'on:
       (roble 'algo))
   (message
    "Aqu@'{@dotless{i}} est@'an %d variables con %s, %s, y el valor %s."
-   abedul pino abeto roble))@end group
+   abedul pino abeto roble))
+@end group
 @end smallexample
 
 @noindent
@@ -18774,8 +18776,10 @@ Por ejemplo, en versiones m@'as recientes se ocultan los cursores por
 defecto. Si se odia tal ocultaci@'on se escribe lo siguiente en mi
 fichero @file{.emacs}@footnote{Cuando se empiezan las instancias de
 Emacs que no cargan mi fichero @file{.emacs} o cualquier fichero,
-tambi@'en se puede deshabilitar la ocultaci@'on: @smallexample emacs
--q --no-site-file -eval '(blink-cursor-mode nil)' @exdent O ahora,
+tambi@'en se puede deshabilitar la ocultaci@'on:
+@smallexample
+emacs -q --no-site-file -eval '(blink-cursor-mode nil)'
+@exdent O ahora,
 usando un conjunto m@'as sofisticado de opciones, emacs -Q - D
 @end smallexample
  }:
@@ -20145,7 +20149,8 @@ La funci@'on @code{current-kill} es usada por @code{yank} y por
 "Rota el punto de pegue por N lugares, y entonces devuelve lo cortado.
 Si N es cero, `interprogram-paste-function' se asigna, y si se llama
 devuelve una cadena, entonces esta cadena se a@~nade al frente del
-anillo de la muerte @emph{kill ring} y devuelve el @'ultimo corte.  @end group
+anillo de la muerte @emph{kill ring} y devuelve el @'ultimo corte.
+@end group
 @group
 Si el argumento opcional DO-NOT-MOVE es no nulo, entonces no muevas el
 punto de pegue; solo devuelve el Nth corte hacia adelante.
@@ -22411,7 +22416,8 @@ Los numbers-list consisten en los valores del eje Y."
 @group
 Opcionalmente, VERTICAL-STEP, un entero positivo, especifica cuanto un
 eje Y se incrementa por cada l@'{@dotless{i}}nea. Por ejemplo, un paso
-de 5 significa que cada fila es de cinco unidades.@end group
+de 5 significa que cada fila es de cinco unidades.
+@end group
 
 @group
 Opcionalmente, HORIZONTAL-STEP, un entero positivo,
@@ -22911,7 +22917,8 @@ Los numbers-list consisten en los valores del eje Y."
 @group
 Opcionalmente, VERTICAL-STEP, un entero positivo, especifica cuanto un
 eje Y se incrementa por cada l@'{@dotless{i}}nea. Por ejemplo, un paso
-de 5 significa que cada fila es de cinco unidades.@end group
+de 5 significa que cada fila es de cinco unidades.
+@end group
 
 @group
 Opcionalmente, HORIZONTAL-STEP, un entero positivo,
