@@ -1225,7 +1225,7 @@ GNU Emacs Lisp en particular.
 Estoy agradecido a todas las personas que me ayudaron con este
 libro. Especialmente agradecido a @r{Jim Blandy}, @r{Noah Friedman},
 @w{Jim Kingdon}, @r{Roland McGrath}, @w{Frank Ritter}, @w{Randy
-Smith}, @w{Richard M.  Stallman}, and @w{Melissa Weisshaus}. Gracias
+Smith}, @w{Richard M.  Stallman}, y @w{Melissa Weisshaus}. Gracias
 tambi@'en a @w{Philip Johnson} y @w{David Stampe} por su @'animo
 paciente. Mis errores son m@'{@dotless{i}}os.
 
@@ -1433,7 +1433,7 @@ este caso son s@'{@dotless{i}}mbolos, separados por espacios en blanco
 y cerrados por par@'entesis, sin cualquier puntuaci@'on no Lisp.)
 
 @need 1250
-Texto entre comillas --- incluso frases de p@'arrafos --- son
+Texto entre comillas---incluso frases de p@'arrafos---son
 tambi@'en un @'atomo. Aqu@'{@dotless{i}} hay un ejemplo:
 @cindex Texto entre comillas
 
@@ -1556,17 +1556,18 @@ cursor de manera inmediata despu@'es de la siguiente lista y escribe
 @noindent
 Ver@'as que el n@'umero @code{4} aparece en el @'area echo. (La jerga
 que se usa es ``evaluar la lista.'' El @'area echo es la
-l@'{@dotless{i}}nea arriba de la pantalla que muestra o hace ``echo''
-del texto.) Ahora intenta la misma cosa con una lista entre comillas:
-posiciona el cursor correcto despu@'es de la siguiente lista y escribe
-@kbd{C-x C-e}:
+l@'{@dotless{i}}nea en la parte de arriba de la pantalla que muestra o
+hace ``echo'' del texto). Ahora intenta la misma cosa con una lista
+entre comillas: posiciona el cursor justo despu@'es de la siguiente
+lista y escribe @kbd{C-x C-e}:
 
 @smallexample
-'(esto es una lista comilla)
+'(esto es una lista con comillas)
 @end smallexample
 
 @noindent
-Tu ver@'as @code{(esto es una lista citada)} aparece en el @'area echo.
+Se ver@'a aparecer @code{(esto es una lista con comillas)} en el @'area
+echo.
 
 @cindex Int@'erprete Lisp, explicada
 @cindex Int@'erprete, Lisp, explicado
@@ -1599,14 +1600,14 @@ mensajes de ``ayuda''. Esto son como signos para un viajero en un
 pa@'{@dotless{i}}s extra@~no; descifrarlos puede ser duro, pero una
 vez comprendidos, pueden encontrar el camino.
 
-El mensaje de error est@'a generado por un depurador de GNU
-Emacs. Se `introduce el depurador'. Se obtiene el depurador
-escribiendo @code{q}.
+El mensaje de error es generado por un depurador de c@'odigo
+incorporado dentro de GNU Emacs. As@'{@dotless{i}} se `entra al
+depurador'. Se puede salir del depurador pulsando @code{q}.
 
 Lo que se hace es evaluar una lista que no est@'a citada y no tiene un
 comando con significado como su primer elemento. Aqu@'{@dotless{i}}
 hay una lista casi exacta a la usada, pero sin la cita simple
-en vez de eso. Posicione el cursor derecho despu@'es y escribe
+en vez de eso. Posicione el cursor justo despu@'es y presione
 @kbd{C-x C-e}:
 
 @smallexample
@@ -1626,7 +1627,7 @@ In GNU Emacs version 22, a @file{*Backtrace*} window will open up and
 you will see the following in it:
 @end ignore
 
-Una ventana @file{*Backtrace*} se abrir@'a y se ver@'a lo siguiente:
+Se abrir@'a una ventana @file{*Backtrace*} y se ver@'a lo siguiente:
 
 @smallexample
 @group
@@ -1652,9 +1653,9 @@ q
 @end smallexample
 
 @noindent
-Por favor, escriba @kbd{q} bien ahora, as@'{@dotless{i}} llegar@'a a
-ser confidente de que se pueda bajar el depurador. Entonces, escribe
-@kbd{C-x C-e} de nuevo y se reintroduce.
+Por favor, ahora pulsa @kbd{q}, as@'{@dotless{i}} se comprueba que se
+puede salir del depurador. A continuacion, presione "@kbd{C-x C-e} una
+vez m@'as para re-entrar.
 
 @cindex @samp{funci@'on} definida
 Basado en lo que ya se sabe, se puede leer este mensaje de error.
